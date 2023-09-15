@@ -34,26 +34,31 @@ onChange('q1', value => {
   }, 2000)
 });
 
-const store = new Storage();
-await store.create();
+async function setupStorage() {
 
-// save state to local storage on each change
-const toStorage = () => store.set('app-state', JSON.stringify(state))
-on('set', toStorage)
-on('reset', toStorage)
+  const store = new Storage();
+  await store.create();
 
-// get state from local storage on init
-try {
-  const storedStateJSON = await store.get('app-state')
-  const storedState: AppState = JSON.parse(storedStateJSON);
-  for (const key in storedState) {
-    if (Object.prototype.hasOwnProperty.call(storedState, key)) {
-      state[key] = storedState[key];
+  // save state to local storage on each change
+  const toStorage = () => store.set('app-state', JSON.stringify(state))
+  on('set', toStorage)
+  on('reset', toStorage)
+
+  // get state from local storage on init
+  try {
+    const storedStateJSON = await store.get('app-state')
+    const storedState: AppState = JSON.parse(storedStateJSON);
+    for (const key in storedState) {
+      if (Object.prototype.hasOwnProperty.call(storedState, key)) {
+        state[key] = storedState[key];
+      }
     }
+  } catch (error) {
+    console.warn('Problem when trying to restore the state from storage')
   }
-} catch (error) {
-  console.warn('Problem when trying to restore the state from storage')
+
 }
 
+setupStorage().then().catch();
 
 export { state, reset, onChange };

@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, Fragment, h } from '@stencil/core';
 
 @Component({
   tag: 'page-about-us',
@@ -6,13 +6,17 @@ import { Component, Host, h } from '@stencil/core';
   shadow: true,
 })
 export class PageAboutUs {
-
   render() {
     return (
-      <Host>
-        <slot></slot>
-      </Host>
+      <Fragment>
+        <app-header headerTitle="Über uns"></app-header>
+        <ion-content class="ion-padding" id="main-menu">
+          <app-content>
+            <h1>Über uns</h1>
+          </app-content>
+        </ion-content>
+        <app-footer></app-footer>
+      </Fragment>
     );
   }
-
 }

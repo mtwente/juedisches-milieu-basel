@@ -16,11 +16,13 @@ export class AppRoot {
           <ion-route url="/puzzle" component="page-puzzle"></ion-route>
           <ion-route url="/puzzle/q1" component="page-q1"></ion-route>
           <ion-route url="/puzzle/q2" component="page-q2"></ion-route>
+          <ion-route url="/about-us" component="page-about-us"></ion-route>
         </ion-router>
 
         <ion-router-outlet></ion-router-outlet>
 
-        {/* <ion-nav></ion-nav> */}
+        <a style={{ display: 'none' }} href="/intro"></a>
+        <a style={{ display: 'none' }} href="/puzzle"></a>
       </ion-app>
     );
   }
