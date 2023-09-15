@@ -16,14 +16,14 @@
   flex-direction: column;
 }
 
-
-
 .flash-container {
   display: none;
+  transform: scale(0.01);
   flex-grow: 1;
   position: relative;
   justify-content: center;
   align-items: center;
+  font-size: 200px;
 }
 
 .skip-intro-btn {

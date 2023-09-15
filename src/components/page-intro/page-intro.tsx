@@ -89,12 +89,14 @@ export class PageIntro {
     return createAnimation('show-hide')
       .addElement(el)
       .duration(2500)
+      .beforeStyles({ display: 'flex' })
+      .afterStyles({ display: 'none' })
       .keyframes([
-        { offset: 0, opacity: '0', display: 'flex' },
-        { offset: 0.2, opacity: '1', transform: 'scale(3)' },
+        { offset: 0, opacity: '0' },
+        { offset: 0.2, opacity: '1' },
         { offset: 0.4, opacity: '1' },
-        { offset: 0.8, opacity: '0', transform: 'scale(9)' },
-        { offset: 1, opacity: '0', transform: 'scale(9)', display: 'none' },
+        { offset: 0.8, opacity: '0', transform: 'scale(1)' },
+        { offset: 1, opacity: '0', transform: 'scale(1)' },
       ]);
   }
 }

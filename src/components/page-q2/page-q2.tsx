@@ -74,7 +74,7 @@ export class PageQ1 {
     setTimeout(async () => {
       await this.successModal.dismiss();
       await this.dismiss();
-    }, 4000);
+    }, 2500);
   }
 
   async dismiss() {
