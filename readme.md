@@ -6,8 +6,6 @@ Das jüdische Milieus Basels vom 19. Jahrhundert bis heute. Ein Spiel mit Data S
 
 This app is developed with Stencil.
 
-## Getting Started
-
 To start, clone this repo to a new directory:
 
 ```bash
