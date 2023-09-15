@@ -1,0 +1,36 @@
+.puzzle-piece {
+  position: relative;
+  display: inline;
+  color: var(--ion-color-primary);
+}
+
+.puzzle-piece svg {
+  width: 180px;
+  height: 180px;
+  margin: -30px;
+}
+
+.puzzle-piece path {
+  stroke: var(--ion-color-primary);
+  stroke-width: 5px;
+  fill: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  z-index: 100;
+}
+
+.puzzle-piece path:hover {
+  fill: var(--ion-color-light-shade);
+}
+
+.puzzle-piece.done path {
+  fill: var(--ion-color-success);
+}
+
+.puzzle-piece div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 40px;
+  pointer-events: none;
+}
+
