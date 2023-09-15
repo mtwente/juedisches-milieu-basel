@@ -88,7 +88,7 @@ export class PageIntro {
   createShowHideAnimation(el: Element): Animation {
     return createAnimation('show-hide')
       .addElement(el)
-      .duration(112500)
+      .duration(2500)
       .keyframes([
         { offset: 0, opacity: '0', display: 'flex' },
         { offset: 0.2, opacity: '1', transform: 'scale(3)' },
