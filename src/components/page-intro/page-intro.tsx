@@ -47,7 +47,7 @@ export class PageIntro {
   render() {
     return (
       <Fragment>
-        <ion-content class="ion-padding" id="main-menu">
+        <ion-content class="ion-padding overflow-y-hidden" id="main-menu">
           <div class={`container ${this.playing}`}>
             <div class="go-btn">
               <ion-button fill="clear" size="large" onClick={() => this.playIntro()}>
@@ -88,7 +88,7 @@ export class PageIntro {
   createShowHideAnimation(el: Element): Animation {
     return createAnimation('show-hide')
       .addElement(el)
-      .duration(2500)
+      .duration(112500)
       .keyframes([
         { offset: 0, opacity: '0', display: 'flex' },
         { offset: 0.2, opacity: '1', transform: 'scale(3)' },
