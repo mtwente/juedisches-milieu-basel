@@ -74,16 +74,17 @@
 }
 
 .puzzle-piece.locked path:not(.overlay) {
+  transition: all 2s;
   fill: var(--ion-color-step-200);
 }
 
 .puzzle-piece.unlocked path:not(.overlay) {
+  transition: all 2s;
   fill: var(--ion-color-step-850);
-
-
 }
 
 .puzzle-piece.done path:not(.overlay) {
+  transition: all 2s;
   fill: rgba(0, 0, 0, 0);
   stroke: rgba(255, 255, 255, 0.225);
 }
