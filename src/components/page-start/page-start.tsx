@@ -37,9 +37,11 @@ export class PageStart {
               Puzzlen stärkt unser Wohlbefinden. Es regt beide Gehirnhälften und wirkt sich positiv auf die Konzentration und das Kurzzeitgedächtnis aus. Deshalb: Legen Sie los.
               Tauchen Sie in das Puzzle ein und eignen Sie sich Wissen zum jüdischen Milieu in Basel an.
             </p>
-            <ion-button color="primary" onClick={_ => this.dismiss()}>
-              OK, los geht's!
-            </ion-button>
+            <p>
+              <ion-button color="primary" onClick={_ => this.dismiss()}>
+                OK, los geht's!
+              </ion-button>
+            </p>
           </app-content>
         </ion-content>
         <app-footer></app-footer>

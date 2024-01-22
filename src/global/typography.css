@@ -1,5 +1,15 @@
 @import '~@ionic/core/css/typography.css';
 
+@font-face {
+  font-family: "Open Sans";
+  src: url("/assets/fonts/EuclidCircularB-Regular-WebS.woff2") format("woff2");
+}
+
+html {
+  --ion-dynamic-font: var(--ion-default-dynamic-font);
+  --ion-font-family: 'Open Sans';
+}
+
 /*
 * Reading (medium).
 * Text set for immersive reading. This usually

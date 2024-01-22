@@ -31,6 +31,8 @@ export namespace Components {
     }
     interface PagePuzzle {
     }
+    interface PageQ1 {
+    }
     interface PageQ2 {
     }
     interface PageStart {
@@ -97,6 +99,12 @@ declare global {
         prototype: HTMLPagePuzzleElement;
         new (): HTMLPagePuzzleElement;
     };
+    interface HTMLPageQ1Element extends Components.PageQ1, HTMLStencilElement {
+    }
+    var HTMLPageQ1Element: {
+        prototype: HTMLPageQ1Element;
+        new (): HTMLPageQ1Element;
+    };
     interface HTMLPageQ2Element extends Components.PageQ2, HTMLStencilElement {
     }
     var HTMLPageQ2Element: {
@@ -120,6 +128,7 @@ declare global {
         "page-home": HTMLPageHomeElement;
         "page-intro": HTMLPageIntroElement;
         "page-puzzle": HTMLPagePuzzleElement;
+        "page-q1": HTMLPageQ1Element;
         "page-q2": HTMLPageQ2Element;
         "page-start": HTMLPageStartElement;
     }
@@ -148,6 +157,8 @@ declare namespace LocalJSX {
     }
     interface PagePuzzle {
     }
+    interface PageQ1 {
+    }
     interface PageQ2 {
     }
     interface PageStart {
@@ -163,6 +174,7 @@ declare namespace LocalJSX {
         "page-home": PageHome;
         "page-intro": PageIntro;
         "page-puzzle": PagePuzzle;
+        "page-q1": PageQ1;
         "page-q2": PageQ2;
         "page-start": PageStart;
     }
@@ -181,6 +193,7 @@ declare module "@stencil/core" {
             "page-home": LocalJSX.PageHome & JSXBase.HTMLAttributes<HTMLPageHomeElement>;
             "page-intro": LocalJSX.PageIntro & JSXBase.HTMLAttributes<HTMLPageIntroElement>;
             "page-puzzle": LocalJSX.PagePuzzle & JSXBase.HTMLAttributes<HTMLPagePuzzleElement>;
+            "page-q1": LocalJSX.PageQ1 & JSXBase.HTMLAttributes<HTMLPageQ1Element>;
             "page-q2": LocalJSX.PageQ2 & JSXBase.HTMLAttributes<HTMLPageQ2Element>;
             "page-start": LocalJSX.PageStart & JSXBase.HTMLAttributes<HTMLPageStartElement>;
         }
