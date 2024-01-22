@@ -12,7 +12,12 @@ interface AppPage {
 
 const appPages: AppPage[] = [
   {
-    title: 'Intro',
+    title: 'Spielanleitung',
+    key: 'start',
+    url: '/puzzle/start',
+  },
+  {
+    title: 'Teil 1',
     key: 'q1',
     url: '/puzzle/q1',
   },

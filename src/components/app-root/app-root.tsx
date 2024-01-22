@@ -14,7 +14,7 @@ export class AppRoot {
           <ion-route-redirect from="/" to="/intro"></ion-route-redirect>
           <ion-route url="/intro" component="page-intro"></ion-route>
           <ion-route url="/puzzle" component="page-puzzle"></ion-route>
-          <ion-route url="/puzzle/q1" component="page-q1"></ion-route>
+          <ion-route url="/puzzle/start" component="page-start"></ion-route>
           <ion-route url="/puzzle/q2" component="page-q2"></ion-route>
           <ion-route url="/about-us" component="page-about-us"></ion-route>
         </ion-router>

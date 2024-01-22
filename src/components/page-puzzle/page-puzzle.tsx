@@ -51,12 +51,12 @@ export class PagePuzzle {
                         2
                       </text>
                     </g>
-                    <g class={`puzzle-piece unlocked ${state.q1 ? 'done' : ''}`}>
+                    <g class={`puzzle-piece unlocked ${state.start ? 'done' : ''}`}>
                       <path d="M338.936,196.331l112.134,64.74l0,129.482l-112.134,64.741l-112.135,-64.741l0,-129.482l112.135,-64.74Z" />
                       <path
                         class="overlay"
                         d="M338.936,196.331l112.134,64.74l0,129.482l-112.134,64.741l-112.135,-64.741l0,-129.482l112.135,-64.74Z"
-                        onClick={() => routerProvider.ionRouterElement.push('/puzzle/q' + 1, 'forward')}
+                        onClick={() => routerProvider.ionRouterElement.push('/puzzle/start', 'forward')}
                       />
                       <text x="338.375px" y="344.344px">
                         Start

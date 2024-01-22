@@ -1,6 +1,7 @@
 import { createStore } from "@stencil/store";
 import { Storage } from "@ionic/storage";
 export interface AppState {
+  start: boolean
   q1: boolean
   q2: boolean
   q3: boolean
@@ -15,6 +16,7 @@ export interface AppState {
 
 }
 const { state, onChange, on, reset } = createStore<AppState>({
+  start: false,
   q1: false,
   q2: false,
   q3: false,
@@ -28,7 +30,7 @@ const { state, onChange, on, reset } = createStore<AppState>({
   playedIntro: false
 });
 
-onChange('q1', value => {
+onChange('start', value => {
   setTimeout(() => {
     state.q2to7locked = !value;
   }, 2000)
