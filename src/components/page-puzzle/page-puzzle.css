@@ -28,7 +28,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  margin: 2rem;
+  margin: .5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,9 +94,14 @@
 .puzzle-piece text {
   transition: fill s2;
   font-weight: 700;
-  font-size: 52.947px;
   text-anchor: middle;
   pointer-events: none;
+}
+.puzzle-piece text.nr {
+  font-size: 170px;
+}
+.puzzle-piece text.label {
+  font-size: 50px;
 }
 
 .puzzle-piece.unlocked text {
@@ -116,3 +121,4 @@
 .puzzle-piece.done:active text {
   fill: var(--ion-text-color);
 }
+

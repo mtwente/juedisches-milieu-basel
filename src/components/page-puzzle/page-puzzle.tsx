@@ -1,7 +1,17 @@
 import { Component, Fragment, getAssetPath, h } from '@stencil/core';
 import routerProvider from '../../global/router-provider';
 import { state } from '../../global/store';
+import { titles } from '../../global/titles';
 
+interface PuzzleElDef {
+  locked: () => boolean;
+  url: string;
+  nr: number;
+  label: string;
+  txt1: { x: number; y: number; width: number; height: number };
+  txt2: { x: number; y: number; width: number; height: number };
+  path: { d: string };
+}
 @Component({
   tag: 'page-puzzle',
   styleUrl: 'page-puzzle.css',
@@ -9,6 +19,141 @@ import { state } from '../../global/store';
 })
 export class PagePuzzle {
   render() {
+    const elements: PuzzleElDef[] = [
+      {
+        locked: () => state.t2to12locked,
+        url: '',
+        nr: 11,
+        label: titles[11],
+        txt1: { x: 12.325, y: 992.609, width: 475.875, height: 162.484 },
+        txt2: { x: 12.325, y: 1155.09, width: 475.875, height: 162.484 },
+        path: {
+          d: 'M0.261,1010.75l250.002,-144.338l250.001,144.338l0,288.677l-250.001,144.339l-250.002,-144.339l0,-288.677Z',
+        },
+      },
+      {
+        locked: () => state.t2to12locked,
+        url: '',
+        nr: 2,
+        label:titles[2],
+        txt1: { x: 762.33, y: 1425.62, width: 475.875, height: 162.484 },
+        txt2: { x: 762.33, y: 1588.11, width: 475.875, height: 162.484 },
+        path: {
+          d: 'M750.266,1732.45l-0,-288.677l250.001,-144.339l250.002,144.339l-0,288.677l-250.002,144.338l-250.001,-144.338Z',
+        },
+      },
+      {
+        locked: () => state.t2to12locked,
+        url: '',
+        nr: 3,
+        label:titles[3],
+        txt1: { x: 12.325, y: 126.579, width: 475.875, height: 162.484 },
+        txt2: { x: 12.325, y: 289.063, width: 475.875, height: 162.484 },
+        path: {
+          d: 'M0.261,433.401l0,-288.677l250.002,-144.338l250.001,144.338l0,288.677l-250.001,144.339l-250.002,-144.339Z',
+        },
+      },
+      {
+        locked: () => state.t2to12locked,
+        url: '',
+        nr: 4,
+        label:titles[4],
+        txt1: { x: 1012.33, y: 992.609, width: 475.875, height: 162.484 },
+        txt2: { x: 1012.33, y: 1155.09, width: 475.875, height: 162.484 },
+        path: {
+          d: 'M1000.27,1299.43l0,-288.677l250.002,-144.338l250.001,144.338l0,288.677l-250.001,144.339l-250.002,-144.339Z',
+        },
+      },
+      {
+        locked: () => state.t2to12locked,
+        url: '',
+        nr: 12,
+        label: titles[12],
+        txt1: { x: 1012.33, y: 126.579, width: 475.875, height: 162.484 },
+        txt2: { x: 1012.33, y: 289.063, width: 475.875, height: 162.484 },
+        path: {
+          d: 'M1000.27,144.724l250.002,-144.338l250.001,144.338l0,288.677l-250.001,144.339l-250.002,-144.339l0,-288.677Z',
+        },
+      },
+      {
+        locked: () => state.t2to12locked,
+        url: '',
+        nr: 5,
+        label:titles[5],
+        txt1: { x: 1512.33, y: 992.609, width: 475.875, height: 162.484 },
+        txt2: { x: 1512.33, y: 1155.09, width: 475.875, height: 162.484 },
+        path: {
+          d: 'M1500.27,1010.75l250.002,-144.338l250.001,144.338l0,288.677l-250.001,144.339l-250.002,-144.339l0,-288.677Z',
+        },
+      },
+      {
+        locked: () => state.t2to12locked,
+        url: '',
+        nr: 6,
+        label:titles[6],
+        txt1: { x: 1512.33, y: 126.579, width: 475.875, height: 162.484 },
+        txt2: { x: 1512.33, y: 289.063, width: 475.875, height: 162.484 },
+        path: {
+          d: 'M1500.27,144.724l250.002,-144.338l250.001,144.338l0,288.677l-250.001,144.339l-250.002,-144.339l0,-288.677Z',
+        },
+      },
+      {
+        locked: () => state.t2to12locked,
+        url: '',
+        nr: 7,
+        label:titles[7],
+        txt1: { x: 512.328, y: 992.609, width: 475.875, height: 162.484 },
+        txt2: { x: 512.328, y: 1155.09, width: 475.875, height: 162.484 },
+        path: {
+          d: 'M500.264,1010.75l250.002,-144.338l250.001,144.338l0,288.677l-250.001,144.339l-250.002,-144.339l0,-288.677Z',
+        },
+      },
+      {
+        locked: () => state.t2to12locked,
+        url: '',
+        nr: 8,
+        label:titles[8],
+        txt1: { x: 512.328, y: 126.579, width: 475.875, height: 162.484 },
+        txt2: { x: 512.328, y: 289.063, width: 475.875, height: 162.484 },
+        path: {
+          d: 'M500.264,433.401l0,-288.677l250.002,-144.338l250.001,144.338l0,288.677l-250.001,144.339l-250.002,-144.339Z',
+        },
+      },
+      {
+        locked: () => state.t2to12locked,
+        url: '',
+        nr: 9,
+        label:titles[9],
+        txt1: { x: 262.327, y: 559.594, width: 475.875, height: 162.484 },
+        txt2: { x: 262.327, y: 722.078, width: 475.875, height: 162.484 },
+        path: {
+          d: 'M500.264,433.401l250.002,144.339l-0,288.677l-250.002,144.338l-250.001,-144.338l-0,-288.677l250.001,-144.339Z',
+        },
+      },
+      {
+        locked: () => state.t2to12locked,
+        url: '',
+        nr: 10,
+        label: titles[10],
+        txt1: { x: 1262.33, y: 559.594, width: 475.875, height: 162.484 },
+        txt2: { x: 1262.33, y: 722.078, width: 475.875, height: 162.484 },
+        path: {
+          d: 'M1500.27,433.401l250.002,144.339l-0,288.677l-250.002,144.338l-250.001,-144.338l-0,-288.677l250.001,-144.339Z',
+        },
+      },
+      {
+        locked: () => false,
+        url: '/puzzle/teil-1',
+        nr: 1,
+        label:titles[1],
+        txt1: { x: 762.33, y: 559.594, width: 475.875, height: 162.484 },
+        txt2: { x: 762.33, y: 722.078, width: 475.875, height: 162.484 },
+        path: {
+          d: 'M1000.27,433.401l250.002,144.339l-0,288.677l-250.002,144.338l-250.001,-144.338l-0,-288.677l250.001,-144.339Z',
+        },
+      },
+    ];
+
     return (
       <Fragment>
         <app-header headerTitle=""></app-header>
@@ -17,7 +162,7 @@ export class PagePuzzle {
             <div class="svg-container hidden">
               <div>
                 <svg
-                  viewBox="0 0 678 653"
+                  viewBox="0 0 2001 1877"
                   version="1.1"
                   xmlns="http://www.w3.org/2000/svg"
                   style={{ fillRule: 'evenodd', clipRule: 'evenodd', strokeLinejoin: 'round', strokeMiterLimit: '2' }}
@@ -27,69 +172,24 @@ export class PagePuzzle {
                       <path
                         stroke="1p solid blue"
                         fill="none"
-                        d="M338.936,584.652l-112.135,64.741l-112.134,-64.741l-0,-129.358l-112.135,-64.741l0,-129.482l112.135,-64.74l-0,-129.159l112.134,-64.741l112.135,64.741l112.134,-64.741l112.135,64.741l-0,129.159l112.134,64.74l0,129.482l-112.134,64.741l-0,129.358l-112.135,64.741l-112.134,-64.741Z"
+                        d="M250.263,866.417c-0,-0 -0,-288.677 -0,-288.677l-250.002,-144.339l0,-288.677l250.002,-144.338l250.001,144.338l250.002,-144.338l250.001,144.338c0,0 250.002,-144.338 250.002,-144.338l250.001,144.338l250.002,-144.338l250.001,144.338l0,288.677l-250.001,144.339c-0,-0 -0,288.677 -0,288.677l250.001,144.338l0,288.677l-250.001,144.339l-250.002,-144.339l-250.001,144.339c-0,-0 -0,288.677 -0,288.677l-250.002,144.338l-250.001,-144.338l-0,-288.677l-250.002,-144.339c0,0 -250.001,144.339 -250.001,144.339l-250.002,-144.339l0,-288.677l250.002,-144.338Z"
                       />
                     </clipPath>
                   </defs>
-                  <image height="100%" clip-path="url(#shape)" xlinkHref={getAssetPath('../../assets/Basler_Synagoge.jpg')}></image>
+                  <image height="100%" clip-path="url(#shape)" xlinkHref={getAssetPath('../../assets/puzzle.jpg')}></image>
                   <g>
-                    <g class={`puzzle-piece ${state.q2to7locked ? 'locked' : 'unlocked'}`}>
-                      <path d="M226.801,2.431l112.135,64.741l-0,129.482l-112.135,64.741l-112.134,-64.741l-0,-129.482l112.134,-64.741Z" />
-                      <path class="overlay" d="M226.801,2.431l112.135,64.741l-0,129.482l-112.135,64.741l-112.134,-64.741l-0,-129.482l112.134,-64.741Z" />
-                      <text x="208.376px" y="150.206px">
-                        7
-                      </text>
-                    </g>
-                    <g class={`puzzle-piece ${state.q2to7locked ? 'locked' : 'unlocked'} ${state.q2 ? 'done' : ''}`}>
-                      <path d="M451.07,2.431l112.135,64.741l-0,129.482l-112.135,64.741l-112.134,-64.741l-0,-129.482l112.134,-64.741Z" />
-                      <path
-                        class="overlay"
-                        d="M451.07,2.431l112.135,64.741l-0,129.482l-112.135,64.741l-112.134,-64.741l-0,-129.482l112.134,-64.741Z"
-                        onClick={() => routerProvider.ionRouterElement.push('/puzzle/q' + 2, 'forward')}
-                      />
-                      <text x="433.915px" y="150.762px">
-                        2
-                      </text>
-                    </g>
-                    <g class={`puzzle-piece unlocked ${state.start ? 'done' : ''}`}>
-                      <path d="M338.936,196.331l112.134,64.74l0,129.482l-112.134,64.741l-112.135,-64.741l0,-129.482l112.135,-64.74Z" />
-                      <path
-                        class="overlay"
-                        d="M338.936,196.331l112.134,64.74l0,129.482l-112.134,64.741l-112.135,-64.741l0,-129.482l112.135,-64.74Z"
-                        onClick={() => routerProvider.ionRouterElement.push('/puzzle/start', 'forward')}
-                      />
-                      <text x="338.375px" y="344.344px">
-                        Start
-                      </text>
-                    </g>
-                    <g class={`puzzle-piece ${state.q2to7locked ? 'locked' : 'unlocked'}`}>
-                      <path d="M114.667,196.331l112.134,64.74l0,129.482l-112.134,64.741l-112.135,-64.741l0,-129.482l112.135,-64.74Z" />
-                      <path class="overlay" d="M114.667,196.331l112.134,64.74l0,129.482l-112.134,64.741l-112.135,-64.741l0,-129.482l112.135,-64.74Z" />
-                      <text x="97.247px" y="344.344px">
-                        6
-                      </text>
-                    </g>
-                    <g class={`puzzle-piece ${state.q2to7locked ? 'locked' : 'unlocked'}`}>
-                      <path d="M226.801,390.429l112.135,64.741l-0,129.482l-112.135,64.741l-112.134,-64.741l-0,-129.482l112.134,-64.741Z" />
-                      <path class="overlay" d="M226.801,390.429l112.135,64.741l-0,129.482l-112.135,64.741l-112.134,-64.741l-0,-129.482l112.134,-64.741Z" />
-                      <text x="210.494px" y="538.125px">
-                        5
-                      </text>
-                    </g>
-                    <g class={`puzzle-piece ${state.q2to7locked ? 'locked' : 'unlocked'}`}>
-                      <path d="M451.07,390.429l112.135,64.741l-0,129.482l-112.135,64.741l-112.134,-64.741l-0,-129.482l112.134,-64.741Z" />
-                      <path class="overlay" d="M451.07,390.429l112.135,64.741l-0,129.482l-112.135,64.741l-112.134,-64.741l-0,-129.482l112.134,-64.741Z" />
-                      <text x="433.651px" y="538.442px">
-                        4
-                      </text>
-                    </g>
-                    <g class={`puzzle-piece ${state.q2to7locked ? 'locked' : 'unlocked'}`}>
-                      <path d="M563.205,196.331l112.134,64.74l0,129.482l-112.134,64.741l-112.135,-64.741l0,-129.482l112.135,-64.74Z" />
-                      <path class="overlay" d="M563.205,196.331l112.134,64.74l0,129.482l-112.134,64.741l-112.135,-64.741l0,-129.482l112.135,-64.74Z" />
-                      <text x="547.718px" y="345.376px">
-                        3
-                      </text>
-                    </g>
+                    {elements.map(e => (
+                      <g class={`puzzle-piece ${e.locked() ? 'locked' : 'unlocked'} ${state?.['t' + e.nr] ? 'done' : ''}`}>
+                        <path d={e.path.d} />
+                        <path class="overlay" d={e.path.d} onClick={() => routerProvider.ionRouterElement.push('/puzzle/teil-' + e.nr, 'forward')} />
+                        <text class="nr" x={e.txt1.x + e.txt1.width / 2} y={e.txt1.y + e.txt1.height / 1.5} dominant-baseline="middle" text-anchor="middle">
+                          {e.nr}
+                        </text>
+                        <text class="label" x={e.txt2.x + e.txt2.width / 2} y={e.txt2.y + e.txt2.height / 2} dominant-baseline="middle" text-anchor="middle">
+                          {e.label}
+                        </text>
+                      </g>
+                    ))}
                   </g>
                 </svg>
               </div>

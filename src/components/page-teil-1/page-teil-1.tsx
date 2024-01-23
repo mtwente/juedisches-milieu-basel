@@ -4,11 +4,11 @@ import routerProvider from '../../global/router-provider';
 import { state } from '../../global/store';
 
 @Component({
-  tag: 'page-start',
-  styleUrl: 'page-start.css',
+  tag: 'page-teil-1',
+  styleUrl: 'page-teil-1.css',
   // shadow: true,
 })
-export class PageStart {
+export class PageTeil1 {
   failModal: HTMLIonModalElement;
   successModal: HTMLIonModalElement;
   successAnimation: Animation;
@@ -50,6 +50,6 @@ export class PageStart {
   }
   async dismiss() {
     await routerProvider.ionRouterElement.push('/puzzle', 'back');
-    state.start = true;
+    state.t1 = true;
   }
 }

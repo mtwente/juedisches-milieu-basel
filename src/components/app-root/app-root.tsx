@@ -1,5 +1,6 @@
 import { Component, h } from '@stencil/core';
 import routerProvider from '../../global/router-provider';
+import { appPages } from '../../global/appPages';
 
 @Component({
   tag: 'app-root',
@@ -14,8 +15,9 @@ export class AppRoot {
           <ion-route-redirect from="/" to="/intro"></ion-route-redirect>
           <ion-route url="/intro" component="page-intro"></ion-route>
           <ion-route url="/puzzle" component="page-puzzle"></ion-route>
-          <ion-route url="/puzzle/start" component="page-start"></ion-route>
-          <ion-route url="/puzzle/q2" component="page-q2"></ion-route>
+          {appPages.map((p) => (
+            <ion-route url={p.url} component={p.component}></ion-route>
+          ))}
           <ion-route url="/about-us" component="page-about-us"></ion-route>
         </ion-router>
 

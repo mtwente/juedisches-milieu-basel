@@ -33,9 +33,11 @@ export namespace Components {
     }
     interface PageQ1 {
     }
-    interface PageQ2 {
+    interface PageQ3 {
     }
-    interface PageStart {
+    interface PageTeil1 {
+    }
+    interface PageTeil2 {
     }
 }
 declare global {
@@ -105,17 +107,23 @@ declare global {
         prototype: HTMLPageQ1Element;
         new (): HTMLPageQ1Element;
     };
-    interface HTMLPageQ2Element extends Components.PageQ2, HTMLStencilElement {
+    interface HTMLPageQ3Element extends Components.PageQ3, HTMLStencilElement {
     }
-    var HTMLPageQ2Element: {
-        prototype: HTMLPageQ2Element;
-        new (): HTMLPageQ2Element;
+    var HTMLPageQ3Element: {
+        prototype: HTMLPageQ3Element;
+        new (): HTMLPageQ3Element;
     };
-    interface HTMLPageStartElement extends Components.PageStart, HTMLStencilElement {
+    interface HTMLPageTeil1Element extends Components.PageTeil1, HTMLStencilElement {
     }
-    var HTMLPageStartElement: {
-        prototype: HTMLPageStartElement;
-        new (): HTMLPageStartElement;
+    var HTMLPageTeil1Element: {
+        prototype: HTMLPageTeil1Element;
+        new (): HTMLPageTeil1Element;
+    };
+    interface HTMLPageTeil2Element extends Components.PageTeil2, HTMLStencilElement {
+    }
+    var HTMLPageTeil2Element: {
+        prototype: HTMLPageTeil2Element;
+        new (): HTMLPageTeil2Element;
     };
     interface HTMLElementTagNameMap {
         "app-content": HTMLAppContentElement;
@@ -129,8 +137,9 @@ declare global {
         "page-intro": HTMLPageIntroElement;
         "page-puzzle": HTMLPagePuzzleElement;
         "page-q1": HTMLPageQ1Element;
-        "page-q2": HTMLPageQ2Element;
-        "page-start": HTMLPageStartElement;
+        "page-q3": HTMLPageQ3Element;
+        "page-teil-1": HTMLPageTeil1Element;
+        "page-teil-2": HTMLPageTeil2Element;
     }
 }
 declare namespace LocalJSX {
@@ -159,9 +168,11 @@ declare namespace LocalJSX {
     }
     interface PageQ1 {
     }
-    interface PageQ2 {
+    interface PageQ3 {
     }
-    interface PageStart {
+    interface PageTeil1 {
+    }
+    interface PageTeil2 {
     }
     interface IntrinsicElements {
         "app-content": AppContent;
@@ -175,8 +186,9 @@ declare namespace LocalJSX {
         "page-intro": PageIntro;
         "page-puzzle": PagePuzzle;
         "page-q1": PageQ1;
-        "page-q2": PageQ2;
-        "page-start": PageStart;
+        "page-q3": PageQ3;
+        "page-teil-1": PageTeil1;
+        "page-teil-2": PageTeil2;
     }
 }
 export { LocalJSX as JSX };
@@ -194,8 +206,9 @@ declare module "@stencil/core" {
             "page-intro": LocalJSX.PageIntro & JSXBase.HTMLAttributes<HTMLPageIntroElement>;
             "page-puzzle": LocalJSX.PagePuzzle & JSXBase.HTMLAttributes<HTMLPagePuzzleElement>;
             "page-q1": LocalJSX.PageQ1 & JSXBase.HTMLAttributes<HTMLPageQ1Element>;
-            "page-q2": LocalJSX.PageQ2 & JSXBase.HTMLAttributes<HTMLPageQ2Element>;
-            "page-start": LocalJSX.PageStart & JSXBase.HTMLAttributes<HTMLPageStartElement>;
+            "page-q3": LocalJSX.PageQ3 & JSXBase.HTMLAttributes<HTMLPageQ3Element>;
+            "page-teil-1": LocalJSX.PageTeil1 & JSXBase.HTMLAttributes<HTMLPageTeil1Element>;
+            "page-teil-2": LocalJSX.PageTeil2 & JSXBase.HTMLAttributes<HTMLPageTeil2Element>;
         }
     }
 }

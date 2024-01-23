@@ -13,7 +13,7 @@ export class AppHeader {
         <ion-header translucent={true}>
           <ion-toolbar>
             <ion-buttons slot="start">
-              <ion-back-button defaultHref={window.location.pathname === '/puzzle' ? undefined : '/puzzle'}></ion-back-button>
+              <ion-back-button text="Zurück" defaultHref={window.location.pathname === '/puzzle' ? undefined : '/puzzle'}></ion-back-button>
             </ion-buttons>
             <ion-title>{this.headerTitle}</ion-title>
             <ion-buttons slot="end">

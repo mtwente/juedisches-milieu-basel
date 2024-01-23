@@ -3,55 +3,7 @@ import { checkmarkCircleOutline, extensionPuzzleOutline, informationCircleOutlin
 import { animationBuilderFadePages } from '../../global/page-animation';
 import routerProvider from '../../global/router-provider';
 import { reset, state } from '../../global/store';
-
-interface AppPage {
-  url: string;
-  key: string;
-  title: string;
-}
-
-const appPages: AppPage[] = [
-  {
-    title: 'Spielanleitung',
-    key: 'start',
-    url: '/puzzle/start',
-  },
-  {
-    title: 'Teil 1',
-    key: 'q1',
-    url: '/puzzle/q1',
-  },
-  {
-    title: 'Teil 2',
-    key: 'q2',
-    url: '/puzzle/q2',
-  },
-  {
-    title: 'Teil 3',
-    key: 'q3',
-    url: '/puzzle/q3',
-  },
-  {
-    title: 'Teil 4',
-    key: 'q4',
-    url: '/puzzle/q4',
-  },
-  {
-    title: 'Teil 5',
-    key: 'q5',
-    url: '/puzzle/q5',
-  },
-  {
-    title: 'Teil 6',
-    key: 'q6',
-    url: '/puzzle/q6',
-  },
-  {
-    title: 'Teil 7',
-    key: 'q7',
-    url: '/puzzle/q7',
-  },
-];
+import { appPages } from '../../global/appPages';
 
 @Component({
   tag: 'app-menu',
@@ -66,14 +18,17 @@ export class AppMenu {
         <ion-content>
           <ion-list id="inbox-list">
             <ion-list-header>Inhalt</ion-list-header>
-            <ion-note>Eine Geschichte – 7 Teile</ion-note>
+            <ion-note>Eine Geschichte – 12 Teile</ion-note>
 
             {appPages.map((appPage, index) => {
               return (
                 <ion-menu-toggle key={index} autoHide={false}>
                   <ion-item class={location.pathname === appPage.url ? 'selected' : ''} href={appPage.url} routerDirection="forward" lines="none" detail={false}>
                     <ion-icon color="primary" aria-hidden="true" slot="start" icon={state[appPage.key] ? checkmarkCircleOutline : extensionPuzzleOutline} />
-                    <ion-label>{appPage.title}</ion-label>
+                    <ion-label>
+                      {index + 1}.{' '}
+                      {appPage.title}
+                    </ion-label>
                   </ion-item>
                 </ion-menu-toggle>
               );

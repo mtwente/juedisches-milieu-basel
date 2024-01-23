@@ -1,14 +1,14 @@
 import { Animation, createAnimation } from '@ionic/core';
 import { Component, Fragment, getAssetPath, h } from '@stencil/core';
 import routerProvider from '../../global/router-provider';
-import { state } from '../../global/store';
+import {state}from '../../global/store';
 
 @Component({
-  tag: 'page-q1',
-  styleUrl: 'page-q1.css',
+  tag: 'page-q3',
+  styleUrl: 'page-q3.css',
   // shadow: true,
 })
-export class PageQ1 {
+export class PageQ3 {
   failModal: HTMLIonModalElement;
   successModal: HTMLIonModalElement;
   successAnimation: Animation;
@@ -25,44 +25,21 @@ export class PageQ1 {
   render() {
     return (
       <Fragment>
-        <app-header headerTitle="Teil 1"></app-header>
+        <app-header headerTitle="Teil 3"></app-header>
         <ion-content class="ion-padding" id="main-menu">
           <app-content>
-            <h1>Teil 1</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa non, ratione officia dolorem pariatur suscipit accusantium autem voluptates dolores alias voluptate
-              amet. Recusandae maxime fugit error accusamus dolor quam sequi.
-            </p>
+            <h1>
+              Teil 2</h1>
 
-            <iframe
-              width="100%"
-              height="315"
-              src="https://www.youtube.com/embed/Sst6hx7WznY"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullScreen
-            ></iframe>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa non, ratione officia dolorem pariatur suscipit accusantium autem voluptates dolores alias voluptate
-              amet. Recusandae maxime fugit error accusamus dolor quam sequi.
-            </p>
-            <iframe
-              width="100%"
-              height="315"
-              src="https://www.srf.ch/play/embed?urn=urn:srf:video:00f8e25c-099a-4dcf-b6aa-49495936c76c&subdivisions=false"
-              allowfullScreen
-              allow="geolocation *; autoplay; encrypted-media"
-            ></iframe>
             <p>Was ist richtig?</p>
             <ion-button color="primary" onClick={_ => this.right()} ref={e => this.createSuccessAnimation(e)}>
               Antwort A
             </ion-button>
-            <ion-button color="primary" onClick={_ => this.failModal.present()}>
+            <ion-button color="primary" id="open-modal">
               Antwort B
             </ion-button>
 
-            <ion-modal ref={e => (this.failModal = e)}>
+            <ion-modal trigger="open-modal" ref={e => (this.failModal = e)}>
               <ion-header>
                 <ion-toolbar>
                   <ion-title>Leider falsch</ion-title>
@@ -102,7 +79,7 @@ export class PageQ1 {
 
   async dismiss() {
     await routerProvider.ionRouterElement.push('/puzzle', 'back');
-    state.t2 = true;
+    state.t3 = true;
   }
   wrong() {}
 }

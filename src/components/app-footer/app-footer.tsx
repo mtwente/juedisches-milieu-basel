@@ -8,8 +8,8 @@ import { state } from '../../global/store';
 })
 export class AppFooter {
   render() {
-    const parts = [state.q1, state.q2, state.q3, state.q4, state.q5, state.q6, state.q7];
-    const resolved = parts.filter(q => q).length;
+    const parts = [state.t1, state.t2, state.t3, state.t4, state.t5, state.t6, state.t7, state.t8, state.t9, state.t10, state.t11, state.t12];
+    const resolved = parts.filter(t => t).length;
     const total = parts.length;
     const percentResolved = (resolved / total) * 100;
     return (

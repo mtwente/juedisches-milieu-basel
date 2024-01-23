@@ -1,14 +1,14 @@
 import { Animation, createAnimation } from '@ionic/core';
 import { Component, Fragment, getAssetPath, h } from '@stencil/core';
 import routerProvider from '../../global/router-provider';
-import {state}from '../../global/store';
+import { state } from '../../global/store';
 
 @Component({
-  tag: 'page-q2',
-  styleUrl: 'page-q2.css',
+  tag: 'page-teil-2',
+  styleUrl: 'page-teil-2.css',
   // shadow: true,
 })
-export class PageQ1 {
+export class PageTeil2 {
   failModal: HTMLIonModalElement;
   successModal: HTMLIonModalElement;
   successAnimation: Animation;
@@ -28,8 +28,7 @@ export class PageQ1 {
         <app-header headerTitle="Teil 2"></app-header>
         <ion-content class="ion-padding" id="main-menu">
           <app-content>
-            <h1>
-              Teil 2</h1>
+            <h1>Teil 2</h1>
 
             <p>Was ist richtig?</p>
             <ion-button color="primary" onClick={_ => this.right()} ref={e => this.createSuccessAnimation(e)}>
@@ -79,7 +78,7 @@ export class PageQ1 {
 
   async dismiss() {
     await routerProvider.ionRouterElement.push('/puzzle', 'back');
-    state.q2 = true;
+    state.t2 = true;
   }
   wrong() {}
 }

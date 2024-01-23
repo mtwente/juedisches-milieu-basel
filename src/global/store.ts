@@ -1,38 +1,46 @@
 import { createStore } from "@stencil/store";
 import { Storage } from "@ionic/storage";
 export interface AppState {
-  start: boolean
-  q1: boolean
-  q2: boolean
-  q3: boolean
-  q4: boolean
-  q5: boolean
-  q6: boolean
-  q7: boolean
+  t1: boolean
+  t2: boolean
+  t3: boolean
+  t4: boolean
+  t5: boolean
+  t6: boolean
+  t7: boolean
+  t8: boolean
+  t9: boolean
+  t10: boolean
+  t11: boolean
+  t12: boolean
 
-  q2to7locked: boolean
+  t2to12locked: boolean
 
   playedIntro: boolean
 
 }
 const { state, onChange, on, reset } = createStore<AppState>({
-  start: false,
-  q1: false,
-  q2: false,
-  q3: false,
-  q4: false,
-  q5: false,
-  q6: false,
-  q7: false,
+  t1: false,
+  t2: false,
+  t3: false,
+  t4: false,
+  t5: false,
+  t6: false,
+  t7: false,
+  t8: false,
+  t9: false,
+  t10: false,
+  t11: false,
+  t12: false,
 
-  q2to7locked: true,
+  t2to12locked: true,
 
   playedIntro: false
 });
 
-onChange('start', value => {
+onChange('t1', value => {
   setTimeout(() => {
-    state.q2to7locked = !value;
+    state.t2to12locked = !value;
   }, 2000)
 });
 
