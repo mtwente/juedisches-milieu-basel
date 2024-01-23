@@ -52,6 +52,8 @@ export namespace Components {
     }
     interface PageTeil3 {
     }
+    interface PageTeil4 {
+    }
 }
 declare global {
     interface HTMLAppContentElement extends Components.AppContent, HTMLStencilElement {
@@ -162,6 +164,12 @@ declare global {
         prototype: HTMLPageTeil3Element;
         new (): HTMLPageTeil3Element;
     };
+    interface HTMLPageTeil4Element extends Components.PageTeil4, HTMLStencilElement {
+    }
+    var HTMLPageTeil4Element: {
+        prototype: HTMLPageTeil4Element;
+        new (): HTMLPageTeil4Element;
+    };
     interface HTMLElementTagNameMap {
         "app-content": HTMLAppContentElement;
         "app-dialog-fail": HTMLAppDialogFailElement;
@@ -181,6 +189,7 @@ declare global {
         "page-teil-1": HTMLPageTeil1Element;
         "page-teil-2": HTMLPageTeil2Element;
         "page-teil-3": HTMLPageTeil3Element;
+        "page-teil-4": HTMLPageTeil4Element;
     }
 }
 declare namespace LocalJSX {
@@ -226,6 +235,8 @@ declare namespace LocalJSX {
     }
     interface PageTeil3 {
     }
+    interface PageTeil4 {
+    }
     interface IntrinsicElements {
         "app-content": AppContent;
         "app-dialog-fail": AppDialogFail;
@@ -245,6 +256,7 @@ declare namespace LocalJSX {
         "page-teil-1": PageTeil1;
         "page-teil-2": PageTeil2;
         "page-teil-3": PageTeil3;
+        "page-teil-4": PageTeil4;
     }
 }
 export { LocalJSX as JSX };
@@ -269,6 +281,7 @@ declare module "@stencil/core" {
             "page-teil-1": LocalJSX.PageTeil1 & JSXBase.HTMLAttributes<HTMLPageTeil1Element>;
             "page-teil-2": LocalJSX.PageTeil2 & JSXBase.HTMLAttributes<HTMLPageTeil2Element>;
             "page-teil-3": LocalJSX.PageTeil3 & JSXBase.HTMLAttributes<HTMLPageTeil3Element>;
+            "page-teil-4": LocalJSX.PageTeil4 & JSXBase.HTMLAttributes<HTMLPageTeil4Element>;
         }
     }
 }
