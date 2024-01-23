@@ -1,0 +1,9 @@
+:host {
+  display: inline;
+  padding-left: 0.1rem;
+}
+
+ion-icon {
+  vertical-align: top;
+  cursor: pointer;
+}

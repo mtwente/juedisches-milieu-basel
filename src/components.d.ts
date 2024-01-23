@@ -10,7 +10,18 @@ export { AppState } from "./global/store";
 export namespace Components {
     interface AppContent {
     }
+    interface AppDialogFail {
+        "open": () => Promise<void>;
+        "titleTxt": string;
+    }
+    interface AppDialogSuccess {
+        "nr": number;
+        "open": () => Promise<void>;
+    }
     interface AppFooter {
+    }
+    interface AppFootnote {
+        "text": string;
     }
     interface AppHeader {
         "headerTitle": string;
@@ -39,6 +50,8 @@ export namespace Components {
     }
     interface PageTeil2 {
     }
+    interface PageTeil3 {
+    }
 }
 declare global {
     interface HTMLAppContentElement extends Components.AppContent, HTMLStencilElement {
@@ -47,11 +60,29 @@ declare global {
         prototype: HTMLAppContentElement;
         new (): HTMLAppContentElement;
     };
+    interface HTMLAppDialogFailElement extends Components.AppDialogFail, HTMLStencilElement {
+    }
+    var HTMLAppDialogFailElement: {
+        prototype: HTMLAppDialogFailElement;
+        new (): HTMLAppDialogFailElement;
+    };
+    interface HTMLAppDialogSuccessElement extends Components.AppDialogSuccess, HTMLStencilElement {
+    }
+    var HTMLAppDialogSuccessElement: {
+        prototype: HTMLAppDialogSuccessElement;
+        new (): HTMLAppDialogSuccessElement;
+    };
     interface HTMLAppFooterElement extends Components.AppFooter, HTMLStencilElement {
     }
     var HTMLAppFooterElement: {
         prototype: HTMLAppFooterElement;
         new (): HTMLAppFooterElement;
+    };
+    interface HTMLAppFootnoteElement extends Components.AppFootnote, HTMLStencilElement {
+    }
+    var HTMLAppFootnoteElement: {
+        prototype: HTMLAppFootnoteElement;
+        new (): HTMLAppFootnoteElement;
     };
     interface HTMLAppHeaderElement extends Components.AppHeader, HTMLStencilElement {
     }
@@ -125,9 +156,18 @@ declare global {
         prototype: HTMLPageTeil2Element;
         new (): HTMLPageTeil2Element;
     };
+    interface HTMLPageTeil3Element extends Components.PageTeil3, HTMLStencilElement {
+    }
+    var HTMLPageTeil3Element: {
+        prototype: HTMLPageTeil3Element;
+        new (): HTMLPageTeil3Element;
+    };
     interface HTMLElementTagNameMap {
         "app-content": HTMLAppContentElement;
+        "app-dialog-fail": HTMLAppDialogFailElement;
+        "app-dialog-success": HTMLAppDialogSuccessElement;
         "app-footer": HTMLAppFooterElement;
+        "app-footnote": HTMLAppFootnoteElement;
         "app-header": HTMLAppHeaderElement;
         "app-menu": HTMLAppMenuElement;
         "app-puzzle-piece": HTMLAppPuzzlePieceElement;
@@ -140,12 +180,22 @@ declare global {
         "page-q3": HTMLPageQ3Element;
         "page-teil-1": HTMLPageTeil1Element;
         "page-teil-2": HTMLPageTeil2Element;
+        "page-teil-3": HTMLPageTeil3Element;
     }
 }
 declare namespace LocalJSX {
     interface AppContent {
     }
+    interface AppDialogFail {
+        "titleTxt"?: string;
+    }
+    interface AppDialogSuccess {
+        "nr"?: number;
+    }
     interface AppFooter {
+    }
+    interface AppFootnote {
+        "text"?: string;
     }
     interface AppHeader {
         "headerTitle"?: string;
@@ -174,9 +224,14 @@ declare namespace LocalJSX {
     }
     interface PageTeil2 {
     }
+    interface PageTeil3 {
+    }
     interface IntrinsicElements {
         "app-content": AppContent;
+        "app-dialog-fail": AppDialogFail;
+        "app-dialog-success": AppDialogSuccess;
         "app-footer": AppFooter;
+        "app-footnote": AppFootnote;
         "app-header": AppHeader;
         "app-menu": AppMenu;
         "app-puzzle-piece": AppPuzzlePiece;
@@ -189,6 +244,7 @@ declare namespace LocalJSX {
         "page-q3": PageQ3;
         "page-teil-1": PageTeil1;
         "page-teil-2": PageTeil2;
+        "page-teil-3": PageTeil3;
     }
 }
 export { LocalJSX as JSX };
@@ -196,7 +252,10 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "app-content": LocalJSX.AppContent & JSXBase.HTMLAttributes<HTMLAppContentElement>;
+            "app-dialog-fail": LocalJSX.AppDialogFail & JSXBase.HTMLAttributes<HTMLAppDialogFailElement>;
+            "app-dialog-success": LocalJSX.AppDialogSuccess & JSXBase.HTMLAttributes<HTMLAppDialogSuccessElement>;
             "app-footer": LocalJSX.AppFooter & JSXBase.HTMLAttributes<HTMLAppFooterElement>;
+            "app-footnote": LocalJSX.AppFootnote & JSXBase.HTMLAttributes<HTMLAppFootnoteElement>;
             "app-header": LocalJSX.AppHeader & JSXBase.HTMLAttributes<HTMLAppHeaderElement>;
             "app-menu": LocalJSX.AppMenu & JSXBase.HTMLAttributes<HTMLAppMenuElement>;
             "app-puzzle-piece": LocalJSX.AppPuzzlePiece & JSXBase.HTMLAttributes<HTMLAppPuzzlePieceElement>;
@@ -209,6 +268,7 @@ declare module "@stencil/core" {
             "page-q3": LocalJSX.PageQ3 & JSXBase.HTMLAttributes<HTMLPageQ3Element>;
             "page-teil-1": LocalJSX.PageTeil1 & JSXBase.HTMLAttributes<HTMLPageTeil1Element>;
             "page-teil-2": LocalJSX.PageTeil2 & JSXBase.HTMLAttributes<HTMLPageTeil2Element>;
+            "page-teil-3": LocalJSX.PageTeil3 & JSXBase.HTMLAttributes<HTMLPageTeil3Element>;
         }
     }
 }
