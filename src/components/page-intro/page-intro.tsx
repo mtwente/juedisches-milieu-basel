@@ -63,7 +63,7 @@ export class PageIntro {
                 Ein Puzzle
               </div>
               <div class="flash-container hidden" ref={e => (this.flash3 = this.createShowHideAnimation(e))}>
-                Sieben Teile
+                Zwölf Teile
               </div>
               <ion-button fill="clear" class="skip-intro-btn" ref={e => (this.skipBtn = e)} onClick={() => this.skipIntro()}>
                 Intro überspringen
