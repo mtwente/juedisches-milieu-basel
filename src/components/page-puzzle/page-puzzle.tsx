@@ -176,7 +176,7 @@ export class PagePuzzle {
                     {this.elements.map(e => (
                       <g class={`puzzle-piece ${e.locked() ? 'locked' : 'unlocked'} ${state?.['t' + e.nr] ? 'done' : ''}`}>
                         <path d={e.path.d} />
-                        <path class="overlay" d={e.path.d} onClick={() => routerProvider.ionRouterElement.push('/puzzle/teil-' + e.nr, 'forward')} />
+                        <path class="overlay" d={e.path.d} onClick={() => this.navigate(e)} />
                         <text class="nr" x={e.txt1.x + e.txt1.width / 2} y={e.txt1.y + e.txt1.height / 1.5} dominant-baseline="middle" text-anchor="middle">
                           {e.nr}
                         </text>
@@ -194,5 +194,9 @@ export class PagePuzzle {
         <app-footer></app-footer>
       </Fragment>
     );
+  }
+
+  private navigate(e: PuzzleElDef): void {
+    if (!e.locked()) routerProvider.ionRouterElement.push('/puzzle/teil-' + e.nr, 'forward');
   }
 }

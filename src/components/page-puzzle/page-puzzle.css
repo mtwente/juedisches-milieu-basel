@@ -54,8 +54,10 @@
 
 .puzzle-piece path.overlay {
   z-index: 1;
-  cursor: pointer;
   fill: rgba(255, 255, 255, 0);
+}
+.puzzle-piece.unlocked path.overlay{
+  cursor: pointer;
 }
 
 .puzzle-piece.unlocked path.overlay:hover {
