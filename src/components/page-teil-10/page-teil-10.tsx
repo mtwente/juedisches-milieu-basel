@@ -1,10 +1,10 @@
 import { Component, Fragment, getAssetPath, h } from '@stencil/core';
-const nr = 2;
+const nr = 10;
 @Component({
-  tag: 'page-teil-2',
-  styleUrl: 'page-teil-2.css',
+  tag: 'page-teil-10',
+  styleUrl: 'page-teil-10.css',
 })
-export class PageTeil2 {
+export class PageTeil10 {
   failModal: HTMLAppDialogFailElement;
   successModal: HTMLAppDialogSuccessElement;
   render() {

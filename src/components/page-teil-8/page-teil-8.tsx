@@ -1,4 +1,3 @@
-import { Animation } from '@ionic/core';
 import { Component, Fragment, getAssetPath, h } from '@stencil/core';
 
 const nr = 8;
@@ -10,7 +9,6 @@ const nr = 8;
 export class PageTeil8 {
   failModal: HTMLAppDialogFailElement;
   successModal: HTMLAppDialogSuccessElement;
-  successAnimation: Animation;
   render() {
     return (
       <Fragment>

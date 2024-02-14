@@ -190,10 +190,10 @@ export class PagePuzzle {
                       <g class={`puzzle-piece ${e.locked() ? 'locked' : 'unlocked'} ${state?.['t' + e.nr] ? 'done' : ''}`}>
                         <path d={e.path.d} />
                         <path class="overlay" d={e.path.d} onClick={() => this.navigate(e)} />
-                        <text class="nr" x={e.txt1.x + e.txt1.width / 2} y={e.txt1.y + e.txt1.height / 1.5} dominant-baseline="middle" text-anchor="middle">
+                        {/* <text class="nr" x={e.txt1.x + e.txt1.width / 2} y={e.txt1.y + e.txt1.height / 1.5} dominant-baseline="middle" text-anchor="middle">
                           {e.nr}
-                        </text>
-                        <text class="label" x={e.txt2.x + e.txt2.width / 2} y={e.txt2.y + e.txt2.height / 2} dominant-baseline="middle" text-anchor="middle">
+                        </text> */}
+                        <text class="label" x={e.txt2.x + e.txt2.width / 2} y={e.txt2.y + 14} dominant-baseline="middle" text-anchor="middle">
                           {e.label}
                         </text>
                       </g>

@@ -52,13 +52,27 @@ export namespace Components {
     }
     interface PageTeil1 {
     }
+    interface PageTeil10 {
+    }
+    interface PageTeil11 {
+    }
+    interface PageTeil12 {
+    }
     interface PageTeil2 {
     }
     interface PageTeil3 {
     }
     interface PageTeil4 {
     }
+    interface PageTeil5 {
+    }
+    interface PageTeil6 {
+    }
+    interface PageTeil7 {
+    }
     interface PageTeil8 {
+    }
+    interface PageTeil9 {
     }
 }
 declare global {
@@ -164,6 +178,24 @@ declare global {
         prototype: HTMLPageTeil1Element;
         new (): HTMLPageTeil1Element;
     };
+    interface HTMLPageTeil10Element extends Components.PageTeil10, HTMLStencilElement {
+    }
+    var HTMLPageTeil10Element: {
+        prototype: HTMLPageTeil10Element;
+        new (): HTMLPageTeil10Element;
+    };
+    interface HTMLPageTeil11Element extends Components.PageTeil11, HTMLStencilElement {
+    }
+    var HTMLPageTeil11Element: {
+        prototype: HTMLPageTeil11Element;
+        new (): HTMLPageTeil11Element;
+    };
+    interface HTMLPageTeil12Element extends Components.PageTeil12, HTMLStencilElement {
+    }
+    var HTMLPageTeil12Element: {
+        prototype: HTMLPageTeil12Element;
+        new (): HTMLPageTeil12Element;
+    };
     interface HTMLPageTeil2Element extends Components.PageTeil2, HTMLStencilElement {
     }
     var HTMLPageTeil2Element: {
@@ -182,11 +214,35 @@ declare global {
         prototype: HTMLPageTeil4Element;
         new (): HTMLPageTeil4Element;
     };
+    interface HTMLPageTeil5Element extends Components.PageTeil5, HTMLStencilElement {
+    }
+    var HTMLPageTeil5Element: {
+        prototype: HTMLPageTeil5Element;
+        new (): HTMLPageTeil5Element;
+    };
+    interface HTMLPageTeil6Element extends Components.PageTeil6, HTMLStencilElement {
+    }
+    var HTMLPageTeil6Element: {
+        prototype: HTMLPageTeil6Element;
+        new (): HTMLPageTeil6Element;
+    };
+    interface HTMLPageTeil7Element extends Components.PageTeil7, HTMLStencilElement {
+    }
+    var HTMLPageTeil7Element: {
+        prototype: HTMLPageTeil7Element;
+        new (): HTMLPageTeil7Element;
+    };
     interface HTMLPageTeil8Element extends Components.PageTeil8, HTMLStencilElement {
     }
     var HTMLPageTeil8Element: {
         prototype: HTMLPageTeil8Element;
         new (): HTMLPageTeil8Element;
+    };
+    interface HTMLPageTeil9Element extends Components.PageTeil9, HTMLStencilElement {
+    }
+    var HTMLPageTeil9Element: {
+        prototype: HTMLPageTeil9Element;
+        new (): HTMLPageTeil9Element;
     };
     interface HTMLElementTagNameMap {
         "app-content": HTMLAppContentElement;
@@ -206,10 +262,17 @@ declare global {
         "page-q1": HTMLPageQ1Element;
         "page-q3": HTMLPageQ3Element;
         "page-teil-1": HTMLPageTeil1Element;
+        "page-teil-10": HTMLPageTeil10Element;
+        "page-teil-11": HTMLPageTeil11Element;
+        "page-teil-12": HTMLPageTeil12Element;
         "page-teil-2": HTMLPageTeil2Element;
         "page-teil-3": HTMLPageTeil3Element;
         "page-teil-4": HTMLPageTeil4Element;
+        "page-teil-5": HTMLPageTeil5Element;
+        "page-teil-6": HTMLPageTeil6Element;
+        "page-teil-7": HTMLPageTeil7Element;
         "page-teil-8": HTMLPageTeil8Element;
+        "page-teil-9": HTMLPageTeil9Element;
     }
 }
 declare namespace LocalJSX {
@@ -255,13 +318,27 @@ declare namespace LocalJSX {
     }
     interface PageTeil1 {
     }
+    interface PageTeil10 {
+    }
+    interface PageTeil11 {
+    }
+    interface PageTeil12 {
+    }
     interface PageTeil2 {
     }
     interface PageTeil3 {
     }
     interface PageTeil4 {
     }
+    interface PageTeil5 {
+    }
+    interface PageTeil6 {
+    }
+    interface PageTeil7 {
+    }
     interface PageTeil8 {
+    }
+    interface PageTeil9 {
     }
     interface IntrinsicElements {
         "app-content": AppContent;
@@ -281,10 +358,17 @@ declare namespace LocalJSX {
         "page-q1": PageQ1;
         "page-q3": PageQ3;
         "page-teil-1": PageTeil1;
+        "page-teil-10": PageTeil10;
+        "page-teil-11": PageTeil11;
+        "page-teil-12": PageTeil12;
         "page-teil-2": PageTeil2;
         "page-teil-3": PageTeil3;
         "page-teil-4": PageTeil4;
+        "page-teil-5": PageTeil5;
+        "page-teil-6": PageTeil6;
+        "page-teil-7": PageTeil7;
         "page-teil-8": PageTeil8;
+        "page-teil-9": PageTeil9;
     }
 }
 export { LocalJSX as JSX };
@@ -308,10 +392,17 @@ declare module "@stencil/core" {
             "page-q1": LocalJSX.PageQ1 & JSXBase.HTMLAttributes<HTMLPageQ1Element>;
             "page-q3": LocalJSX.PageQ3 & JSXBase.HTMLAttributes<HTMLPageQ3Element>;
             "page-teil-1": LocalJSX.PageTeil1 & JSXBase.HTMLAttributes<HTMLPageTeil1Element>;
+            "page-teil-10": LocalJSX.PageTeil10 & JSXBase.HTMLAttributes<HTMLPageTeil10Element>;
+            "page-teil-11": LocalJSX.PageTeil11 & JSXBase.HTMLAttributes<HTMLPageTeil11Element>;
+            "page-teil-12": LocalJSX.PageTeil12 & JSXBase.HTMLAttributes<HTMLPageTeil12Element>;
             "page-teil-2": LocalJSX.PageTeil2 & JSXBase.HTMLAttributes<HTMLPageTeil2Element>;
             "page-teil-3": LocalJSX.PageTeil3 & JSXBase.HTMLAttributes<HTMLPageTeil3Element>;
             "page-teil-4": LocalJSX.PageTeil4 & JSXBase.HTMLAttributes<HTMLPageTeil4Element>;
+            "page-teil-5": LocalJSX.PageTeil5 & JSXBase.HTMLAttributes<HTMLPageTeil5Element>;
+            "page-teil-6": LocalJSX.PageTeil6 & JSXBase.HTMLAttributes<HTMLPageTeil6Element>;
+            "page-teil-7": LocalJSX.PageTeil7 & JSXBase.HTMLAttributes<HTMLPageTeil7Element>;
             "page-teil-8": LocalJSX.PageTeil8 & JSXBase.HTMLAttributes<HTMLPageTeil8Element>;
+            "page-teil-9": LocalJSX.PageTeil9 & JSXBase.HTMLAttributes<HTMLPageTeil9Element>;
         }
     }
 }
