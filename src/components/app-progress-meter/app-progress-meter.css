@@ -1,0 +1,35 @@
+:host {
+  display: block;
+}
+
+.circle {
+  fill: none;
+}
+
+.circle.segment-1 {
+  stroke: #e94329
+}
+
+.circle.segment-2 {
+  stroke: #f6d609
+}
+
+.circle.segment-3 {
+  stroke: #4ee044
+}
+
+.outline {
+  stroke: #F1F1F1;
+}
+
+.label-1 {
+  fill: var(--ion-text-color, #000);
+  ;
+  font-size: 2rem;
+}
+
+.label-2 {
+  fill: var(--ion-text-color, #000);
+  ;
+  font-size: 1rem;
+}

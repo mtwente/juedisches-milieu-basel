@@ -28,6 +28,10 @@ export namespace Components {
     }
     interface AppMenu {
     }
+    interface AppProgressMeter {
+        "maxVal": number;
+        "value": number;
+    }
     interface AppPuzzlePiece {
         "label": string;
         "pieceId": keyof AppState;
@@ -99,6 +103,12 @@ declare global {
     var HTMLAppMenuElement: {
         prototype: HTMLAppMenuElement;
         new (): HTMLAppMenuElement;
+    };
+    interface HTMLAppProgressMeterElement extends Components.AppProgressMeter, HTMLStencilElement {
+    }
+    var HTMLAppProgressMeterElement: {
+        prototype: HTMLAppProgressMeterElement;
+        new (): HTMLAppProgressMeterElement;
     };
     interface HTMLAppPuzzlePieceElement extends Components.AppPuzzlePiece, HTMLStencilElement {
     }
@@ -186,6 +196,7 @@ declare global {
         "app-footnote": HTMLAppFootnoteElement;
         "app-header": HTMLAppHeaderElement;
         "app-menu": HTMLAppMenuElement;
+        "app-progress-meter": HTMLAppProgressMeterElement;
         "app-puzzle-piece": HTMLAppPuzzlePieceElement;
         "app-root": HTMLAppRootElement;
         "page-about-us": HTMLPageAboutUsElement;
@@ -219,6 +230,10 @@ declare namespace LocalJSX {
         "headerTitle"?: string;
     }
     interface AppMenu {
+    }
+    interface AppProgressMeter {
+        "maxVal"?: number;
+        "value"?: number;
     }
     interface AppPuzzlePiece {
         "label"?: string;
@@ -256,6 +271,7 @@ declare namespace LocalJSX {
         "app-footnote": AppFootnote;
         "app-header": AppHeader;
         "app-menu": AppMenu;
+        "app-progress-meter": AppProgressMeter;
         "app-puzzle-piece": AppPuzzlePiece;
         "app-root": AppRoot;
         "page-about-us": PageAboutUs;
@@ -282,6 +298,7 @@ declare module "@stencil/core" {
             "app-footnote": LocalJSX.AppFootnote & JSXBase.HTMLAttributes<HTMLAppFootnoteElement>;
             "app-header": LocalJSX.AppHeader & JSXBase.HTMLAttributes<HTMLAppHeaderElement>;
             "app-menu": LocalJSX.AppMenu & JSXBase.HTMLAttributes<HTMLAppMenuElement>;
+            "app-progress-meter": LocalJSX.AppProgressMeter & JSXBase.HTMLAttributes<HTMLAppProgressMeterElement>;
             "app-puzzle-piece": LocalJSX.AppPuzzlePiece & JSXBase.HTMLAttributes<HTMLAppPuzzlePieceElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
             "page-about-us": LocalJSX.PageAboutUs & JSXBase.HTMLAttributes<HTMLPageAboutUsElement>;

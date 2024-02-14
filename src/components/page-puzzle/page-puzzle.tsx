@@ -148,11 +148,24 @@ export class PagePuzzle {
     },
   ];
   elements: PuzzleElDef[] = [...this.row1, ...this.row2, ...this.row3, ...this.row4];
+  g: SVGElement;
+  p: HTMLAppProgressMeterElement;
+  componentDidLoad() {
+    const svg = this.p.querySelector('svg');
+    svg.setAttribute('width', '380')
+    svg.setAttribute('y', '650px')
+    svg.setAttribute('x', '320px')
+    this.g.appendChild(this.p.querySelector('svg'));
+  }
   render() {
+    const parts = [state.t1, state.t2, state.t3, state.t4, state.t5, state.t6, state.t7, state.t8, state.t9, state.t10, state.t11, state.t12];
+    const resolved = parts.filter(t => t).length;
+    const total = parts.length;
     return (
       <Fragment>
         <app-header headerTitle=""></app-header>
         <ion-content class="ion-padding" id="main-menu">
+          <app-progress-meter value={resolved} maxVal={total} style={{ display: 'none' }} ref={e => (this.p = e)}></app-progress-meter>
           <div class="container">
             <div class="svg-container hidden">
               <div>
@@ -185,6 +198,7 @@ export class PagePuzzle {
                         </text>
                       </g>
                     ))}
+                    <g ref={e => (this.g = e)}></g>
                   </g>
                 </svg>
               </div>

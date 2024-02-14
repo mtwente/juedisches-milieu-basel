@@ -14,14 +14,14 @@ export class AppFooter {
     const percentResolved = (resolved / total) * 100;
     return (
       <Host>
-        <ion-footer translucent={true}>
+        {/* <ion-footer translucent={true}>
           <ion-toolbar>
             <div class="progress-bar" style={{ width: `${percentResolved}%` }}></div>
             <div class="progress-text">
               Gelöst: {resolved} / {total}
             </div>
           </ion-toolbar>
-        </ion-footer>
+        </ion-footer> */}
       </Host>
     );
   }
