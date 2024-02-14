@@ -56,7 +56,8 @@
   z-index: 1;
   fill: rgba(255, 255, 255, 0);
 }
-.puzzle-piece.unlocked path.overlay{
+
+.puzzle-piece.unlocked path.overlay {
   cursor: pointer;
 }
 
@@ -99,9 +100,11 @@
   text-anchor: middle;
   pointer-events: none;
 }
+
 .puzzle-piece text.nr {
   font-size: 170px;
 }
+
 .puzzle-piece text.label {
   font-size: 50px;
 }
@@ -124,3 +127,7 @@
   fill: var(--ion-text-color);
 }
 
+.title {
+  fill: var(--ion-color-step-500);
+  font-size: 3.5rem;
+}

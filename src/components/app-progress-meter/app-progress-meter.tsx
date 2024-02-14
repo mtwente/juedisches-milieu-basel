@@ -21,15 +21,15 @@ export class AppProgressMeter {
   lbl: HTMLLabelElement;
 
   // radius of circle (scales to parent)
-  r = 80;
+  r = 60;
   // stroke width for outlines
-  strokeOuter = 25;
+  strokeOuter = 10;
   // stroke width for indicator
-  strokeInner = 20;
+  strokeInner = 6;
   // closing, 1 = semi-circle, 2= full circle
   closing = 1.6;
   // gap between label lines
-  labelGap = 10;
+  labelGap = 6;
   rotation = 0.5 - (this.closing - 1) / 4;
   cf = 2 * Math.PI * this.r;
   semi_cf = (this.closing * this.cf) / 2;
@@ -81,11 +81,11 @@ export class AppProgressMeter {
               <circle ref={e => (this.outlineEnds = e)} class="circle outline" cx="50%" cy="50%"></circle>
             </g>
           </g>
-          <text class="label-1" x={this.width / 2} y={this.height / 2 - this.labelGap} dominant-baseline="middle" text-anchor="middle">
-            {this.value}
+          <text class="label-3" x={this.width / 2} y={this.height / 2 + this.labelGap * 3} dominant-baseline="middle" text-anchor="middle">
+            gelöst
           </text>{' '}
-          <text class="label-2" x={this.width / 2} y={this.height / 2 + this.labelGap} dominant-baseline="middle" text-anchor="middle">
-            von {this.maxVal}
+          <text class="label-1" x={this.width / 2} y={this.height / 2 - this.labelGap} dominant-baseline="middle" text-anchor="middle">
+            {this.value} / {this.maxVal}
           </text>{' '}
         </svg>
       </Fragment>
