@@ -50,6 +50,6 @@ export class PageTeil1 {
   }
   async dismiss() {
     await routerProvider.ionRouterElement.push('/puzzle', 'back');
-    state.t1 = true;
+    state.t1 = 'done';
   }
 }

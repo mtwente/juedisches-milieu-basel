@@ -39,6 +39,6 @@ export class AppDialogSuccess {
 
   async dismiss() {
     await routerProvider.ionRouterElement.push('/puzzle', 'back');
-    state['t' + this.nr] = true;
+    state['t' + this.nr] = 'done';
   }
 }

@@ -4,7 +4,6 @@ import { state } from '../../global/store';
 import { titles } from '../../global/titles';
 
 interface PuzzleElDef {
-  locked: () => boolean;
   nr: number;
   label: string;
   txt1: { x: number; y: number; width: number; height: number };
@@ -20,7 +19,6 @@ interface PuzzleElDef {
 export class PagePuzzle {
   row1: PuzzleElDef[] = [
     {
-      locked: () => state.t2to12locked,
       nr: 3,
       label: titles[3],
       txt1: { x: 12.325, y: 126.579, width: 475.875, height: 162.484 },
@@ -30,7 +28,6 @@ export class PagePuzzle {
       },
     },
     {
-      locked: () => state.t2to12locked,
       nr: 8,
       label: titles[8],
       txt1: { x: 512.328, y: 126.579, width: 475.875, height: 162.484 },
@@ -40,7 +37,6 @@ export class PagePuzzle {
       },
     },
     {
-      locked: () => true,
       nr: 12,
       label: titles[12],
       txt1: { x: 1012.33, y: 126.579, width: 475.875, height: 162.484 },
@@ -50,7 +46,6 @@ export class PagePuzzle {
       },
     },
     {
-      locked: () => true,
       nr: 6,
       label: titles[6],
       txt1: { x: 1512.33, y: 126.579, width: 475.875, height: 162.484 },
@@ -62,7 +57,6 @@ export class PagePuzzle {
   ];
   row2: PuzzleElDef[] = [
     {
-      locked: () => true,
       nr: 9,
       label: titles[9],
       txt1: { x: 262.327, y: 559.594, width: 475.875, height: 162.484 },
@@ -72,7 +66,6 @@ export class PagePuzzle {
       },
     },
     {
-      locked: () => false,
       nr: 1,
       label: titles[1],
       txt1: { x: 762.33, y: 559.594, width: 475.875, height: 162.484 },
@@ -82,7 +75,6 @@ export class PagePuzzle {
       },
     },
     {
-      locked: () => true,
       nr: 10,
       label: titles[10],
       txt1: { x: 1262.33, y: 559.594, width: 475.875, height: 162.484 },
@@ -94,7 +86,6 @@ export class PagePuzzle {
   ];
   row3: PuzzleElDef[] = [
     {
-      locked: () => true,
       nr: 11,
       label: titles[11],
       txt1: { x: 12.325, y: 992.609, width: 475.875, height: 162.484 },
@@ -104,7 +95,6 @@ export class PagePuzzle {
       },
     },
     {
-      locked: () => true,
       nr: 7,
       label: titles[7],
       txt1: { x: 512.328, y: 992.609, width: 475.875, height: 162.484 },
@@ -114,7 +104,6 @@ export class PagePuzzle {
       },
     },
     {
-      locked: () => state.t2to12locked,
       nr: 4,
       label: titles[4],
       txt1: { x: 1012.33, y: 992.609, width: 475.875, height: 162.484 },
@@ -125,7 +114,6 @@ export class PagePuzzle {
     },
 
     {
-      locked: () => true,
       nr: 5,
       label: titles[5],
       txt1: { x: 1512.33, y: 992.609, width: 475.875, height: 162.484 },
@@ -137,7 +125,6 @@ export class PagePuzzle {
   ];
   row4: PuzzleElDef[] = [
     {
-      locked: () => true,
       nr: 2,
       label: titles[2],
       txt1: { x: 762.33, y: 1425.62, width: 475.875, height: 162.484 },
@@ -159,7 +146,7 @@ export class PagePuzzle {
   }
   render() {
     const parts = [state.t1, state.t2, state.t3, state.t4, state.t5, state.t6, state.t7, state.t8, state.t9, state.t10, state.t11, state.t12];
-    const resolved = parts.filter(t => t).length;
+    const resolved = parts.filter(t => t === 'done').length;
     const total = parts.length;
     return (
       <Fragment>
@@ -187,7 +174,7 @@ export class PagePuzzle {
                   <image height="100%" clip-path="url(#shape)" xlinkHref={getAssetPath('../../assets/puzzle.jpg')}></image>
                   <g>
                     {this.elements.map(e => (
-                      <g class={`puzzle-piece ${e.locked() ? 'locked' : 'unlocked'} ${state?.['t' + e.nr] ? 'done' : ''}`}>
+                      <g class={`puzzle-piece ${state?.['t' + e.nr]}`}>
                         <path d={e.path.d} />
                         <path class="overlay" d={e.path.d} onClick={() => this.navigate(e)} />
                         {/* <text class="nr" x={e.txt1.x + e.txt1.width / 2} y={e.txt1.y + e.txt1.height / 1.5} dominant-baseline="middle" text-anchor="middle">
@@ -220,6 +207,6 @@ export class PagePuzzle {
   }
 
   private navigate(e: PuzzleElDef): void {
-    if (!e.locked()) routerProvider.ionRouterElement.push('/puzzle/teil-' + e.nr, 'forward');
+    if (state['t' + e.nr] !== 'locked') routerProvider.ionRouterElement.push('/puzzle/teil-' + e.nr, 'forward');
   }
 }

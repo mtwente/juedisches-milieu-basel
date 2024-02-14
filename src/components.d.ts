@@ -46,10 +46,6 @@ export namespace Components {
     }
     interface PagePuzzle {
     }
-    interface PageQ1 {
-    }
-    interface PageQ3 {
-    }
     interface PageTeil1 {
     }
     interface PageTeil10 {
@@ -160,18 +156,6 @@ declare global {
         prototype: HTMLPagePuzzleElement;
         new (): HTMLPagePuzzleElement;
     };
-    interface HTMLPageQ1Element extends Components.PageQ1, HTMLStencilElement {
-    }
-    var HTMLPageQ1Element: {
-        prototype: HTMLPageQ1Element;
-        new (): HTMLPageQ1Element;
-    };
-    interface HTMLPageQ3Element extends Components.PageQ3, HTMLStencilElement {
-    }
-    var HTMLPageQ3Element: {
-        prototype: HTMLPageQ3Element;
-        new (): HTMLPageQ3Element;
-    };
     interface HTMLPageTeil1Element extends Components.PageTeil1, HTMLStencilElement {
     }
     var HTMLPageTeil1Element: {
@@ -259,8 +243,6 @@ declare global {
         "page-home": HTMLPageHomeElement;
         "page-intro": HTMLPageIntroElement;
         "page-puzzle": HTMLPagePuzzleElement;
-        "page-q1": HTMLPageQ1Element;
-        "page-q3": HTMLPageQ3Element;
         "page-teil-1": HTMLPageTeil1Element;
         "page-teil-10": HTMLPageTeil10Element;
         "page-teil-11": HTMLPageTeil11Element;
@@ -312,10 +294,6 @@ declare namespace LocalJSX {
     }
     interface PagePuzzle {
     }
-    interface PageQ1 {
-    }
-    interface PageQ3 {
-    }
     interface PageTeil1 {
     }
     interface PageTeil10 {
@@ -355,8 +333,6 @@ declare namespace LocalJSX {
         "page-home": PageHome;
         "page-intro": PageIntro;
         "page-puzzle": PagePuzzle;
-        "page-q1": PageQ1;
-        "page-q3": PageQ3;
         "page-teil-1": PageTeil1;
         "page-teil-10": PageTeil10;
         "page-teil-11": PageTeil11;
@@ -389,8 +365,6 @@ declare module "@stencil/core" {
             "page-home": LocalJSX.PageHome & JSXBase.HTMLAttributes<HTMLPageHomeElement>;
             "page-intro": LocalJSX.PageIntro & JSXBase.HTMLAttributes<HTMLPageIntroElement>;
             "page-puzzle": LocalJSX.PagePuzzle & JSXBase.HTMLAttributes<HTMLPagePuzzleElement>;
-            "page-q1": LocalJSX.PageQ1 & JSXBase.HTMLAttributes<HTMLPageQ1Element>;
-            "page-q3": LocalJSX.PageQ3 & JSXBase.HTMLAttributes<HTMLPageQ3Element>;
             "page-teil-1": LocalJSX.PageTeil1 & JSXBase.HTMLAttributes<HTMLPageTeil1Element>;
             "page-teil-10": LocalJSX.PageTeil10 & JSXBase.HTMLAttributes<HTMLPageTeil10Element>;
             "page-teil-11": LocalJSX.PageTeil11 & JSXBase.HTMLAttributes<HTMLPageTeil11Element>;

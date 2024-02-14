@@ -77,7 +77,7 @@
 }
 
 .puzzle-piece.locked path:not(.overlay) {
-  transition: all 2s;
+  transition: all 200ms;
   fill: var(--ion-color-step-200);
 }
 
@@ -92,6 +92,10 @@
   stroke: rgba(255, 255, 255, 0.225);
 }
 
+.puzzle-piece.highlighted path:not(.overlay) {
+  transition: all 200ms;
+  fill: var(--ion-color-step-400);
+}
 /* Text */
 
 .puzzle-piece text {
@@ -113,7 +117,8 @@
   fill: #585987;
 }
 
-.puzzle-piece.locked text {
+.puzzle-piece.locked text,
+.puzzle-piece.highlighted text  {
   fill: var(--ion-background-color);
 }
 
