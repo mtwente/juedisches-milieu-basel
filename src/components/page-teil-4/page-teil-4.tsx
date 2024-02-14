@@ -1,5 +1,6 @@
 import { Animation } from '@ionic/core';
 import { Component, Fragment, getAssetPath, h } from '@stencil/core';
+import { titles } from '../../global/titles';
 
 const nr = 4;
 @Component({
@@ -14,7 +15,7 @@ export class PageTeil4 {
   render() {
     return (
       <Fragment>
-        <app-header headerTitle="4. Vereinswesen"></app-header>
+        <app-header headerTitle={titles[nr]}></app-header>
         <ion-content class="ion-padding" id="main-menu">
           <app-content>
             <h1>Vereinswesen</h1>

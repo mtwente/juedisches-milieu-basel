@@ -2,7 +2,8 @@ import { Animation } from '@ionic/core';
 import { Component, Fragment, h } from '@stencil/core';
 import routerProvider from '../../global/router-provider';
 import { state } from '../../global/store';
-
+import { titles } from '../../global/titles';
+const nr = 1;
 @Component({
   tag: 'page-teil-1',
   styleUrl: 'page-teil-1.css',
@@ -15,7 +16,7 @@ export class PageTeil1 {
   render() {
     return (
       <Fragment>
-        <app-header headerTitle="Spielanleitung"></app-header>
+        <app-header headerTitle={titles[nr]}></app-header>
         <ion-content class="ion-padding" id="main-menu">
           <app-content>
             <h1>Spielanleitung</h1>

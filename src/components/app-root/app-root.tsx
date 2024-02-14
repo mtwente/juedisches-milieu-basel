@@ -19,6 +19,7 @@ export class AppRoot {
             <ion-route url={p.url} component={p.component}></ion-route>
           ))}
           <ion-route url="/about-us" component="page-about-us"></ion-route>
+          <ion-route url="/belohnung" component="page-gratification"></ion-route>
         </ion-router>
 
         <ion-router-outlet></ion-router-outlet>

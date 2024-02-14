@@ -40,6 +40,8 @@ export namespace Components {
     }
     interface PageAboutUs {
     }
+    interface PageGratification {
+    }
     interface PageHome {
     }
     interface PageIntro {
@@ -137,6 +139,12 @@ declare global {
     var HTMLPageAboutUsElement: {
         prototype: HTMLPageAboutUsElement;
         new (): HTMLPageAboutUsElement;
+    };
+    interface HTMLPageGratificationElement extends Components.PageGratification, HTMLStencilElement {
+    }
+    var HTMLPageGratificationElement: {
+        prototype: HTMLPageGratificationElement;
+        new (): HTMLPageGratificationElement;
     };
     interface HTMLPageHomeElement extends Components.PageHome, HTMLStencilElement {
     }
@@ -240,6 +248,7 @@ declare global {
         "app-puzzle-piece": HTMLAppPuzzlePieceElement;
         "app-root": HTMLAppRootElement;
         "page-about-us": HTMLPageAboutUsElement;
+        "page-gratification": HTMLPageGratificationElement;
         "page-home": HTMLPageHomeElement;
         "page-intro": HTMLPageIntroElement;
         "page-puzzle": HTMLPagePuzzleElement;
@@ -288,6 +297,8 @@ declare namespace LocalJSX {
     }
     interface PageAboutUs {
     }
+    interface PageGratification {
+    }
     interface PageHome {
     }
     interface PageIntro {
@@ -330,6 +341,7 @@ declare namespace LocalJSX {
         "app-puzzle-piece": AppPuzzlePiece;
         "app-root": AppRoot;
         "page-about-us": PageAboutUs;
+        "page-gratification": PageGratification;
         "page-home": PageHome;
         "page-intro": PageIntro;
         "page-puzzle": PagePuzzle;
@@ -362,6 +374,7 @@ declare module "@stencil/core" {
             "app-puzzle-piece": LocalJSX.AppPuzzlePiece & JSXBase.HTMLAttributes<HTMLAppPuzzlePieceElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
             "page-about-us": LocalJSX.PageAboutUs & JSXBase.HTMLAttributes<HTMLPageAboutUsElement>;
+            "page-gratification": LocalJSX.PageGratification & JSXBase.HTMLAttributes<HTMLPageGratificationElement>;
             "page-home": LocalJSX.PageHome & JSXBase.HTMLAttributes<HTMLPageHomeElement>;
             "page-intro": LocalJSX.PageIntro & JSXBase.HTMLAttributes<HTMLPageIntroElement>;
             "page-puzzle": LocalJSX.PagePuzzle & JSXBase.HTMLAttributes<HTMLPagePuzzleElement>;

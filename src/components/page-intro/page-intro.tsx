@@ -19,10 +19,16 @@ export class PageIntro {
   @State() playing: 'initial' | 'playing' | 'ended' = 'initial';
 
   async componentDidLoad() {
-    if (state.playedIntro) this.skipIntro();
+    // if (state.playedIntro) this.skipIntro();
+  }
+  disconnectedCallback(){
+    this.playing='initial'
   }
   private async playIntro() {
     this.playing = 'playing';
+    this.flash1.stop();
+    this.flash2.stop();
+    this.flash3.stop();
     await this.flash1.play();
     await this.flash2.play();
     await this.flash3.play();

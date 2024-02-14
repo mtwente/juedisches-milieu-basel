@@ -17,6 +17,7 @@ export interface AppState {
 
 
   playedIntro: boolean
+  showBravo: boolean
 
 }
 const { state, onChange, on, reset } = createStore<AppState>({
@@ -33,8 +34,8 @@ const { state, onChange, on, reset } = createStore<AppState>({
   t11: 'locked',
   t12: 'locked',
 
-
-  playedIntro: false
+  playedIntro: false,
+  showBravo: false
 });
 function getRandomAndRemoveFromArray(array: string[]) {
   // Generate a random index within the range of the array length
@@ -47,7 +48,12 @@ function getRandomAndRemoveFromArray(array: string[]) {
   return pickedElement;
 }
 function pickMany(nr: number, array: string[]): string[] {
-  const clone = [...array];
+  let clone = [...array];
+  // as long as 3 or more are locked
+  if (clone.length > 2) {
+    // exclude t12
+    clone = clone.filter(k => k !== 't12')
+  }
   const res: string[] = []
   for (let i = 0; i < nr; i++) {
     res.push(getRandomAndRemoveFromArray(clone))
@@ -87,7 +93,7 @@ async function startRoulette(nrUnlock: number) {
         else {
           state[key] = 'locked';
         }
-      },  200);
+      }, 200);
     }, delay);
   })
   const intervals = await Promise.all(promisedIntervals);
@@ -106,7 +112,7 @@ async function setupStorage() {
 
   // save state to local storage on each change
   const toStorage = () => store.set('app-state', JSON.stringify(state))
-  // on('set', toStorage)
+  on('set', toStorage)
   on('reset', toStorage)
 
   // get state from local storage on init
@@ -115,7 +121,7 @@ async function setupStorage() {
     const storedState: AppState = JSON.parse(storedStateJSON);
     for (const key in storedState) {
       if (Object.prototype.hasOwnProperty.call(storedState, key)) {
-        state[key] = storedState[key];
+        state[key] = storedState[key] === 'highlighted' ? 'locked' : storedState[key];
       }
     }
   } catch (error) {
@@ -140,6 +146,18 @@ setupStorage().then().catch().finally(() => {
       }
     });
   }
+  on('set', async (key, val) => {
+    if (key.startsWith('t')) {
+      const parts = [state.t1, state.t2, state.t3, state.t4, state.t5, state.t6, state.t7, state.t8, state.t9, state.t10, state.t11, state.t12];
+      const done = parts.filter(t => t === 'done');
+      if (parts.length === done.length) {
+        await sleep(5000);
+        state.showBravo = true
+      } else if (state.showBravo === true) {
+        state.showBravo = false
+      }
+    }
+  })
 });
 
 export { onChange, reset, state };

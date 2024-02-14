@@ -1,4 +1,5 @@
 import { Component, Fragment, getAssetPath, h } from '@stencil/core';
+import { titles } from '../../global/titles';
 const nr = 11;
 @Component({
   tag: 'page-teil-11',
@@ -10,7 +11,7 @@ export class PageTeil11 {
   render() {
     return (
       <Fragment>
-        <app-header headerTitle="Titel"></app-header>
+        <app-header headerTitle={titles[nr]}></app-header>
         <ion-content class="ion-padding" id="main-menu">
           <app-content>
             <h1>Titel</h1>
