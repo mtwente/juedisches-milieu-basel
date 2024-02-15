@@ -162,7 +162,7 @@ export class PagePuzzle {
               </p>
               <div>
                 <ion-button color="primary" onClick={() => this.openGratification()}>
-                  Belohnung abolen
+                  Belohnung abholen
                 </ion-button>{' '}
                 <ion-button fill="clear" onClick={() => this.confirmRestartModal.open()}>
                   Neustart
