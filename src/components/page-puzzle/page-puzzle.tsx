@@ -1,8 +1,7 @@
 import { Component, Fragment, getAssetPath, h } from '@stencil/core';
 import routerProvider from '../../global/router-provider';
-import { reset, state } from '../../global/store';
+import { state } from '../../global/store';
 import { titles } from '../../global/titles';
-import { animationBuilderFadePages } from '../../global/page-animation';
 
 interface PuzzleElDef {
   nr: number;
@@ -138,7 +137,7 @@ export class PagePuzzle {
   elements: PuzzleElDef[] = [...this.row1, ...this.row2, ...this.row3, ...this.row4];
   g: SVGElement;
   p: HTMLAppProgressMeterElement;
-  confirmRestartModal: HTMLIonModalElement;
+  confirmRestartModal: HTMLAppDialogRestartElement;
   componentDidLoad() {
     const svg = this.p.querySelector('svg');
     svg.setAttribute('width', '380');
@@ -156,6 +155,20 @@ export class PagePuzzle {
         <ion-content class="ion-padding" id="main-menu">
           <app-progress-meter value={resolved} maxVal={total} style={{ display: 'none' }} ref={e => (this.p = e)}></app-progress-meter>
           <div class="container">
+            <div class={`game-finished ${state.showBravo ? 'visible' : 'hidden'}`}>
+              <p>
+                Bravo, <br />
+                Sie haben es geschafft!
+              </p>
+              <div>
+                <ion-button color="primary" onClick={() => this.openGratification()}>
+                  Belohnung abolen
+                </ion-button>{' '}
+                <ion-button fill="clear" onClick={() => this.confirmRestartModal.open()}>
+                  Neustart
+                </ion-button>
+              </div>
+            </div>
             <div class="svg-container hidden">
               <div>
                 <svg
@@ -201,49 +214,14 @@ export class PagePuzzle {
                 </svg>
               </div>
             </div>
-
-            <div class={`game-finished ${state.showBravo ? 'visible' : 'hidden'}`}>
-              <div>
-                <p>Bravo! </p>
-                <p>
-                  Sie haben das Puzzle <br /> erfolgreich gelöst!
-                </p>{' '}
-                <div class="restricted-width">
-                  <ion-button color="primary" onClick={() => this.openGratification()}>
-                    Belohnung Abolen
-                  </ion-button>{' '}
-                  <ion-button fill="clear" onClick={() => this.confirmRestartModal.present()}>
-                    Von vorne beginnen
-                  </ion-button>
-                </div>
-              </div>
-            </div>
           </div>
-          <ion-modal ref={e => (this.confirmRestartModal = e)}>
-            <ion-header>
-              <ion-toolbar>
-                <ion-buttons slot="start">
-                  <ion-button onClick={() => this.confirmRestartModal.dismiss()}>Nein</ion-button>
-                </ion-buttons>
-                <ion-title>Von vorne beginnen?</ion-title>
-                <ion-buttons slot="end">
-                  <ion-button onClick={() => this.restart()}>Ja</ion-button>
-                </ion-buttons>
-              </ion-toolbar>
-            </ion-header>
-            <ion-content class="ion-padding">Der Spielstand wird gelöscht und das Puzzle beginnt erneut.</ion-content>
-          </ion-modal>
+          <app-dialog-restart ref={e => (this.confirmRestartModal = e)}></app-dialog-restart>
         </ion-content>
         <app-footer></app-footer>
       </Fragment>
     );
   }
 
-  private async restart() {
-    await this.confirmRestartModal.dismiss();
-    await routerProvider.ionRouterElement.push('/intro', 'forward', animationBuilderFadePages);
-    reset()
-  }
   private async openGratification() {
     routerProvider.ionRouterElement.push('/belohnung');
   }

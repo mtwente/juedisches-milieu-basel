@@ -1,9 +1,7 @@
 import { Component, h } from '@stencil/core';
 import { checkmarkCircleOutline, extensionPuzzleOutline, informationCircleOutline, refreshOutline } from 'ionicons/icons';
 import { appPages } from '../../global/appPages';
-import { animationBuilderFadePages } from '../../global/page-animation';
-import routerProvider from '../../global/router-provider';
-import { reset, state } from '../../global/store';
+import { state } from '../../global/store';
 
 @Component({
   tag: 'app-menu',
@@ -11,7 +9,8 @@ import { reset, state } from '../../global/store';
   // shadow: true,
 })
 export class AppMenu {
-  resetModal: HTMLIonModalElement;
+  confirmRestartModal: HTMLAppDialogRestartElement;
+
   render() {
     return (
       <ion-menu contentId="main-menu" type="overlay">
@@ -50,49 +49,12 @@ export class AppMenu {
                 <ion-label>Über diese App</ion-label>
               </ion-item>
             </ion-menu-toggle>
-            <ion-item lines="none" button detail={false} onClick={() => this.resetModal.present()}>
+            <ion-item lines="none" button detail={false} onClick={() => this.confirmRestartModal.open()}>
               <ion-icon color="primary" aria-hidden="true" slot="start" icon={refreshOutline} />
-              <ion-label>Zurücksetzen ...</ion-label>
+              <ion-label>Neustart ...</ion-label>
             </ion-item>
-            <ion-modal
-              ref={e => {
-                this.resetModal = e;
-              }}
-            >
-              <ion-header>
-                <ion-toolbar>
-                  <ion-buttons slot="start">
-                    <ion-button
-                      onClick={() => {
-                        this.resetModal.dismiss();
-                      }}
-                    >
-                      Abbrechen
-                    </ion-button>
-                  </ion-buttons>
-                  <ion-title>Zurücksetzen?</ion-title>
-                  <ion-buttons slot="end">
-                    <ion-button
-                      onClick={async () => {
-                        await this.resetModal.dismiss();
-                        setTimeout(() => {
-                          reset(), 250;
-                        });
-                        await routerProvider.ionRouterElement.push('/intro', 'forward', animationBuilderFadePages);
-                        reset();
-                      }}
-                      strong={true}
-                    >
-                      Ja
-                    </ion-button>
-                  </ion-buttons>
-                </ion-toolbar>
-              </ion-header>
-              <ion-content class="ion-padding">
-                <p> Wollen sie die App zurücksetzen?</p>
-                <p>Der Spielstand wird gelöscht und Sie können das Puzzle nochmals von Anfang an spielen.</p>
-              </ion-content>
-            </ion-modal>
+            <app-dialog-restart ref={e => (this.confirmRestartModal = e)}></app-dialog-restart>
+
           </ion-list>
         </ion-content>
       </ion-menu>

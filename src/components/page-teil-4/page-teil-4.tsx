@@ -84,7 +84,7 @@ export class PageTeil4 {
             </app-dialog-fail>
             <app-dialog-success nr={nr} ref={e => (this.successModal = e)}>
               <ion-img src={getAssetPath('../../assets/hurray.gif')}></ion-img>
-              <div class="ion-padding">Du hast Kapitel {nr} erfolgreich abgeschlossen !!</div>
+              <div class="ion-padding">Du hast Kapitel {nr} erfolgreich abgeschlossen&nbsp;!!</div>
             </app-dialog-success>
           </app-content>
         </ion-content>

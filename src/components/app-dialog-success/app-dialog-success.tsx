@@ -12,11 +12,14 @@ export class AppDialogSuccess {
   @Prop() nr: number;
   @Method() async open() {
     await this.successModal.present();
-    this.successModal.onDidDismiss().then(() => this.dismiss());
-    setTimeout(async () => {
+    const t = setTimeout(async () => {
       await this.successModal.dismiss();
       await this.dismiss();
     }, 2500);
+    this.successModal.onDidDismiss().then(() => {
+      clearTimeout(t);
+      this.dismiss();
+    });
   }
 
   render() {

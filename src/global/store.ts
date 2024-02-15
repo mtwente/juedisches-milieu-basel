@@ -151,7 +151,7 @@ setupStorage().then().catch().finally(() => {
       const parts = [state.t1, state.t2, state.t3, state.t4, state.t5, state.t6, state.t7, state.t8, state.t9, state.t10, state.t11, state.t12];
       const done = parts.filter(t => t === 'done');
       if (parts.length === done.length) {
-        await sleep(5000);
+        await sleep(1000);
         state.showBravo = true
       } else if (state.showBravo === true) {
         state.showBravo = false

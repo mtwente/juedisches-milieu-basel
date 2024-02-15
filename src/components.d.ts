@@ -14,6 +14,9 @@ export namespace Components {
         "open": () => Promise<void>;
         "titleTxt": string;
     }
+    interface AppDialogRestart {
+        "open": () => Promise<void>;
+    }
     interface AppDialogSuccess {
         "nr": number;
         "open": () => Promise<void>;
@@ -85,6 +88,12 @@ declare global {
     var HTMLAppDialogFailElement: {
         prototype: HTMLAppDialogFailElement;
         new (): HTMLAppDialogFailElement;
+    };
+    interface HTMLAppDialogRestartElement extends Components.AppDialogRestart, HTMLStencilElement {
+    }
+    var HTMLAppDialogRestartElement: {
+        prototype: HTMLAppDialogRestartElement;
+        new (): HTMLAppDialogRestartElement;
     };
     interface HTMLAppDialogSuccessElement extends Components.AppDialogSuccess, HTMLStencilElement {
     }
@@ -239,6 +248,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "app-content": HTMLAppContentElement;
         "app-dialog-fail": HTMLAppDialogFailElement;
+        "app-dialog-restart": HTMLAppDialogRestartElement;
         "app-dialog-success": HTMLAppDialogSuccessElement;
         "app-footer": HTMLAppFooterElement;
         "app-footnote": HTMLAppFootnoteElement;
@@ -271,6 +281,8 @@ declare namespace LocalJSX {
     }
     interface AppDialogFail {
         "titleTxt"?: string;
+    }
+    interface AppDialogRestart {
     }
     interface AppDialogSuccess {
         "nr"?: number;
@@ -332,6 +344,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "app-content": AppContent;
         "app-dialog-fail": AppDialogFail;
+        "app-dialog-restart": AppDialogRestart;
         "app-dialog-success": AppDialogSuccess;
         "app-footer": AppFooter;
         "app-footnote": AppFootnote;
@@ -365,6 +378,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "app-content": LocalJSX.AppContent & JSXBase.HTMLAttributes<HTMLAppContentElement>;
             "app-dialog-fail": LocalJSX.AppDialogFail & JSXBase.HTMLAttributes<HTMLAppDialogFailElement>;
+            "app-dialog-restart": LocalJSX.AppDialogRestart & JSXBase.HTMLAttributes<HTMLAppDialogRestartElement>;
             "app-dialog-success": LocalJSX.AppDialogSuccess & JSXBase.HTMLAttributes<HTMLAppDialogSuccessElement>;
             "app-footer": LocalJSX.AppFooter & JSXBase.HTMLAttributes<HTMLAppFooterElement>;
             "app-footnote": LocalJSX.AppFootnote & JSXBase.HTMLAttributes<HTMLAppFootnoteElement>;
