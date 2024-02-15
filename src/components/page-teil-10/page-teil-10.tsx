@@ -12,8 +12,9 @@ export class PageTeil10 {
     return (
       <Fragment>
         <app-header headerTitle={titles[nr]}></app-header>
-        <ion-content class="ion-padding" id="main-menu">
-          <app-content>
+        <ion-content id="main-menu">
+          <iframe width="100%" height="400px" src={getAssetPath('../../assets/teil-10/karte.html')} frameborder="0"></iframe>
+          <div class="ion-padding">
             <h1>Titel</h1>
             <p>Was ist richtig?</p>
             <p>
@@ -24,7 +25,7 @@ export class PageTeil10 {
                 Antwort B
               </ion-button>
             </p>
-          </app-content>
+          </div>
         </ion-content>
         <app-dialog-fail ref={e => (this.failModal = e)} titleTxt={'Leider falsch'}>
           <p>Die richtige Antwort ist A</p>
