@@ -146,7 +146,7 @@ setupStorage().then().catch().finally(() => {
       }
     });
   }
-  on('set', async (key, val) => {
+  on('set', async (key) => {
     if (key.startsWith('t')) {
       const parts = [state.t1, state.t2, state.t3, state.t4, state.t5, state.t6, state.t7, state.t8, state.t9, state.t10, state.t11, state.t12];
       const done = parts.filter(t => t === 'done');

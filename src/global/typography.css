@@ -189,3 +189,26 @@ pre:not(.CodeMirror-line),
   margin: unset;
 }
 
+/* unvisited link */
+a:link {
+  color: var(--ion-text-color);
+  /* light blue */
+}
+
+/* visited link */
+a:visited {
+  color: #f2dbff;
+  /* light purple */
+}
+
+/* mouse over link */
+a:hover {
+  color: #ffeb3b;
+  /* yellow */
+}
+
+/* selected link */
+a:active {
+  color: #ff8a80;
+  /* light red */
+}

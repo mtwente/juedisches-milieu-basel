@@ -47,14 +47,13 @@ export class AppMenu {
             <ion-menu-toggle autoHide={false}>
               <ion-item lines="none" href={'/about-us'}>
                 <ion-icon color="primary" aria-hidden="true" slot="start" icon={informationCircleOutline} />
-                <ion-label>Über uns</ion-label>
+                <ion-label>Über diese App</ion-label>
               </ion-item>
             </ion-menu-toggle>
             <ion-item lines="none" button detail={false} onClick={() => this.resetModal.present()}>
               <ion-icon color="primary" aria-hidden="true" slot="start" icon={refreshOutline} />
               <ion-label>Zurücksetzen ...</ion-label>
             </ion-item>
-
             <ion-modal
               ref={e => {
                 this.resetModal = e;
