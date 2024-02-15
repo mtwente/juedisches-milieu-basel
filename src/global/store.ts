@@ -1,5 +1,6 @@
 import { Storage } from "@ionic/storage";
 import { createStore } from "@stencil/store";
+import { version } from '../buildinfo';
 type PuzzlePieceState = 'locked' | 'unlocked' | 'done' | 'highlighted';
 export interface AppState {
   t1: PuzzlePieceState
@@ -18,7 +19,7 @@ export interface AppState {
 
   playedIntro: boolean
   showBravo: boolean
-
+  appVersion: string;
 }
 const { state, onChange, on, reset } = createStore<AppState>({
   t1: 'unlocked',
@@ -35,7 +36,8 @@ const { state, onChange, on, reset } = createStore<AppState>({
   t12: 'locked',
 
   playedIntro: false,
-  showBravo: false
+  showBravo: false,
+  appVersion: version
 });
 function getRandomAndRemoveFromArray(array: string[]) {
   // Generate a random index within the range of the array length
@@ -115,14 +117,24 @@ async function setupStorage() {
   on('set', toStorage)
   on('reset', toStorage)
 
+
   // get state from local storage on init
   try {
     const storedStateJSON = await store.get('app-state')
     const storedState: AppState = JSON.parse(storedStateJSON);
-    for (const key in storedState) {
-      if (Object.prototype.hasOwnProperty.call(storedState, key)) {
-        state[key] = storedState[key] === 'highlighted' ? 'locked' : storedState[key];
+
+    // if app versions are the same
+    if (storedState?.appVersion === state?.appVersion) {
+
+      // read the stored state into memory
+      for (const key in storedState) {
+        if (Object.prototype.hasOwnProperty.call(storedState, key)) {
+          state[key] = storedState[key] === 'highlighted' ? 'locked' : storedState[key];
+        }
       }
+    } else {
+      // override the storage with initial state
+      toStorage()
     }
   } catch (error) {
     console.warn('Problem when trying to restore the state from storage')
