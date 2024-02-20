@@ -55,18 +55,17 @@ export class PageTeil3 {
                 Antwort C
               </ion-button>
             </p>
-            <p>Literatur:</p>
-            <p>
-              <ul>
-                <li>Guth-Dreyfus, Katia: 175 Jahre Israelitische Gemeinde Basel, in: Basler Stadtbuch 1980, S. 153-162.</li>
-                <li>
+            <app-literatur
+              items={[
+                <Fragment>Guth-Dreyfus, Katia: 175 Jahre Israelitische Gemeinde Basel, in: Basler Stadtbuch 1980, S. 153-162.</Fragment>,
+                <Fragment>
                   Haumann, Heiko: Juden in Basel und Umgebung – Zur Geschichte einer Minderheit. Darstellung und Quellen für den Gebrauch an Schulen, Herausgegeben von den
                   Regierungsräten der Kantone Basel-Stadt und Basel-Landschaft, Basel 1999.
-                </li>
-                <li>Haumann, Heiko (Hg.): Acht Jahrhunderte Juden in Basel, Basel 2005.</li>
-                <li>Pfister, Willy: Die Einbürgerung der Ausländer in der Stadt Basel im 19. Jahrhundert, Basel 1976.</li>
-              </ul>
-            </p>
+                </Fragment>,
+                <Fragment>Haumann, Heiko (Hg.): Acht Jahrhunderte Juden in Basel, Basel 2005.</Fragment>,
+                <Fragment>Pfister, Willy: Die Einbürgerung der Ausländer in der Stadt Basel im 19. Jahrhundert, Basel 1976.</Fragment>,
+              ]}
+            ></app-literatur>
             <app-dialog-fail ref={e => (this.failModal = e)} titleTxt={'Leider falsch'}>
               <p>Die richtige Antwort ist A</p>
             </app-dialog-fail>

@@ -71,20 +71,20 @@ export class PageTeil8 {
                 Hotel Drei Könige
               </ion-button>
             </p>
-            <p>Literatur:</p>
-            <p>
-              <ul>
-                <li>
+
+            <app-literatur
+              items={[
+                <Fragment>
                   Guth Basiani, Nadia: Basel und der Zionistenkongress, in Haumann, Heiko (Hg.): Der Erste Zionistenkongress von 1897 – Ursachen, Bedeutung, Aktualität, Basel 1997,
                   S. 131-140.
-                </li>
-                <li>Haumann, Heiko (Hg.): Der Erste Zionistenkongress von 1897 – Ursachen, Bedeutung, Aktualität, Basel 1997.</li>
-                <li>
+                </Fragment>,
+                <Fragment>Haumann, Heiko (Hg.): Der Erste Zionistenkongress von 1897 – Ursachen, Bedeutung, Aktualität, Basel 1997.</Fragment>,
+                <Fragment>
                   Heiko Haumann: Juden in Basel und Umgebung – Zur Geschichte einer Minderheit. Darstellung und Quellen für den Gebrauch an Schulen. Herausgegeben von den
                   Regierungsräten der Kantone Basel-Stadt und Basel-Landschaft. Basel 1999.
-                </li>
-              </ul>
-            </p>
+                </Fragment>,
+              ]}
+            ></app-literatur>
             <app-dialog-fail ref={e => (this.failModal = e)} titleTxt={'Leider falsch'}>
               <p>Die richtige Antwort ist «Hotel Drei Könige».</p>
             </app-dialog-fail>

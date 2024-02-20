@@ -15,7 +15,7 @@ export class PageTeil10 {
         <ion-content id="main-menu">
           <iframe width="100%" height="400px" src={getAssetPath('../../assets/teil-10/karte.html')} frameborder="0"></iframe>
           <div class="ion-padding">
-            <h1>Titel</h1>
+            <h1>{titles[nr]}</h1>
             <p>Was ist richtig?</p>
             <p>
               <ion-button color="primary" onClick={_ => this.successModal.open()}>

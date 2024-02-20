@@ -5,7 +5,9 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { VNode } from "@stencil/core";
 import { AppState } from "./global/store";
+export { VNode } from "@stencil/core";
 export { AppState } from "./global/store";
 export namespace Components {
     interface AppContent {
@@ -31,6 +33,9 @@ export namespace Components {
     }
     interface AppImg {
         "src": string;
+    }
+    interface AppLiteratur {
+        "items": VNode[];
     }
     interface AppMenu {
     }
@@ -129,6 +134,12 @@ declare global {
     var HTMLAppImgElement: {
         prototype: HTMLAppImgElement;
         new (): HTMLAppImgElement;
+    };
+    interface HTMLAppLiteraturElement extends Components.AppLiteratur, HTMLStencilElement {
+    }
+    var HTMLAppLiteraturElement: {
+        prototype: HTMLAppLiteraturElement;
+        new (): HTMLAppLiteraturElement;
     };
     interface HTMLAppMenuElement extends Components.AppMenu, HTMLStencilElement {
     }
@@ -271,6 +282,7 @@ declare global {
         "app-footnote": HTMLAppFootnoteElement;
         "app-header": HTMLAppHeaderElement;
         "app-img": HTMLAppImgElement;
+        "app-literatur": HTMLAppLiteraturElement;
         "app-menu": HTMLAppMenuElement;
         "app-progress-meter": HTMLAppProgressMeterElement;
         "app-puzzle-piece": HTMLAppPuzzlePieceElement;
@@ -316,6 +328,9 @@ declare namespace LocalJSX {
     }
     interface AppImg {
         "src"?: string;
+    }
+    interface AppLiteratur {
+        "items"?: VNode[];
     }
     interface AppMenu {
     }
@@ -374,6 +389,7 @@ declare namespace LocalJSX {
         "app-footnote": AppFootnote;
         "app-header": AppHeader;
         "app-img": AppImg;
+        "app-literatur": AppLiteratur;
         "app-menu": AppMenu;
         "app-progress-meter": AppProgressMeter;
         "app-puzzle-piece": AppPuzzlePiece;
@@ -410,6 +426,7 @@ declare module "@stencil/core" {
             "app-footnote": LocalJSX.AppFootnote & JSXBase.HTMLAttributes<HTMLAppFootnoteElement>;
             "app-header": LocalJSX.AppHeader & JSXBase.HTMLAttributes<HTMLAppHeaderElement>;
             "app-img": LocalJSX.AppImg & JSXBase.HTMLAttributes<HTMLAppImgElement>;
+            "app-literatur": LocalJSX.AppLiteratur & JSXBase.HTMLAttributes<HTMLAppLiteraturElement>;
             "app-menu": LocalJSX.AppMenu & JSXBase.HTMLAttributes<HTMLAppMenuElement>;
             "app-progress-meter": LocalJSX.AppProgressMeter & JSXBase.HTMLAttributes<HTMLAppProgressMeterElement>;
             "app-puzzle-piece": LocalJSX.AppPuzzlePiece & JSXBase.HTMLAttributes<HTMLAppPuzzlePieceElement>;

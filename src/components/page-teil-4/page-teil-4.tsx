@@ -72,13 +72,13 @@ export class PageTeil4 {
                 Emil Lévy
               </ion-button>
             </p>
-            <p>Literatur:</p>
-            <p>
-              <ul>
-                <li>Wecker, Regina: Zwischen Ökonomie und Ideologie. Arbeit im Lebenszusammenhang von Frauen im Kanton Basel-Stadt 1870-1910, Zürich 1997.</li>
-                <li>Weill, Jeremy: 100 Jahre Jüdischer Turnverein Basel, Saarwellingen 2014.</li>
-              </ul>
-            </p>
+            <app-literatur
+              items={[
+                <Fragment>Wecker, Regina: Zwischen Ökonomie und Ideologie. Arbeit im Lebenszusammenhang von Frauen im Kanton Basel-Stadt 1870-1910, Zürich 1997.</Fragment>,
+                <Fragment>Weill, Jeremy: 100 Jahre Jüdischer Turnverein Basel, Saarwellingen 2014.</Fragment>,
+              ]}
+            ></app-literatur>
+
             <app-dialog-fail ref={e => (this.failModal = e)} titleTxt={'Leider falsch'}>
               <p>Die richtige Antwort ist Georg Wolf.</p>
             </app-dialog-fail>
