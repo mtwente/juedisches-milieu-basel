@@ -1,52 +1,7 @@
 import { Component, h } from '@stencil/core';
 import { checkmarkCircleOutline, extensionPuzzleOutline, informationCircleOutline, refreshOutline } from 'ionicons/icons';
-import { animationBuilderFadePages } from '../../global/page-animation';
-import routerProvider from '../../global/router-provider';
-import { reset, state } from '../../global/store';
-
-interface AppPage {
-  url: string;
-  key: string;
-  title: string;
-}
-
-const appPages: AppPage[] = [
-  {
-    title: 'Intro',
-    key: 'q1',
-    url: '/puzzle/q1',
-  },
-  {
-    title: 'Teil 2',
-    key: 'q2',
-    url: '/puzzle/q2',
-  },
-  {
-    title: 'Teil 3',
-    key: 'q3',
-    url: '/puzzle/q3',
-  },
-  {
-    title: 'Teil 4',
-    key: 'q4',
-    url: '/puzzle/q4',
-  },
-  {
-    title: 'Teil 5',
-    key: 'q5',
-    url: '/puzzle/q5',
-  },
-  {
-    title: 'Teil 6',
-    key: 'q6',
-    url: '/puzzle/q6',
-  },
-  {
-    title: 'Teil 7',
-    key: 'q7',
-    url: '/puzzle/q7',
-  },
-];
+import { appPages } from '../../global/appPages';
+import { state } from '../../global/store';
 
 @Component({
   tag: 'app-menu',
@@ -54,20 +9,30 @@ const appPages: AppPage[] = [
   // shadow: true,
 })
 export class AppMenu {
-  resetModal: HTMLIonModalElement;
+  confirmRestartModal: HTMLAppDialogRestartElement;
+
   render() {
     return (
       <ion-menu contentId="main-menu" type="overlay">
         <ion-content>
           <ion-list id="inbox-list">
             <ion-list-header>Inhalt</ion-list-header>
-            <ion-note>Eine Geschichte – 7 Teile</ion-note>
+            <ion-note>Eine Geschichte – 12 Teile</ion-note>
 
             {appPages.map((appPage, index) => {
+              const t = state[appPage.key];
+              const icon = t === 'done' ? checkmarkCircleOutline : extensionPuzzleOutline;
               return (
                 <ion-menu-toggle key={index} autoHide={false}>
-                  <ion-item class={location.pathname === appPage.url ? 'selected' : ''} href={appPage.url} routerDirection="forward" lines="none" detail={false}>
-                    <ion-icon color="primary" aria-hidden="true" slot="start" icon={state[appPage.key] ? checkmarkCircleOutline : extensionPuzzleOutline} />
+                  <ion-item
+                    disabled={t === 'locked' || t === 'highlighted'}
+                    class={location.pathname === appPage.url ? 'selected' : ''}
+                    href={appPage.url}
+                    routerDirection="forward"
+                    lines="none"
+                    detail={false}
+                  >
+                    <ion-icon color="primary" aria-hidden="true" slot="start" icon={icon} />
                     <ion-label>{appPage.title}</ion-label>
                   </ion-item>
                 </ion-menu-toggle>
@@ -81,52 +46,15 @@ export class AppMenu {
             <ion-menu-toggle autoHide={false}>
               <ion-item lines="none" href={'/about-us'}>
                 <ion-icon color="primary" aria-hidden="true" slot="start" icon={informationCircleOutline} />
-                <ion-label>Über uns</ion-label>
+                <ion-label>Über diese App</ion-label>
               </ion-item>
             </ion-menu-toggle>
-            <ion-item lines="none" button detail={false} onClick={() => this.resetModal.present()}>
+            <ion-item lines="none" button detail={false} onClick={() => this.confirmRestartModal.open()}>
               <ion-icon color="primary" aria-hidden="true" slot="start" icon={refreshOutline} />
-              <ion-label>Zurücksetzen ...</ion-label>
+              <ion-label>Neustart ...</ion-label>
             </ion-item>
+            <app-dialog-restart ref={e => (this.confirmRestartModal = e)}></app-dialog-restart>
 
-            <ion-modal
-              ref={e => {
-                this.resetModal = e;
-              }}
-            >
-              <ion-header>
-                <ion-toolbar>
-                  <ion-buttons slot="start">
-                    <ion-button
-                      onClick={() => {
-                        this.resetModal.dismiss();
-                      }}
-                    >
-                      Abbrechen
-                    </ion-button>
-                  </ion-buttons>
-                  <ion-title>Zurücksetzen?</ion-title>
-                  <ion-buttons slot="end">
-                    <ion-button
-                      onClick={async () => {
-                        await this.resetModal.dismiss();
-                        setTimeout(() => {
-                          reset(), 250;
-                        });
-                        routerProvider.ionRouterElement.push('/intro', 'forward', animationBuilderFadePages);
-                      }}
-                      strong={true}
-                    >
-                      Ja
-                    </ion-button>
-                  </ion-buttons>
-                </ion-toolbar>
-              </ion-header>
-              <ion-content class="ion-padding">
-                <p> Wollen sie die App zurücksetzen?</p>
-                <p>Der Spielstand wird gelöscht und Sie können das Puzzle nochmals von Anfang an spielen.</p>
-              </ion-content>
-            </ion-modal>
           </ion-list>
         </ion-content>
       </ion-menu>

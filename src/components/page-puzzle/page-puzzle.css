@@ -28,7 +28,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  margin: 2rem;
+  margin: .5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,8 +54,11 @@
 
 .puzzle-piece path.overlay {
   z-index: 1;
-  cursor: pointer;
   fill: rgba(255, 255, 255, 0);
+}
+
+.puzzle-piece.unlocked path.overlay {
+  cursor: pointer;
 }
 
 .puzzle-piece.unlocked path.overlay:hover {
@@ -74,18 +77,24 @@
 }
 
 .puzzle-piece.locked path:not(.overlay) {
+  transition: all 200ms;
   fill: var(--ion-color-step-200);
 }
 
 .puzzle-piece.unlocked path:not(.overlay) {
+  transition: all 2s;
   fill: var(--ion-color-step-850);
-
-
 }
 
 .puzzle-piece.done path:not(.overlay) {
+  transition: all 2s;
   fill: rgba(0, 0, 0, 0);
   stroke: rgba(255, 255, 255, 0.225);
+}
+
+.puzzle-piece.highlighted path:not(.overlay) {
+  transition: all 200ms;
+  fill: var(--ion-color-step-400);
 }
 
 /* Text */
@@ -93,16 +102,24 @@
 .puzzle-piece text {
   transition: fill s2;
   font-weight: 700;
-  font-size: 52.947px;
   text-anchor: middle;
   pointer-events: none;
+}
+
+.puzzle-piece text.nr {
+  font-size: 170px;
+}
+
+.puzzle-piece text.label {
+  font-size: 50px;
 }
 
 .puzzle-piece.unlocked text {
   fill: #585987;
 }
 
-.puzzle-piece.locked text {
+.puzzle-piece.locked text,
+.puzzle-piece.highlighted text {
   fill: var(--ion-background-color);
 }
 
@@ -114,4 +131,28 @@
 .puzzle-piece.done:hover text,
 .puzzle-piece.done:active text {
   fill: var(--ion-text-color);
+}
+
+.title {
+  fill: var(--ion-color-step-500);
+  font-size: 3.8rem;
+}
+
+.game-finished {
+  min-width: 288px;
+  text-align: center;
+  margin-bottom: 2rem;
+  transition: height 2s;
+}
+.game-finished.hidden {
+  height: 0px;
+  overflow: hidden;
+}
+
+.game-finished.visible {
+  height: 190px;
+  overflow: hidden;
+}
+.game-finished>p {
+  font-size: 1.5rem;
 }

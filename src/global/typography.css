@@ -1,0 +1,235 @@
+@import '~@ionic/core/css/typography.css';
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("/assets/fonts/EuclidCircularB-Regular-WebS.woff2") format("woff2");
+}
+
+html {
+  --ion-dynamic-font: var(--ion-default-dynamic-font);
+  --ion-font-family: 'Open Sans';
+  font-size: 20px;
+}
+
+
+/*
+* Elements with restricted width of body text
+*/
+p,
+app-video,
+app-img,
+app-literatur,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre:not(.CodeMirror-line),
+.restricted-width {
+  max-width: 30rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*
+* unset the restricted width
+*/
+.unrestricted-width {
+  max-width: unset;
+  margin: unset;
+}
+
+.max-width-sm {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/*
+* Reading (medium).
+* Text set for immersive reading. This usually
+* includes headings which may need to be sized differently to
+* set them off from the body text.
+*/
+p {
+  font-size: 1rem;
+  margin-block-start: .9em;
+  margin-block-end: .9em;
+  line-height: 1.8;
+}
+
+p.lead {
+  font-size: 1.2rem;
+}
+
+address {
+  font-style: normal;
+  line-height: 1.2rem;
+}
+
+small {
+  font-size: 75%;
+}
+
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+
+
+/*
+* Reference (small).
+* Reference text includes small print, notes and specialist purposes
+* such as bibliographies, dictionaries and data presentation.
+*/
+
+/*
+* Display (large).
+* Display text is there to make an impact,
+* evoke an emotional response and set a tone. It is intended
+* to be looked at before it is read, and is thus set larger.
+*/
+/* sm and up */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  line-height: 1.2;
+  margin-block-start: 2em;
+  margin-block-end: .5em;
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+  margin-block-start: 1em;
+}
+
+h1 {
+  font-size: 2.0625rem;
+}
+
+h2 {
+  /* margin-top: 18px; */
+  /* 16px x 1.5625 = 16px */
+  font-size: 1.5625rem;
+}
+
+h3 {
+  /* 16px x 1.3125 = 21px */
+  font-size: 1.3125rem;
+}
+
+h4 {
+  /* 16px x 1 = 16px */
+  font-size: 1rem;
+}
+
+h5 {
+  /* 16px x 1 = 16px */
+  font-size: 1rem;
+  /* font-size: 18px; */
+}
+
+h6 {
+  /* 16px x 1 = 16px */
+  font-size: 1rem;
+  /* font-size: 16px; */
+}
+
+h2+h3,
+h3+h4,
+h4+h5,
+h5+h6 {
+  margin-block-start: 1rem;
+}
+
+/* sm and up */
+@media screen and (min-width: 576px) {
+
+  h1 {
+    /* 16px x 4.875 = 78px */
+    /* font-size: 4.875rem; */
+
+    /* 16px x 3.1875 = 51px */
+    font-size: 3.1875rem;
+    /* font-size: 26px; */
+  }
+
+  h2 {
+    /* 16px x 2.75 = 44px */
+    /* font-size: 2.75rem; */
+
+    /* 16px x 2.0625 = 33px */
+    font-size: 2.0625rem;
+    /* font-size: 24px; */
+  }
+
+  h3 {
+    /* 16px x 1.75 = 28px */
+    /* font-size: 1.75rem; */
+    /* 16px x 1.5625 = 16px */
+    font-size: 1.5625rem;
+    /* font-size: 22px; */
+  }
+
+  h4 {
+    /* 16px x 1.3125 = 21px */
+    /* font-size: 1.3125rem; */
+
+    /* 16px x 1.125 = 18px */
+    font-size: 1.125rem;
+
+    /* font-size: 20px; */
+  }
+
+  h5 {
+    /* 16px x 1 = 16px */
+    font-size: 1rem;
+    /* font-size: 18px; */
+  }
+
+  h6 {
+    /* 16px x 1 = 16px */
+    font-size: 1rem;
+    /* font-size: 16px; */
+  }
+}
+
+
+
+/* unvisited link */
+a:link {
+  color: var(--ion-text-color);
+  /* light blue */
+}
+
+/* visited link */
+a:visited {
+  color: #f2dbff;
+  /* light purple */
+}
+
+/* mouse over link */
+a:hover {
+  color: #ffeb3b;
+  /* yellow */
+}
+
+/* selected link */
+a:active {
+  color: #ff8a80;
+  /* light red */
+}

@@ -1,0 +1,14 @@
+:host {
+  display: block;
+
+}
+
+figure {
+  display: block;
+  margin: 1rem 0 3rem 0;
+}
+
+figcaption {
+  margin-top: .5rem;
+  font-size: .8rem;
+}

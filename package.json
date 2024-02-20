@@ -1,9 +1,11 @@
 {
   "name": "juedisches-milieu-app",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.2-pr-1.19",
   "description": "Das jüdische Milieus Basels vom 19. Jahrhundert bis heute. Ein Spiel mit Data Stories.",
   "scripts": {
+    "prebuild": "node create-build-info.js",
+    "prestart": "node create-build-info.js",
     "build": "stencil build --prerender",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",

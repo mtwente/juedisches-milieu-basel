@@ -19,10 +19,16 @@ export class PageIntro {
   @State() playing: 'initial' | 'playing' | 'ended' = 'initial';
 
   async componentDidLoad() {
-    if (state.playedIntro) this.skipIntro();
+    // if (state.playedIntro) this.skipIntro();
+  }
+  disconnectedCallback(){
+    this.playing='initial'
   }
   private async playIntro() {
     this.playing = 'playing';
+    this.flash1.stop();
+    this.flash2.stop();
+    this.flash3.stop();
     await this.flash1.play();
     await this.flash2.play();
     await this.flash3.play();
@@ -47,7 +53,7 @@ export class PageIntro {
   render() {
     return (
       <Fragment>
-        <ion-content class="ion-padding" id="main-menu">
+        <ion-content class="ion-padding overflow-y-hidden" id="main-menu">
           <div class={`container ${this.playing}`}>
             <div class="go-btn">
               <ion-button fill="clear" size="large" onClick={() => this.playIntro()}>
@@ -63,7 +69,7 @@ export class PageIntro {
                 Ein Puzzle
               </div>
               <div class="flash-container hidden" ref={e => (this.flash3 = this.createShowHideAnimation(e))}>
-                Sieben Teile
+                Zwölf Teile
               </div>
               <ion-button fill="clear" class="skip-intro-btn" ref={e => (this.skipBtn = e)} onClick={() => this.skipIntro()}>
                 Intro überspringen
@@ -89,12 +95,14 @@ export class PageIntro {
     return createAnimation('show-hide')
       .addElement(el)
       .duration(2500)
+      .beforeStyles({ display: 'flex' })
+      .afterStyles({ display: 'none' })
       .keyframes([
-        { offset: 0, opacity: '0', display: 'flex' },
-        { offset: 0.2, opacity: '1', transform: 'scale(3)' },
+        { offset: 0, opacity: '0' },
+        { offset: 0.2, opacity: '1' },
         { offset: 0.4, opacity: '1' },
-        { offset: 0.8, opacity: '0', transform: 'scale(9)' },
-        { offset: 1, opacity: '0', transform: 'scale(9)', display: 'none' },
+        { offset: 0.8, opacity: '0', transform: 'scale(1)' },
+        { offset: 1, opacity: '0', transform: 'scale(1)' },
       ]);
   }
 }

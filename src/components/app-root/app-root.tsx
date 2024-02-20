@@ -1,5 +1,8 @@
 import { Component, h } from '@stencil/core';
 import routerProvider from '../../global/router-provider';
+import { appPages } from '../../global/appPages';
+import { state } from '../../global/store';
+import { NavigationHookResult } from '@ionic/core/dist/types/components/route/route-interface';
 
 @Component({
   tag: 'app-root',
@@ -14,9 +17,23 @@ export class AppRoot {
           <ion-route-redirect from="/" to="/intro"></ion-route-redirect>
           <ion-route url="/intro" component="page-intro"></ion-route>
           <ion-route url="/puzzle" component="page-puzzle"></ion-route>
-          <ion-route url="/puzzle/q1" component="page-q1"></ion-route>
-          <ion-route url="/puzzle/q2" component="page-q2"></ion-route>
+          {appPages.map(p => (
+            <ion-route
+              url={p.url}
+              component={p.component}
+              beforeEnter={() => {
+                if (state[p.key] === 'locked') {
+                  const redirect: NavigationHookResult = {
+                    redirect: '/puzzle',
+                  };
+                  return redirect;
+                }
+                return true;
+              }}
+            ></ion-route>
+          ))}
           <ion-route url="/about-us" component="page-about-us"></ion-route>
+          <ion-route url="/belohnung" component="page-gratification"></ion-route>
         </ion-router>
 
         <ion-router-outlet></ion-router-outlet>

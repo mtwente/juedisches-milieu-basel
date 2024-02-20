@@ -5,17 +5,43 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { VNode } from "@stencil/core";
 import { AppState } from "./global/store";
+export { VNode } from "@stencil/core";
 export { AppState } from "./global/store";
 export namespace Components {
     interface AppContent {
     }
+    interface AppDialogFail {
+        "open": () => Promise<void>;
+        "titleTxt": string;
+    }
+    interface AppDialogRestart {
+        "open": () => Promise<void>;
+    }
+    interface AppDialogSuccess {
+        "nr": number;
+        "open": () => Promise<void>;
+    }
     interface AppFooter {
+    }
+    interface AppFootnote {
+        "text": string;
     }
     interface AppHeader {
         "headerTitle": string;
     }
+    interface AppImg {
+        "src": string;
+    }
+    interface AppLiteratur {
+        "items": VNode[];
+    }
     interface AppMenu {
+    }
+    interface AppProgressMeter {
+        "maxVal": number;
+        "value": number;
     }
     interface AppPuzzlePiece {
         "label": string;
@@ -23,7 +49,11 @@ export namespace Components {
     }
     interface AppRoot {
     }
+    interface AppVideo {
+    }
     interface PageAboutUs {
+    }
+    interface PageGratification {
     }
     interface PageHome {
     }
@@ -31,9 +61,29 @@ export namespace Components {
     }
     interface PagePuzzle {
     }
-    interface PageQ1 {
+    interface PageTeil1 {
     }
-    interface PageQ2 {
+    interface PageTeil10 {
+    }
+    interface PageTeil11 {
+    }
+    interface PageTeil12 {
+    }
+    interface PageTeil2 {
+    }
+    interface PageTeil3 {
+    }
+    interface PageTeil4 {
+    }
+    interface PageTeil5 {
+    }
+    interface PageTeil6 {
+    }
+    interface PageTeil7 {
+    }
+    interface PageTeil8 {
+    }
+    interface PageTeil9 {
     }
 }
 declare global {
@@ -43,11 +93,35 @@ declare global {
         prototype: HTMLAppContentElement;
         new (): HTMLAppContentElement;
     };
+    interface HTMLAppDialogFailElement extends Components.AppDialogFail, HTMLStencilElement {
+    }
+    var HTMLAppDialogFailElement: {
+        prototype: HTMLAppDialogFailElement;
+        new (): HTMLAppDialogFailElement;
+    };
+    interface HTMLAppDialogRestartElement extends Components.AppDialogRestart, HTMLStencilElement {
+    }
+    var HTMLAppDialogRestartElement: {
+        prototype: HTMLAppDialogRestartElement;
+        new (): HTMLAppDialogRestartElement;
+    };
+    interface HTMLAppDialogSuccessElement extends Components.AppDialogSuccess, HTMLStencilElement {
+    }
+    var HTMLAppDialogSuccessElement: {
+        prototype: HTMLAppDialogSuccessElement;
+        new (): HTMLAppDialogSuccessElement;
+    };
     interface HTMLAppFooterElement extends Components.AppFooter, HTMLStencilElement {
     }
     var HTMLAppFooterElement: {
         prototype: HTMLAppFooterElement;
         new (): HTMLAppFooterElement;
+    };
+    interface HTMLAppFootnoteElement extends Components.AppFootnote, HTMLStencilElement {
+    }
+    var HTMLAppFootnoteElement: {
+        prototype: HTMLAppFootnoteElement;
+        new (): HTMLAppFootnoteElement;
     };
     interface HTMLAppHeaderElement extends Components.AppHeader, HTMLStencilElement {
     }
@@ -55,11 +129,29 @@ declare global {
         prototype: HTMLAppHeaderElement;
         new (): HTMLAppHeaderElement;
     };
+    interface HTMLAppImgElement extends Components.AppImg, HTMLStencilElement {
+    }
+    var HTMLAppImgElement: {
+        prototype: HTMLAppImgElement;
+        new (): HTMLAppImgElement;
+    };
+    interface HTMLAppLiteraturElement extends Components.AppLiteratur, HTMLStencilElement {
+    }
+    var HTMLAppLiteraturElement: {
+        prototype: HTMLAppLiteraturElement;
+        new (): HTMLAppLiteraturElement;
+    };
     interface HTMLAppMenuElement extends Components.AppMenu, HTMLStencilElement {
     }
     var HTMLAppMenuElement: {
         prototype: HTMLAppMenuElement;
         new (): HTMLAppMenuElement;
+    };
+    interface HTMLAppProgressMeterElement extends Components.AppProgressMeter, HTMLStencilElement {
+    }
+    var HTMLAppProgressMeterElement: {
+        prototype: HTMLAppProgressMeterElement;
+        new (): HTMLAppProgressMeterElement;
     };
     interface HTMLAppPuzzlePieceElement extends Components.AppPuzzlePiece, HTMLStencilElement {
     }
@@ -73,11 +165,23 @@ declare global {
         prototype: HTMLAppRootElement;
         new (): HTMLAppRootElement;
     };
+    interface HTMLAppVideoElement extends Components.AppVideo, HTMLStencilElement {
+    }
+    var HTMLAppVideoElement: {
+        prototype: HTMLAppVideoElement;
+        new (): HTMLAppVideoElement;
+    };
     interface HTMLPageAboutUsElement extends Components.PageAboutUs, HTMLStencilElement {
     }
     var HTMLPageAboutUsElement: {
         prototype: HTMLPageAboutUsElement;
         new (): HTMLPageAboutUsElement;
+    };
+    interface HTMLPageGratificationElement extends Components.PageGratification, HTMLStencilElement {
+    }
+    var HTMLPageGratificationElement: {
+        prototype: HTMLPageGratificationElement;
+        new (): HTMLPageGratificationElement;
     };
     interface HTMLPageHomeElement extends Components.PageHome, HTMLStencilElement {
     }
@@ -97,42 +201,142 @@ declare global {
         prototype: HTMLPagePuzzleElement;
         new (): HTMLPagePuzzleElement;
     };
-    interface HTMLPageQ1Element extends Components.PageQ1, HTMLStencilElement {
+    interface HTMLPageTeil1Element extends Components.PageTeil1, HTMLStencilElement {
     }
-    var HTMLPageQ1Element: {
-        prototype: HTMLPageQ1Element;
-        new (): HTMLPageQ1Element;
+    var HTMLPageTeil1Element: {
+        prototype: HTMLPageTeil1Element;
+        new (): HTMLPageTeil1Element;
     };
-    interface HTMLPageQ2Element extends Components.PageQ2, HTMLStencilElement {
+    interface HTMLPageTeil10Element extends Components.PageTeil10, HTMLStencilElement {
     }
-    var HTMLPageQ2Element: {
-        prototype: HTMLPageQ2Element;
-        new (): HTMLPageQ2Element;
+    var HTMLPageTeil10Element: {
+        prototype: HTMLPageTeil10Element;
+        new (): HTMLPageTeil10Element;
+    };
+    interface HTMLPageTeil11Element extends Components.PageTeil11, HTMLStencilElement {
+    }
+    var HTMLPageTeil11Element: {
+        prototype: HTMLPageTeil11Element;
+        new (): HTMLPageTeil11Element;
+    };
+    interface HTMLPageTeil12Element extends Components.PageTeil12, HTMLStencilElement {
+    }
+    var HTMLPageTeil12Element: {
+        prototype: HTMLPageTeil12Element;
+        new (): HTMLPageTeil12Element;
+    };
+    interface HTMLPageTeil2Element extends Components.PageTeil2, HTMLStencilElement {
+    }
+    var HTMLPageTeil2Element: {
+        prototype: HTMLPageTeil2Element;
+        new (): HTMLPageTeil2Element;
+    };
+    interface HTMLPageTeil3Element extends Components.PageTeil3, HTMLStencilElement {
+    }
+    var HTMLPageTeil3Element: {
+        prototype: HTMLPageTeil3Element;
+        new (): HTMLPageTeil3Element;
+    };
+    interface HTMLPageTeil4Element extends Components.PageTeil4, HTMLStencilElement {
+    }
+    var HTMLPageTeil4Element: {
+        prototype: HTMLPageTeil4Element;
+        new (): HTMLPageTeil4Element;
+    };
+    interface HTMLPageTeil5Element extends Components.PageTeil5, HTMLStencilElement {
+    }
+    var HTMLPageTeil5Element: {
+        prototype: HTMLPageTeil5Element;
+        new (): HTMLPageTeil5Element;
+    };
+    interface HTMLPageTeil6Element extends Components.PageTeil6, HTMLStencilElement {
+    }
+    var HTMLPageTeil6Element: {
+        prototype: HTMLPageTeil6Element;
+        new (): HTMLPageTeil6Element;
+    };
+    interface HTMLPageTeil7Element extends Components.PageTeil7, HTMLStencilElement {
+    }
+    var HTMLPageTeil7Element: {
+        prototype: HTMLPageTeil7Element;
+        new (): HTMLPageTeil7Element;
+    };
+    interface HTMLPageTeil8Element extends Components.PageTeil8, HTMLStencilElement {
+    }
+    var HTMLPageTeil8Element: {
+        prototype: HTMLPageTeil8Element;
+        new (): HTMLPageTeil8Element;
+    };
+    interface HTMLPageTeil9Element extends Components.PageTeil9, HTMLStencilElement {
+    }
+    var HTMLPageTeil9Element: {
+        prototype: HTMLPageTeil9Element;
+        new (): HTMLPageTeil9Element;
     };
     interface HTMLElementTagNameMap {
         "app-content": HTMLAppContentElement;
+        "app-dialog-fail": HTMLAppDialogFailElement;
+        "app-dialog-restart": HTMLAppDialogRestartElement;
+        "app-dialog-success": HTMLAppDialogSuccessElement;
         "app-footer": HTMLAppFooterElement;
+        "app-footnote": HTMLAppFootnoteElement;
         "app-header": HTMLAppHeaderElement;
+        "app-img": HTMLAppImgElement;
+        "app-literatur": HTMLAppLiteraturElement;
         "app-menu": HTMLAppMenuElement;
+        "app-progress-meter": HTMLAppProgressMeterElement;
         "app-puzzle-piece": HTMLAppPuzzlePieceElement;
         "app-root": HTMLAppRootElement;
+        "app-video": HTMLAppVideoElement;
         "page-about-us": HTMLPageAboutUsElement;
+        "page-gratification": HTMLPageGratificationElement;
         "page-home": HTMLPageHomeElement;
         "page-intro": HTMLPageIntroElement;
         "page-puzzle": HTMLPagePuzzleElement;
-        "page-q1": HTMLPageQ1Element;
-        "page-q2": HTMLPageQ2Element;
+        "page-teil-1": HTMLPageTeil1Element;
+        "page-teil-10": HTMLPageTeil10Element;
+        "page-teil-11": HTMLPageTeil11Element;
+        "page-teil-12": HTMLPageTeil12Element;
+        "page-teil-2": HTMLPageTeil2Element;
+        "page-teil-3": HTMLPageTeil3Element;
+        "page-teil-4": HTMLPageTeil4Element;
+        "page-teil-5": HTMLPageTeil5Element;
+        "page-teil-6": HTMLPageTeil6Element;
+        "page-teil-7": HTMLPageTeil7Element;
+        "page-teil-8": HTMLPageTeil8Element;
+        "page-teil-9": HTMLPageTeil9Element;
     }
 }
 declare namespace LocalJSX {
     interface AppContent {
     }
+    interface AppDialogFail {
+        "titleTxt"?: string;
+    }
+    interface AppDialogRestart {
+    }
+    interface AppDialogSuccess {
+        "nr"?: number;
+    }
     interface AppFooter {
+    }
+    interface AppFootnote {
+        "text"?: string;
     }
     interface AppHeader {
         "headerTitle"?: string;
     }
+    interface AppImg {
+        "src"?: string;
+    }
+    interface AppLiteratur {
+        "items"?: VNode[];
+    }
     interface AppMenu {
+    }
+    interface AppProgressMeter {
+        "maxVal"?: number;
+        "value"?: number;
     }
     interface AppPuzzlePiece {
         "label"?: string;
@@ -140,7 +344,11 @@ declare namespace LocalJSX {
     }
     interface AppRoot {
     }
+    interface AppVideo {
+    }
     interface PageAboutUs {
+    }
+    interface PageGratification {
     }
     interface PageHome {
     }
@@ -148,23 +356,62 @@ declare namespace LocalJSX {
     }
     interface PagePuzzle {
     }
-    interface PageQ1 {
+    interface PageTeil1 {
     }
-    interface PageQ2 {
+    interface PageTeil10 {
+    }
+    interface PageTeil11 {
+    }
+    interface PageTeil12 {
+    }
+    interface PageTeil2 {
+    }
+    interface PageTeil3 {
+    }
+    interface PageTeil4 {
+    }
+    interface PageTeil5 {
+    }
+    interface PageTeil6 {
+    }
+    interface PageTeil7 {
+    }
+    interface PageTeil8 {
+    }
+    interface PageTeil9 {
     }
     interface IntrinsicElements {
         "app-content": AppContent;
+        "app-dialog-fail": AppDialogFail;
+        "app-dialog-restart": AppDialogRestart;
+        "app-dialog-success": AppDialogSuccess;
         "app-footer": AppFooter;
+        "app-footnote": AppFootnote;
         "app-header": AppHeader;
+        "app-img": AppImg;
+        "app-literatur": AppLiteratur;
         "app-menu": AppMenu;
+        "app-progress-meter": AppProgressMeter;
         "app-puzzle-piece": AppPuzzlePiece;
         "app-root": AppRoot;
+        "app-video": AppVideo;
         "page-about-us": PageAboutUs;
+        "page-gratification": PageGratification;
         "page-home": PageHome;
         "page-intro": PageIntro;
         "page-puzzle": PagePuzzle;
-        "page-q1": PageQ1;
-        "page-q2": PageQ2;
+        "page-teil-1": PageTeil1;
+        "page-teil-10": PageTeil10;
+        "page-teil-11": PageTeil11;
+        "page-teil-12": PageTeil12;
+        "page-teil-2": PageTeil2;
+        "page-teil-3": PageTeil3;
+        "page-teil-4": PageTeil4;
+        "page-teil-5": PageTeil5;
+        "page-teil-6": PageTeil6;
+        "page-teil-7": PageTeil7;
+        "page-teil-8": PageTeil8;
+        "page-teil-9": PageTeil9;
     }
 }
 export { LocalJSX as JSX };
@@ -172,17 +419,36 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "app-content": LocalJSX.AppContent & JSXBase.HTMLAttributes<HTMLAppContentElement>;
+            "app-dialog-fail": LocalJSX.AppDialogFail & JSXBase.HTMLAttributes<HTMLAppDialogFailElement>;
+            "app-dialog-restart": LocalJSX.AppDialogRestart & JSXBase.HTMLAttributes<HTMLAppDialogRestartElement>;
+            "app-dialog-success": LocalJSX.AppDialogSuccess & JSXBase.HTMLAttributes<HTMLAppDialogSuccessElement>;
             "app-footer": LocalJSX.AppFooter & JSXBase.HTMLAttributes<HTMLAppFooterElement>;
+            "app-footnote": LocalJSX.AppFootnote & JSXBase.HTMLAttributes<HTMLAppFootnoteElement>;
             "app-header": LocalJSX.AppHeader & JSXBase.HTMLAttributes<HTMLAppHeaderElement>;
+            "app-img": LocalJSX.AppImg & JSXBase.HTMLAttributes<HTMLAppImgElement>;
+            "app-literatur": LocalJSX.AppLiteratur & JSXBase.HTMLAttributes<HTMLAppLiteraturElement>;
             "app-menu": LocalJSX.AppMenu & JSXBase.HTMLAttributes<HTMLAppMenuElement>;
+            "app-progress-meter": LocalJSX.AppProgressMeter & JSXBase.HTMLAttributes<HTMLAppProgressMeterElement>;
             "app-puzzle-piece": LocalJSX.AppPuzzlePiece & JSXBase.HTMLAttributes<HTMLAppPuzzlePieceElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+            "app-video": LocalJSX.AppVideo & JSXBase.HTMLAttributes<HTMLAppVideoElement>;
             "page-about-us": LocalJSX.PageAboutUs & JSXBase.HTMLAttributes<HTMLPageAboutUsElement>;
+            "page-gratification": LocalJSX.PageGratification & JSXBase.HTMLAttributes<HTMLPageGratificationElement>;
             "page-home": LocalJSX.PageHome & JSXBase.HTMLAttributes<HTMLPageHomeElement>;
             "page-intro": LocalJSX.PageIntro & JSXBase.HTMLAttributes<HTMLPageIntroElement>;
             "page-puzzle": LocalJSX.PagePuzzle & JSXBase.HTMLAttributes<HTMLPagePuzzleElement>;
-            "page-q1": LocalJSX.PageQ1 & JSXBase.HTMLAttributes<HTMLPageQ1Element>;
-            "page-q2": LocalJSX.PageQ2 & JSXBase.HTMLAttributes<HTMLPageQ2Element>;
+            "page-teil-1": LocalJSX.PageTeil1 & JSXBase.HTMLAttributes<HTMLPageTeil1Element>;
+            "page-teil-10": LocalJSX.PageTeil10 & JSXBase.HTMLAttributes<HTMLPageTeil10Element>;
+            "page-teil-11": LocalJSX.PageTeil11 & JSXBase.HTMLAttributes<HTMLPageTeil11Element>;
+            "page-teil-12": LocalJSX.PageTeil12 & JSXBase.HTMLAttributes<HTMLPageTeil12Element>;
+            "page-teil-2": LocalJSX.PageTeil2 & JSXBase.HTMLAttributes<HTMLPageTeil2Element>;
+            "page-teil-3": LocalJSX.PageTeil3 & JSXBase.HTMLAttributes<HTMLPageTeil3Element>;
+            "page-teil-4": LocalJSX.PageTeil4 & JSXBase.HTMLAttributes<HTMLPageTeil4Element>;
+            "page-teil-5": LocalJSX.PageTeil5 & JSXBase.HTMLAttributes<HTMLPageTeil5Element>;
+            "page-teil-6": LocalJSX.PageTeil6 & JSXBase.HTMLAttributes<HTMLPageTeil6Element>;
+            "page-teil-7": LocalJSX.PageTeil7 & JSXBase.HTMLAttributes<HTMLPageTeil7Element>;
+            "page-teil-8": LocalJSX.PageTeil8 & JSXBase.HTMLAttributes<HTMLPageTeil8Element>;
+            "page-teil-9": LocalJSX.PageTeil9 & JSXBase.HTMLAttributes<HTMLPageTeil9Element>;
         }
     }
 }
