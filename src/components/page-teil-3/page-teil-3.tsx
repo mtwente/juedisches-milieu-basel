@@ -41,10 +41,9 @@ export class PageTeil3 {
               und Lengnau in die Stadt. Die Beziehungen zum Elsass, insbesondere zur Gemeinde Hégenheim blieben aber identitätsstiftend für die jüdische Gemeinde.
             </p>
             <h2>Wo befindet sich das elsässische Dorf Hégenheim: A, B oder C?</h2>
-            <p>
-              <ion-img src={getAssetPath('../../assets/teil-3/karte.jpg')}></ion-img>
-            </p>
-            <p>Quelle: Siegfriedkarte von 1864</p>
+            <app-img class="restricted-width" src={'../../assets/teil-3/karte.jpg'}>
+              Quelle: Siegfriedkarte von 1864
+            </app-img>
             <p>
               <ion-button color="primary" onClick={_ => this.successModal.open()}>
                 Antwort A
@@ -73,7 +72,7 @@ export class PageTeil3 {
             </app-dialog-fail>
             <app-dialog-success nr={nr} ref={e => (this.successModal = e)}>
               <ion-img src={getAssetPath('../../assets/hurray.gif')}></ion-img>
-              <div class="ion-padding">Du hast Kapitel {nr} erfolgreich abgeschlossen&nbsp;!!</div>
+              <div class="ion-padding">Du hast Kapitel «{titles[nr]}» erfolgreich abgeschlossen&nbsp;!!</div>
             </app-dialog-success>
           </app-content>
         </ion-content>

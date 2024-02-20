@@ -8,6 +8,35 @@
 html {
   --ion-dynamic-font: var(--ion-default-dynamic-font);
   --ion-font-family: 'Open Sans';
+  font-size: 20px;
+}
+
+
+/*
+* Elements with restricted width of body text
+*/
+p,
+app-video,
+app-img,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre:not(.CodeMirror-line),
+.restricted-width {
+  max-width: 30rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*
+* unset the restricted width
+*/
+.unrestricted-width {
+  max-width: unset;
+  margin: unset;
 }
 
 /*
@@ -18,8 +47,6 @@ html {
 */
 p {
   font-size: 1rem;
-  max-width: 38rem;
-  margin: auto;
   margin-block-start: .9em;
   margin-block-end: .9em;
   line-height: 1.8;
@@ -67,11 +94,6 @@ h3,
 h4,
 h5,
 h6 {
-  max-width: 38rem;
-  margin-left: auto;
-  margin-right: auto;
-  /* margin-bottom: 10px; */
-
   font-weight: 500;
   line-height: 1.2;
   margin-block-start: 2em;
@@ -178,16 +200,7 @@ h5+h6 {
   }
 }
 
-pre:not(.CodeMirror-line),
-.restricted-width {
-  max-width: 38rem;
-  margin: auto;
-}
 
-.unrestricted-width {
-  max-width: unset;
-  margin: unset;
-}
 
 /* unvisited link */
 a:link {

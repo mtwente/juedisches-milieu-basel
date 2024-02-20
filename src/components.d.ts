@@ -29,6 +29,9 @@ export namespace Components {
     interface AppHeader {
         "headerTitle": string;
     }
+    interface AppImg {
+        "src": string;
+    }
     interface AppMenu {
     }
     interface AppProgressMeter {
@@ -40,6 +43,8 @@ export namespace Components {
         "pieceId": keyof AppState;
     }
     interface AppRoot {
+    }
+    interface AppVideo {
     }
     interface PageAboutUs {
     }
@@ -119,6 +124,12 @@ declare global {
         prototype: HTMLAppHeaderElement;
         new (): HTMLAppHeaderElement;
     };
+    interface HTMLAppImgElement extends Components.AppImg, HTMLStencilElement {
+    }
+    var HTMLAppImgElement: {
+        prototype: HTMLAppImgElement;
+        new (): HTMLAppImgElement;
+    };
     interface HTMLAppMenuElement extends Components.AppMenu, HTMLStencilElement {
     }
     var HTMLAppMenuElement: {
@@ -142,6 +153,12 @@ declare global {
     var HTMLAppRootElement: {
         prototype: HTMLAppRootElement;
         new (): HTMLAppRootElement;
+    };
+    interface HTMLAppVideoElement extends Components.AppVideo, HTMLStencilElement {
+    }
+    var HTMLAppVideoElement: {
+        prototype: HTMLAppVideoElement;
+        new (): HTMLAppVideoElement;
     };
     interface HTMLPageAboutUsElement extends Components.PageAboutUs, HTMLStencilElement {
     }
@@ -253,10 +270,12 @@ declare global {
         "app-footer": HTMLAppFooterElement;
         "app-footnote": HTMLAppFootnoteElement;
         "app-header": HTMLAppHeaderElement;
+        "app-img": HTMLAppImgElement;
         "app-menu": HTMLAppMenuElement;
         "app-progress-meter": HTMLAppProgressMeterElement;
         "app-puzzle-piece": HTMLAppPuzzlePieceElement;
         "app-root": HTMLAppRootElement;
+        "app-video": HTMLAppVideoElement;
         "page-about-us": HTMLPageAboutUsElement;
         "page-gratification": HTMLPageGratificationElement;
         "page-home": HTMLPageHomeElement;
@@ -295,6 +314,9 @@ declare namespace LocalJSX {
     interface AppHeader {
         "headerTitle"?: string;
     }
+    interface AppImg {
+        "src"?: string;
+    }
     interface AppMenu {
     }
     interface AppProgressMeter {
@@ -306,6 +328,8 @@ declare namespace LocalJSX {
         "pieceId"?: keyof AppState;
     }
     interface AppRoot {
+    }
+    interface AppVideo {
     }
     interface PageAboutUs {
     }
@@ -349,10 +373,12 @@ declare namespace LocalJSX {
         "app-footer": AppFooter;
         "app-footnote": AppFootnote;
         "app-header": AppHeader;
+        "app-img": AppImg;
         "app-menu": AppMenu;
         "app-progress-meter": AppProgressMeter;
         "app-puzzle-piece": AppPuzzlePiece;
         "app-root": AppRoot;
+        "app-video": AppVideo;
         "page-about-us": PageAboutUs;
         "page-gratification": PageGratification;
         "page-home": PageHome;
@@ -383,10 +409,12 @@ declare module "@stencil/core" {
             "app-footer": LocalJSX.AppFooter & JSXBase.HTMLAttributes<HTMLAppFooterElement>;
             "app-footnote": LocalJSX.AppFootnote & JSXBase.HTMLAttributes<HTMLAppFootnoteElement>;
             "app-header": LocalJSX.AppHeader & JSXBase.HTMLAttributes<HTMLAppHeaderElement>;
+            "app-img": LocalJSX.AppImg & JSXBase.HTMLAttributes<HTMLAppImgElement>;
             "app-menu": LocalJSX.AppMenu & JSXBase.HTMLAttributes<HTMLAppMenuElement>;
             "app-progress-meter": LocalJSX.AppProgressMeter & JSXBase.HTMLAttributes<HTMLAppProgressMeterElement>;
             "app-puzzle-piece": LocalJSX.AppPuzzlePiece & JSXBase.HTMLAttributes<HTMLAppPuzzlePieceElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+            "app-video": LocalJSX.AppVideo & JSXBase.HTMLAttributes<HTMLAppVideoElement>;
             "page-about-us": LocalJSX.PageAboutUs & JSXBase.HTMLAttributes<HTMLPageAboutUsElement>;
             "page-gratification": LocalJSX.PageGratification & JSXBase.HTMLAttributes<HTMLPageGratificationElement>;
             "page-home": LocalJSX.PageHome & JSXBase.HTMLAttributes<HTMLPageHomeElement>;
