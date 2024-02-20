@@ -190,7 +190,7 @@ export class PagePuzzle {
                   <g>
                     {this.elements.map(e => (
                       <g class={`puzzle-piece ${state?.['t' + e.nr]}`}>
-                        <path d={e.path.d} />
+                        <path class="cover" d={e.path.d} />
                         <path class="overlay" d={e.path.d} onClick={() => this.navigate(e)} />
                         {/* <text class="nr" x={e.txt1.x + e.txt1.width / 2} y={e.txt1.y + e.txt1.height / 1.5} dominant-baseline="middle" text-anchor="middle">
                           {e.nr}

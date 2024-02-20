@@ -142,21 +142,58 @@ async function setupStorage() {
 
 }
 
+
+/**
+ * returns false, if the URL contains ?shuffle=false, else true
+ */
+function getShuffle(): boolean {
+  let shuffle = true
+  try {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    shuffle = urlParams.get('shuffle') !== 'false';
+  } catch (error) { }
+  return shuffle;
+}
 setupStorage().then().catch().finally(() => {
+
+  const shuffle = getShuffle();
+
   onChange('t1', (value) => {
     if (value === 'done') {
-      const nrUnlock = 3;
-      startRoulette(nrUnlock);
+
+      if (shuffle) {
+        const nrUnlock = 3;
+        startRoulette(nrUnlock);
+
+      }
+      else {
+
+        state.t2 = 'unlocked';
+        state.t3 = 'unlocked';
+        state.t4 = 'unlocked';
+        state.t5 = 'unlocked';
+        state.t6 = 'unlocked';
+        state.t7 = 'unlocked';
+        state.t8 = 'unlocked';
+        state.t9 = 'unlocked';
+        state.t10 = 'unlocked';
+        state.t11 = 'unlocked';
+        state.t12 = 'unlocked';
+      }
+
     }
   });
 
-  for (let i = 2; i <= 12; i++) {
-    onChange('t' + i as keyof AppState, value => {
-      if (value === 'done') {
-        const nrUnlock = 1;
-        startRoulette(nrUnlock);
-      }
-    });
+  if (shuffle) {
+    for (let i = 2; i <= 12; i++) {
+      onChange('t' + i as keyof AppState, value => {
+        if (value === 'done') {
+          const nrUnlock = 1;
+          startRoulette(nrUnlock);
+        }
+      });
+    }
   }
   on('set', async (key) => {
     if (key.startsWith('t')) {
@@ -173,4 +210,3 @@ setupStorage().then().catch().finally(() => {
 });
 
 export { onChange, reset, state };
-

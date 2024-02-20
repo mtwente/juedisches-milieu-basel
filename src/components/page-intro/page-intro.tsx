@@ -16,13 +16,16 @@ export class PageIntro {
   flash2: Animation;
   flash3: Animation;
 
+  disconnected = false;
+
   @State() playing: 'initial' | 'playing' | 'ended' = 'initial';
 
   async componentDidLoad() {
-    // if (state.playedIntro) this.skipIntro();
+    if (state.playedIntro) this.skipIntro();
   }
-  disconnectedCallback(){
-    this.playing='initial'
+  disconnectedCallback() {
+    this.playing = 'initial';
+    this.disconnected = true;
   }
   private async playIntro() {
     this.playing = 'playing';
@@ -47,7 +50,7 @@ export class PageIntro {
   }
 
   private navigateToPuzzle() {
-    routerProvider.ionRouterElement.push('/puzzle', 'forward', animationBuilderFadePages);
+    if (!this.disconnected) routerProvider.ionRouterElement.push('/puzzle', 'forward', animationBuilderFadePages);
   }
 
   render() {

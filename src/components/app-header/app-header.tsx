@@ -10,7 +10,7 @@ export class AppHeader {
     return (
       <Fragment>
         <app-menu></app-menu>
-        <ion-header translucent={true}>
+        <ion-header translucent={false}>
           <ion-toolbar>
             <ion-buttons slot="start">
               <ion-back-button text="Zurück" defaultHref={window.location.pathname === '/puzzle' ? undefined : '/puzzle'}></ion-back-button>

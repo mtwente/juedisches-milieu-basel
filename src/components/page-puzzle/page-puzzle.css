@@ -10,6 +10,14 @@
   right: 0;
   display: flex;
   flex-direction: column;
+
+  --bg-locked: var(--app-puzzle-piece-bg-locked);
+  --bg-unlocked: var(--app-puzzle-piece-bg-unlocked);
+  --bg-highlighed: var(--app-puzzle-piece-bg-highlighed);
+
+  --text-locked: var(--app-puzzle-piece-text-locked);
+  --text-unlocked: var(--app-puzzle-piece-text-unlocked);
+  --text-highlighed: var(--app-puzzle-piece-text-highlighed);
 }
 
 .h-container {
@@ -50,7 +58,7 @@
   opacity: 1;
 }
 
-/* Overlay path */
+/* Overlay path used to catch click and hover */
 
 .puzzle-piece path.overlay {
   z-index: 1;
@@ -69,39 +77,39 @@
   fill: rgba(0, 0, 0, 0.2)
 }
 
-/* Covering path */
+/* Cover path, used to fill the shape with color */
 
-.puzzle-piece path:not(.overlay) {
+.puzzle-piece path.cover {
   transition: all 2s;
   stroke: var(--ion-background-color);
 }
 
-.puzzle-piece.locked path:not(.overlay) {
+.puzzle-piece.locked path.cover {
   transition: all 200ms;
-  fill: var(--ion-color-step-200);
+  fill: var(--bg-locked);
 }
 
-.puzzle-piece.unlocked path:not(.overlay) {
+.puzzle-piece.unlocked path.cover {
   transition: all 2s;
-  fill: var(--ion-color-step-850);
+  fill: var(--bg-unlocked);
 }
 
-.puzzle-piece.done path:not(.overlay) {
+.puzzle-piece.done path.cover {
   transition: all 2s;
-  fill: rgba(0, 0, 0, 0);
+  fill: rgba(0, 0, 0, 0); /* invisible */
   stroke: rgba(255, 255, 255, 0.225);
 }
 
-.puzzle-piece.highlighted path:not(.overlay) {
+.puzzle-piece.highlighted path.cover {
   transition: all 200ms;
-  fill: var(--ion-color-step-400);
+  fill: var(--bg-highlighed);
 }
 
 /* Text */
 
 .puzzle-piece text {
   transition: fill s2;
-  font-weight: 700;
+  font-weight: 600;
   text-anchor: middle;
   pointer-events: none;
 }
@@ -115,12 +123,16 @@
 }
 
 .puzzle-piece.unlocked text {
-  fill: #585987;
+  fill: var(--text-unlocked);
 }
 
-.puzzle-piece.locked text,
+
+.puzzle-piece.locked text {
+  fill: var(--text-locked);
+
+}
 .puzzle-piece.highlighted text {
-  fill: var(--ion-background-color);
+  fill: var(--text-highlighed);
 }
 
 
@@ -139,7 +151,7 @@
 }
 
 .game-finished {
-  min-width: 288px;
+  min-width: 18rem;
   text-align: center;
   margin-bottom: 2rem;
   transition: height 2s;
@@ -150,7 +162,7 @@
 }
 
 .game-finished.visible {
-  height: 190px;
+  height: 11.875rem;
   overflow: hidden;
 }
 .game-finished>p {
