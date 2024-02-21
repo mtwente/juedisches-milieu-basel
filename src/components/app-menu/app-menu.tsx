@@ -1,5 +1,5 @@
 import { Component, getAssetPath, h } from '@stencil/core';
-import { checkmarkCircleOutline, extensionPuzzleOutline, informationCircleOutline, refreshOutline } from 'ionicons/icons';
+import { checkmarkCircleOutline, informationCircleOutline, refreshOutline } from 'ionicons/icons';
 import { appPages } from '../../global/appPages';
 import { state } from '../../global/store';
 
@@ -31,7 +31,6 @@ export class AppMenu {
                     lines="none"
                     detail={false}
                   >
-                    {/* <ion-icon color="primary" aria-hidden="true" slot="start" icon={icon} /> */}
                     {t === 'done' ? (
                       <ion-icon color="primary" aria-hidden="true" slot="start" icon={checkmarkCircleOutline} />
                     ) : (
