@@ -16,7 +16,7 @@ export class PageTeil8 {
         <app-header headerTitle={titles[nr]}></app-header>
         <ion-content class="ion-padding" id="main-menu">
           <app-content>
-            <h1>Zionistenkongresse</h1>
+             {/* <h1>{titles[nr]}</h1> */}
             <p class="lead">
               «In Basel habe ich den Judenstaat gegründet» <br />
               Basel als Gastgeber der Zionistenkongresse

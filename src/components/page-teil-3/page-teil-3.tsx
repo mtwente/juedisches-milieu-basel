@@ -18,7 +18,7 @@ export class PageTeil3 {
         <app-header headerTitle={titles[nr]}></app-header>
         <ion-content class="ion-padding" id="main-menu">
           <app-content>
-            <h1>Migration</h1>
+             {/* <h1>{titles[nr]}</h1> */}
             <p class="lead">
               On parle français <br />
               Jüdische Einwanderung im 19. Jahrhundert

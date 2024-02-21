@@ -14,7 +14,7 @@ export class PageTeil9 {
         <app-header headerTitle={titles[nr]}></app-header>
         <ion-content class="ion-padding" id="main-menu">
           <app-content>
-            <h1>Menschen</h1>
+             {/* <h1>{titles[nr]}</h1> */}
             <p class="lead">
               Der Trödler aus dem Elsass <br />
               Isaac Ségal (1831-1916) wandert von Hégenheim nach Basel ein
@@ -26,7 +26,7 @@ export class PageTeil9 {
               Guggenheim (1841-1906) zog das Ehepaar an den Spalenberg. Isaac Ségal unterstützte das 1874 in Hégenheim gegründete israelitische Alters- und Pflegeheim jahrelang
               finanziell.{' '}
             </p>
-            <app-img style={{'max-width':'500px'}} src="../../../assets/teil-9/berthold-segal.jpg">
+            <app-img style={{ 'max-width': '500px' }} src="../../../assets/teil-9/berthold-segal.jpg">
               Berthold Ségal kam 1873 auf die Welt und erhielt 1904 das Basler Bürgerrecht. Bild: Privatarchiv Antiquités Ségal&Selig.
             </app-img>
             <p>

@@ -14,7 +14,7 @@ export class PageTeil5 {
         <app-header headerTitle={titles[nr]}></app-header>
         <ion-content class="ion-padding" id="main-menu">
           <app-content>
-            <h1>{titles[nr]}</h1>
+             {/* <h1>{titles[nr]}</h1> */}
             <p>Was ist richtig?</p>
             <p>
               <ion-button color="primary" onClick={_ => this.successModal.open()}>

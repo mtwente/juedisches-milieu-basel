@@ -18,7 +18,7 @@ export class PageTeil4 {
         <app-header headerTitle={titles[nr]}></app-header>
         <ion-content class="ion-padding" id="main-menu">
           <app-content>
-            <h1>Vereinswesen</h1>
+             {/* <h1>{titles[nr]}</h1> */}
             <p class="lead">
               Zentren des jüdischen Lebens <br />
               Das Vereinswesen im jüdischen Milieu

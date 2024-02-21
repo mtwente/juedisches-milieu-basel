@@ -15,7 +15,7 @@ export class PageTeil11 {
         <app-header headerTitle={titles[nr]}></app-header>
         <ion-content class="ion-padding" id="main-menu">
           <app-content>
-            <h1>{titles[nr]}</h1>
+             {/* <h1>{titles[nr]}</h1> */}
             <p class="lead">
               Bâleph – Ein Streifzug durch Basels jüdische Geschichte.
               <br /> 13 Stationen in der Basler Innenstadt.
