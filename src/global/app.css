@@ -39,7 +39,6 @@
 */
 
 @import './variables.css';
-@import './styles/ion-card.css';
 
 iframe {
   border: none;

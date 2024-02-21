@@ -13,11 +13,14 @@
 
   --bg-locked: var(--app-puzzle-piece-bg-locked);
   --bg-unlocked: var(--app-puzzle-piece-bg-unlocked);
+  --bg-unlocked-hover: var(--app-puzzle-piece-bg-unlocked-hover);
+  --bg-unlocked-active: var(--app-puzzle-piece-bg-unlocked-active);
   --bg-highlighed: var(--app-puzzle-piece-bg-highlighed);
 
   --text-locked: var(--app-puzzle-piece-text-locked);
   --text-unlocked: var(--app-puzzle-piece-text-unlocked);
   --text-highlighed: var(--app-puzzle-piece-text-highlighed);
+  --text-hover: var(--app-puzzle-piece-text-hover);
 }
 
 .h-container {
@@ -71,11 +74,19 @@
 }
 
 .puzzle-piece.unlocked path.overlay:hover {
-  fill: rgba(0, 0, 0, 0.1)
+  fill: var(--bg-unlocked-hover);
 }
 
 .puzzle-piece.unlocked path.overlay:active {
-  fill: rgba(0, 0, 0, 0.2)
+  fill: var(--bg-unlocked-active);
+}
+
+.puzzle-piece.done path.overlay:hover {
+  fill: rgba(0, 0, 0, 0.1);
+}
+
+.puzzle-piece.done path.overlay:active {
+  fill: rgba(0, 0, 0, 0.2);
 }
 
 /* Cover path, used to fill the shape with color */
@@ -97,7 +108,8 @@
 
 .puzzle-piece.done path.cover {
   transition: all 2s;
-  fill: rgba(0, 0, 0, 0); /* invisible */
+  fill: rgba(0, 0, 0, 0);
+  /* invisible */
   stroke: rgba(255, 255, 255, 0.225);
 }
 
@@ -132,6 +144,7 @@
   fill: var(--text-locked);
 
 }
+
 .puzzle-piece.highlighted text {
   fill: var(--text-highlighed);
 }
@@ -143,7 +156,7 @@
 
 .puzzle-piece.done:hover text,
 .puzzle-piece.done:active text {
-  fill: var(--ion-text-color);
+  fill: var(--text-hover);
 }
 
 .title {
@@ -157,6 +170,7 @@
   margin-bottom: 2rem;
   transition: height 2s;
 }
+
 .game-finished.hidden {
   height: 0px;
   overflow: hidden;
@@ -166,6 +180,7 @@
   height: 11.875rem;
   overflow: hidden;
 }
+
 .game-finished>p {
   font-size: 1.5rem;
 }

@@ -1,7 +1,0 @@
-ion-card {
-  --background: var(--ion-color-background-tint);
-}
-ion-card ion-list {
-  --background: var(--ion-color-background-tint);
-  --ion-item-background: var(--ion-color-background-tint);
-}
