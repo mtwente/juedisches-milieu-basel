@@ -18,7 +18,7 @@ export class PageTeil4 {
         <app-header headerTitle={titles[nr]}></app-header>
         <ion-content class="ion-padding" id="main-menu">
           <app-content>
-             {/* <h1>{titles[nr]}</h1> */}
+            {/* <h1>{titles[nr]}</h1> */}
             <p class="lead">
               Zentren des jüdischen Lebens <br />
               Das Vereinswesen im jüdischen Milieu
@@ -32,6 +32,11 @@ export class PageTeil4 {
               des Männervereins Dowor Tow wohnten in unmittelbarer Umgebung, an der Hutgasse, am Spalenberg oder an der Schützenmattstrasse. Mit dem Bau der Synagoge 1868 an der
               Leimenstrasse verlagerte sich das Zentrum zunehmend in dieses Quartier und ins Hegenheimerquartier.
             </p>
+            <app-img src={getAssetPath('../../assets/teil-4/bild1.png')}>
+              Quelle: StaBS BILD Schn. 142 <br />
+              Das Bild von Johann Jakob Schneider entstand 1879. Der Blick führt in den unteren Heuberg zur alten Synagoge vom Gemsberg her.
+            </app-img>
+            <app-img src={getAssetPath('../../assets/teil-4/bild2.png')}>Quelle: StaBS NEG 1224 (Aufnahme von 1895).</app-img>
             <p>
               Die Krankenpflege und die finanzielle Unterstützung von bedürftigen Mitgliedern und das Einhalten von Ritualen nach dem Tod bildeten die Kernaufgaben der jüdischen
               Frauen- und Männervereine. Einerseits ging es darum, die traditionelle Totenwache und Totenwaschung durchzuführen, andererseits Mitgliedern bei der Bestattung von
@@ -46,19 +51,7 @@ export class PageTeil4 {
               gründete sich 1914 der ‹Jüdische Turnverein Basel›. Trainiert wurde in der Turnhalle des Leonhardschulhauses <app-footnote text={'Weill 2014, S. 15.'}></app-footnote>
               .{' '}
             </p>
-            <p>
-              <ion-img src={getAssetPath('../../assets/teil-4/bild1.png')}></ion-img>
-            </p>
-            <p>
-              Quelle: StaBS BILD Schn. 142 <br />
-              Das Bild von Johann Jakob Schneider entstand 1879. Der Blick führt in den unteren Heuberg zur alten Synagoge vom Gemsberg her.
-            </p>
-            <p>
-              <ion-img src={getAssetPath('../../assets/teil-4/bild2.png')}></ion-img>
-            </p>
-            <p>
-              Quelle: StaBS NEG 1224 (Aufnahme von 1895). <br />
-            </p>
+
             <h2>Wie hiess der gesuchte Mann?</h2>
             <p>Im Haus zum Schwarzen Ritter direkt hinter dem Gemsbrunnen betrieb ein Gründungsmitglied des Männervereins Dowor Tow ein Lithografie-Geschäft.</p>
             <p>
