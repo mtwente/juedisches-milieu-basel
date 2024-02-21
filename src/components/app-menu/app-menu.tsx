@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component, getAssetPath, h } from '@stencil/core';
 import { checkmarkCircleOutline, extensionPuzzleOutline, informationCircleOutline, refreshOutline } from 'ionicons/icons';
 import { appPages } from '../../global/appPages';
 import { state } from '../../global/store';
@@ -21,7 +21,6 @@ export class AppMenu {
 
             {appPages.map((appPage, index) => {
               const t = state[appPage.key];
-              const icon = t === 'done' ? checkmarkCircleOutline : extensionPuzzleOutline;
               return (
                 <ion-menu-toggle key={index} autoHide={false}>
                   <ion-item
@@ -32,7 +31,12 @@ export class AppMenu {
                     lines="none"
                     detail={false}
                   >
-                    <ion-icon color="primary" aria-hidden="true" slot="start" icon={icon} />
+                    {/* <ion-icon color="primary" aria-hidden="true" slot="start" icon={icon} /> */}
+                    {t === 'done' ? (
+                      <ion-icon color="primary" aria-hidden="true" slot="start" icon={checkmarkCircleOutline} />
+                    ) : (
+                      <ion-icon color="primary" aria-hidden="true" slot="start" src={getAssetPath('../../assets/icons/hexagon-outline.svg')} />
+                    )}
                     <ion-label>{appPage.title}</ion-label>
                   </ion-item>
                 </ion-menu-toggle>
@@ -54,7 +58,6 @@ export class AppMenu {
               <ion-label>Neustart ...</ion-label>
             </ion-item>
             <app-dialog-restart ref={e => (this.confirmRestartModal = e)}></app-dialog-restart>
-
           </ion-list>
         </ion-content>
       </ion-menu>
