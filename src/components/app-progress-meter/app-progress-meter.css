@@ -7,17 +7,12 @@
   fill: none;
 }
 
-.circle.segment-1 {
-  stroke: #7b3f27
-}
-
-.circle.segment-2 {
-  stroke: #c5ab10
-}
-
+.circle.segment-1 ,
+.circle.segment-2 ,
 .circle.segment-3 {
-  stroke: #89bf6b
+  stroke: #7b3f27;
 }
+
 
 .outline {
   stroke: var(--ion-color-step-500);
