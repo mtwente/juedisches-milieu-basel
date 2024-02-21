@@ -12,14 +12,14 @@ export class AppDialogSuccess {
   @Prop() nr: number;
   @Method() async open() {
     await this.successModal.present();
-    const t = setTimeout(async () => {
-      await this.successModal.dismiss();
-      await this.dismiss();
-    }, 2500);
-    this.successModal.onDidDismiss().then(() => {
-      clearTimeout(t);
-      this.dismiss();
-    });
+    // const t = setTimeout(async () => {
+    //   await this.successModal.dismiss();
+    //   await this.dismiss();
+    // }, 2500);
+    // this.successModal.onDidDismiss().then(() => {
+    //   clearTimeout(t);
+    //   this.dismiss();
+    // });
   }
 
   render() {
@@ -34,7 +34,11 @@ export class AppDialogSuccess {
               </ion-buttons>
             </ion-toolbar>
           </ion-header>
-          <slot />
+          <ion-content class="ion-padding-top">
+            <div style={{ 'max-width': '600px', 'margin': '0 auto auto auto' }}>
+              <slot />
+            </div>
+          </ion-content>
         </ion-modal>
       </Host>
     );
