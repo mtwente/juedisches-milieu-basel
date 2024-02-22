@@ -3,7 +3,7 @@ export const titles = {
   2: 'Juden in Basel',
   3: 'Migration',
   4: 'Vereinswesen',
-  5: 'Institutionen',
+  5: 'Synagoge',
   6: 'Der Rabbiner',
   7: 'Jüdischer Friedhof',
   8: 'Zionistenkongresse',
