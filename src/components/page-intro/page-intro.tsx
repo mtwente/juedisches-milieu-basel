@@ -66,13 +66,13 @@ export class PageIntro {
             </div>
             <Fragment>
               <div class="flash-container hidden" ref={e => (this.flash1 = this.createShowHideAnimation(e))}>
-                Eine Geschichte
+                Das jüdische Basel
               </div>
               <div class="flash-container hidden" ref={e => (this.flash2 = this.createShowHideAnimation(e))}>
-                Ein Puzzle
+                1850 bis 1914
               </div>
               <div class="flash-container hidden" ref={e => (this.flash3 = this.createShowHideAnimation(e))}>
-                Zwölf Teile
+                in zwölf Teilen
               </div>
               <ion-button fill="clear" class="skip-intro-btn" ref={e => (this.skipBtn = e)} onClick={() => this.skipIntro()}>
                 Intro überspringen
