@@ -27,7 +27,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@geovistory/design-system-web": "1.21.1-pr-121.0",
+    "@geovistory/design-system-web": "1.21.1-pr-122.0",
     "@ionic/storage": "^4.0.0"
   }
 }
