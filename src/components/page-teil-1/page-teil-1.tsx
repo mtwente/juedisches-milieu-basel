@@ -42,7 +42,7 @@ export class PageTeil1 {
             </p>
             <p>
               Puzzeln stärkt unser Wohlbefinden. Es regt beide Gehirnhälften an und wirkt sich positiv auf Konzentration und Kurzzeitgedächtnis aus. Also: Leg los. Tauche in das
-              Puzzle ein und eigne dir Wissen zum jüdischen Milieu in Basel an.
+              Puzzle ein und eigne dir Wissen zur Geschichte des jüdischen Basels.
             </p>
             <p>
               <ion-button color="primary" onClick={_ => this.dismiss()}>

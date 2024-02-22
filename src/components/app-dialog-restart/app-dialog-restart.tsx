@@ -38,8 +38,8 @@ export class AppDialogRestart {
 
   private async restart() {
     await this.confirmRestartModal.dismiss();
-    await routerProvider.ionRouterElement.push('/intro', 'forward', animationBuilderFadePages);
     reset();
+    await routerProvider.ionRouterElement.push('/intro', 'forward', animationBuilderFadePages);
   }
 
 }
