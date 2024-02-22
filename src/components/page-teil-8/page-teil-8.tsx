@@ -28,7 +28,7 @@ export class PageTeil8 {
               Verfügung gestellt hatte. Auch die Bevölkerung reagierte überwiegend mit Sympathie. Der Zionismus, die Schaffung «einer gesicherten Heimstätte für das jüdische Volk
               in Palästina», die Theodor Herzl am ersten Kongress proklamiert hatte, stiess insbesondere in den pietistischen Kreisen der ‹Freunde Israels› auf Unterstützung
               <app-footnote text="Zur Geschichte des ersten Zionistenkongresses in Basel siehe Haumann 1997."></app-footnote>. Am Schluss des ersten Kongresses 1897 dankte Theodor
-              Herzl der «gastlichen Stadt» Basel, «die uns mit solchem Wohlwollen empfangen hat»<app-footnote text="Guth Basiani 1997, S. 135."></app-footnote>. Einige Tage nach
+              Herzl der «gastlichen Stadt» Basel, «die uns mit solchem Wohlwollen empfangen hat»<app-footnote text="Guth Biasini 1997, S. 135."></app-footnote>. Einige Tage nach
               dem Kongress schrieb er in sein Tagebuch: «In Basel habe ich den Judenstaat gegründet. Wenn ich das heute laut sagte, würde mir ein universelles Gelächter antworten.
               In fünf Jahren, jedenfalls in fünfzig, wird es Jeder einsehen».
             </p>
@@ -75,7 +75,7 @@ export class PageTeil8 {
             <app-literatur
               items={[
                 <Fragment>
-                  Guth Basiani, Nadia: Basel und der Zionistenkongress, in Haumann, Heiko (Hg.): Der Erste Zionistenkongress von 1897 – Ursachen, Bedeutung, Aktualität, Basel 1997,
+                  Guth Biasini, Nadia: Basel und der Zionistenkongress, in Haumann, Heiko (Hg.): Der Erste Zionistenkongress von 1897 – Ursachen, Bedeutung, Aktualität, Basel 1997,
                   S. 131-140.
                 </Fragment>,
                 <Fragment>Haumann, Heiko (Hg.): Der Erste Zionistenkongress von 1897 – Ursachen, Bedeutung, Aktualität, Basel 1997.</Fragment>,
