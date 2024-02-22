@@ -49,7 +49,7 @@ export class AppMenu {
             <ion-menu-toggle autoHide={false}>
               <ion-item lines="none" href={'/about-us'}>
                 <ion-icon color="primary" aria-hidden="true" slot="start" icon={informationCircleOutline} />
-                <ion-label>Über diese App</ion-label>
+                <ion-label>Impressum</ion-label>
               </ion-item>
             </ion-menu-toggle>
             <ion-item lines="none" button detail={false} onClick={() => this.confirmRestartModal.open()}>

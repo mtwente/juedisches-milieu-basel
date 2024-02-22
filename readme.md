@@ -1,6 +1,6 @@
-# App zum jüdischen Milieu Basels
+# App zum jüdischen Basel
 
-Das jüdische Milieus Basels vom 19. Jahrhundert bis heute. Ein Spiel mit Data Stories.
+Das jüdische Basel 1850 bis 1914.
 
 ## Development
 
@@ -42,23 +42,23 @@ npm run test.watch
 Create docker image
 
 ```bash
-docker build -t juedisches-milieu-app .
+docker build -t juedisches-basel-app .
 ```
 
 Start docker container
 
 ```bash
-docker run -d -p 8080:8080 --name jm-app juedisches-milieu-app 
+docker run -d -p 8080:8080 --name jb-app juedisches-basel-app 
 ```
 
 Stop and remove docker container
 
 ```bash
-docker rm -f jm-app
+docker rm -f jb-app
 ```
 
 remove the image
 
 ```bash
-docker image rm juedisches-milieu-app
+docker image rm juedisches-basel-app
 ```

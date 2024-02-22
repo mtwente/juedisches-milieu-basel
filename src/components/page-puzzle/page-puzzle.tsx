@@ -201,13 +201,13 @@ export class PagePuzzle {
                       </g>
                     ))}
                     <g ref={e => (this.g = e)}></g>
-                    <text class="title" x="495px" y="1480px" dominant-baseline="middle" text-anchor="middle">
-                      Jüdisches
+                    <text class="title" x="498px" y="1460px" dominant-baseline="middle" text-anchor="middle">
+                      Das
                     </text>
-                    <text class="title" x="495px" y="1580px" dominant-baseline="middle" text-anchor="middle">
-                      Milieu Basel
+                    <text class="title" x="498px" y="1560px" dominant-baseline="middle" text-anchor="middle">
+                      jüdische Basel
                     </text>
-                    <text class="title" x="495px" y="1680px" dominant-baseline="middle" text-anchor="middle">
+                    <text class="title" x="498px" y="1660px" dominant-baseline="middle" text-anchor="middle">
                       1850 bis 1914
                     </text>
                   </g>
