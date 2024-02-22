@@ -11,6 +11,7 @@
 }
 
 .coupon {
+  font-size: 16px;
   margin-left: -5px;
   width: 450px;
   background: beige;
@@ -50,30 +51,13 @@
 }
 
 .coupon>div:nth-of-type(3)>pre {
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .coupon>div:nth-of-type(4) {
   color: rgb(116, 116, 116);
   text-align: left;
   margin-top: 12px;
-  font-family: monospace;
-}
-
-.coupon>table {
-  line-height: 16px;
-
-  margin-left: auto;
-  font-family: monospace;
-  font-weight: 800;
-}
-
-.coupon>table>tr>td:nth-of-type(1) {
-  text-transform: lowercase;
-  width: 120px;
-  text-align: right;
-  padding-right: 10px;
-  color: rgb(116, 116, 116);
 }
 
 @media screen and (min-width: 460px) {
