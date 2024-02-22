@@ -18,32 +18,32 @@ export class PageTeil3 {
         <app-header headerTitle={titles[nr]}></app-header>
         <ion-content class="ion-padding" id="main-menu">
           <app-content>
-             {/* <h1>{titles[nr]}</h1> */}
+            {/* <h1>{titles[nr]}</h1> */}
             <p class="lead">
               On parle français <br />
               Jüdische Einwanderung im 19. Jahrhundert
             </p>
             <p>
               Weil Jüdinnen und Juden sich erst seit 1866 frei in der Schweiz niederlassen durften, dauerte es relativ lange, bis sich in Basel eine dritte jüdische Gemeinde
-              etablieren konnte. Zwischen 1847 und 1849 erhielten alle in Basel geborenen Söhne aus jüdischen Familien das Niederlassungsrecht
-              <app-footnote text={'Haumann 1999, S. 22.'}></app-footnote>. Die neuen Basler Juden kamen bis 1866 ausschliesslich aus dem Elsass
-              <app-footnote text="Guth-Dreyfus 1980, S. 154."></app-footnote>. Viele waren vor antisemitischen Angriffen geflohen. Andere sahen in Basel bessere berufliche Chancen.
-              Auch Salomon Schwob-Dreyfus, der erste offizielle jüdische Basler Bürger, stammte ursprünglich aus Hégenheim<app-footnote text="Haumann 2005, S. 74."></app-footnote>{' '}
-              . Mit ihm wurden insgesamt acht jüdische Familien 1872 ins Basler Bürgerrecht aufgenommen.{' '}
+              etablieren konnte. Zwischen 1847 und 1849 erhielten alle in Basel geborenen Söhne aus jüdischen Familien das Niederlassungsrecht. Die neuen Basler Juden kamen bis
+              1866 ausschliesslich aus dem Elsass. Viele waren vor antisemitischen Angriffen geflohen. Andere sahen in Basel bessere berufliche Chancen. Auch Salomon
+              Schwob-Dreyfus, der erste offizielle jüdische Basler Bürger, stammte ursprünglich aus Hégenheim . Mit ihm wurden insgesamt acht jüdische Familien 1872 ins Basler
+              Bürgerrecht aufgenommen.{' '}
             </p>
-            <p>
-              Es fällt auf, dass in Basel in den drei Jahren nach dem Deutsch-Französischen Krieg ab 1871 viele Menschen aus dem Elsass das Bürgerrecht erhielten
-              <app-footnote text="Pfister 1976, S. 470."></app-footnote>. Viele zugezogene Juden hatten immer noch Familienangehörige in den Elsässer Dörfern. Mit Sorge blickten
-              sie nach Norden, als Deutschland und Frankreich sich 1870 bekriegten. Tausende Flüchtende suchten in Basel Schutz. Viele darunter waren jüdische Französinnen und
-              Franzosen. Die jüdischen Vereine kümmerten sich um deren Verpflegung und Unterkunft und kamen finanziell an den Anschalg. Die meisten der Geflohenen blieben nicht
-              dauerhaft in Basel und kehrten in ihre Gemeinde zurück. Dennoch: In den nächsten rund 40 Jahren verfünffachte sich die jüdische Bevölkerung in Basel von rund 500
-              Personen 1870 auf über 2400 Personen 1910. Zwar kamen mit der rechtlichen Gleichstellung vermehrt auch Juden aus dem süddeutschen Raum, dem Baselbiet und aus Endingen
-              und Lengnau in die Stadt. Die Beziehungen zum Elsass, insbesondere zur Gemeinde Hégenheim blieben aber identitätsstiftend für die jüdische Gemeinde.
-            </p>
-            <h2>Wo befindet sich das elsässische Dorf Hégenheim: A, B oder C?</h2>
             <app-img class="restricted-width" src={'../../assets/teil-3/karte.jpg'}>
               Quelle: Siegfriedkarte von 1864
             </app-img>
+            <p>
+              Es fällt auf, dass in Basel in den drei Jahren nach dem Deutsch-Französischen Krieg ab 1871 viele Menschen aus dem Elsass das Bürgerrecht erhielten . Viele zugezogene
+              Juden hatten immer noch Familienangehörige in den Elsässer Dörfern. Mit Sorge blickten sie nach Norden, als Deutschland und Frankreich sich 1870 bekriegten. Tausende
+              Flüchtende suchten in Basel Schutz. Viele darunter waren jüdische Französinnen und Franzosen. Die jüdischen Vereine kümmerten sich um deren Verpflegung und Unterkunft
+              und kamen finanziell an den Anschalg. Die meisten der Geflohenen blieben nicht dauerhaft in Basel und kehrten in ihre Gemeinde zurück. Dennoch: In den nächsten rund
+              40 Jahren verfünffachte sich die jüdische Bevölkerung in Basel von rund 500 Personen 1870 auf über 2400 Personen 1910. Zwar kamen mit der rechtlichen Gleichstellung
+              vermehrt auch Juden aus dem süddeutschen Raum, dem Baselbiet und aus Endingen und Lengnau in die Stadt. Die Beziehungen zum Elsass, insbesondere zur Gemeinde
+              Hégenheim blieben aber identitätsstiftend für die jüdische Gemeinde.
+            </p>
+            <h2>Wo befindet sich das elsässische Dorf Hégenheim: A, B oder C?</h2>
+
             <p>
               <ion-button color="primary" onClick={_ => this.successModal.open()}>
                 Antwort A

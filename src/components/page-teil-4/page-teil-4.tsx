@@ -43,12 +43,12 @@ export class PageTeil4 {
               Angehörigen unter die Arme zu greifen. Der Jüdische Frauenverein (1834), der Männerverein Dowor Tow (1857), der Verein Espérance für junge unverheiratete Männer
               (1866) und die Union israélite Chevroh Ez Chajim für junge unverheiratete Männer (1880) stellten sich diesen Aufgaben. Dem Frauenverein, dem ältesten jüdischen Verein
               in Basel, kam dabei eine spezielle Bedeutung zu, weil Frauen in den meisten Fällen den Haushalt führten und damit für die Einhaltung der religiösen Gesetze
-              verantwortlich waren<app-footnote text={'Wecker 1997, S. 124.'}></app-footnote>. Der Frauenverein engagierte sich auch in der Bildungsförderung und finanzierte um die
+              verantwortlich waren. Der Frauenverein engagierte sich auch in der Bildungsförderung und finanzierte um die
               Jahrhundertwende Ferienaufenthalte für arme jüdische Schulkinder.{' '}
             </p>
             <p>
               1903 fand am Zionistenkongress ein internationales jüdisches Schauturnen statt, das auch die Basler Juden inspirierte. Aufbauend auf ersten zaghaften Versuchen
-              gründete sich 1914 der ‹Jüdische Turnverein Basel›. Trainiert wurde in der Turnhalle des Leonhardschulhauses <app-footnote text={'Weill 2014, S. 15.'}></app-footnote>
+              gründete sich 1914 der ‹Jüdische Turnverein Basel›. Trainiert wurde in der Turnhalle des Leonhardschulhauses
               .{' '}
             </p>
 
