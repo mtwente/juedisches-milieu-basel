@@ -1,5 +1,7 @@
 import { Component, Fragment, getAssetPath, h } from '@stencil/core';
 import { titles } from '../../global/titles';
+import { queryTabs } from '../app-dialog-success/queryTabs';
+
 const nr = 10;
 @Component({
   tag: 'page-teil-10',
@@ -13,9 +15,25 @@ export class PageTeil10 {
       <Fragment>
         <app-header headerTitle={titles[nr]}></app-header>
         <ion-content id="main-menu">
-          <iframe width="100%" height="400px" src={getAssetPath('../../assets/teil-10/karte.html')} frameborder="0"></iframe>
+          <geov-yasgui
+            queryTabs={queryTabs}
+            style={{ background: '#fff', height: '400px' }}
+            plugins={new Set(['mapCircles'])}
+            defaultPlugin="mapCircles"
+            collapse={true}
+            hideYasqueToggle={true}
+            pluginConfig={{
+              mapCircles: {
+                disableScrollZoom: true,
+                displayMapNavigationControls: true,
+                maxZoom: 25,
+                radiusMin: 4,
+                radiusMax: 25,
+              },
+            }}
+          ></geov-yasgui>
           <div class="ion-padding">
-             {/* <h1>{titles[nr]}</h1> */}
+            {/* <h1>{titles[nr]}</h1> */}
             <p>Was ist richtig?</p>
             <p>
               <ion-button color="primary" onClick={_ => this.successModal.open()}>

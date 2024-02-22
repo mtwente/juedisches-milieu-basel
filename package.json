@@ -22,10 +22,12 @@
     "ionicons": "^7.1.1",
     "jest": "~27.0.3",
     "jest-cli": "~27.4.5",
-    "puppeteer": "^20.4.0"
+    "puppeteer": "^20.4.0",
+    "@triply/yasgui": "^4.2.28"
   },
   "license": "MIT",
   "dependencies": {
+    "@geovistory/design-system-web": "1.21.1-pr-121.0",
     "@ionic/storage": "^4.0.0"
   }
 }
