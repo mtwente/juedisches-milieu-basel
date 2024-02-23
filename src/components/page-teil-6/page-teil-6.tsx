@@ -14,7 +14,7 @@ export class PageTeil6 {
         <app-header headerTitle={titles[nr]}></app-header>
         <ion-content class="ion-padding" id="main-menu">
           <app-content>
-            {/* <h1>{titles[nr]}</h1> */}
+            <h1 class="ion-hide-md-down">{titles[nr]}</h1>
             <p class={'lead'}>
               Konservativ, aber kein Elsässer <br />
               Arthur Cohn wird erster Rabbiner in Basel
@@ -42,6 +42,8 @@ export class PageTeil6 {
               Nach über vierzigjährigem Wirken verstarb Arthur Cohn 1926 im Amt. Auf ihn folgte Arthur Weil, der aus Frankreich stammte, sein Diplom aber am gleichen
               Rabbinerseminar wie sein Vorgänger erworben hatte.
             </p>
+            <h2>Rätsel</h2>
+
             <p>
               Rabbiner Arthur Cohn hat einen «berühmten»{' '}
               <a href="https://hls-dhs-dss.ch/de/articles/046832/2003-12-18/" target="_blank" rel="noopener noreferrer">
@@ -49,7 +51,7 @@ export class PageTeil6 {
               </a>{' '}
               , der ein Jahr nach seinem Tod auf die Welt kam und den gleichen Namen trägt.{' '}
             </p>
-            <h2>Mit welcher Tätigkeit stand Cohns Enkel in der Öffentlichkeit?</h2>
+            <p>Mit welcher Tätigkeit stand Cohns Enkel in der Öffentlichkeit?</p>
             <p>
               <ion-button color="primary" onClick={_ => this.successModal.open()}>
                 Filmproduzent

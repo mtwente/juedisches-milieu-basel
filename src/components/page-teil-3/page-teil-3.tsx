@@ -18,7 +18,7 @@ export class PageTeil3 {
         <app-header headerTitle={titles[nr]}></app-header>
         <ion-content class="ion-padding" id="main-menu">
           <app-content>
-            {/* <h1>{titles[nr]}</h1> */}
+            <h1 class="ion-hide-md-down">{titles[nr]}</h1>
             <p class="lead">
               On parle français <br />
               Jüdische Einwanderung im 19. Jahrhundert
@@ -30,9 +30,6 @@ export class PageTeil3 {
               Schwob-Dreyfus, der erste offizielle jüdische Basler Bürger, stammte ursprünglich aus Hégenheim. Mit ihm wurden insgesamt acht jüdische Familien 1872 ins Basler
               Bürgerrecht aufgenommen.{' '}
             </p>
-            <app-img class="restricted-width" src={'../../assets/teil-3/karte.jpg'}>
-              Quelle: Siegfriedkarte von 1864
-            </app-img>
             <p>
               Es fällt auf, dass in Basel in den drei Jahren nach dem Deutsch-Französischen Krieg ab 1871 viele Menschen aus dem Elsass das Bürgerrecht erhielten. Viele zugezogene
               Juden hatten immer noch Familienangehörige in den Elsässer Dörfern. Mit Sorge blickten sie nach Norden, als Deutschland und Frankreich sich 1870 bekriegten. Tausende
@@ -42,7 +39,11 @@ export class PageTeil3 {
               vermehrt auch Juden aus dem süddeutschen Raum, dem Baselbiet und aus Endingen und Lengnau in die Stadt. Die Beziehungen zum Elsass, insbesondere zur Gemeinde
               Hégenheim blieben aber identitätsstiftend für die jüdische Gemeinde.
             </p>
-            <h2>Wo befindet sich das elsässische Dorf Hégenheim: A, B oder C?</h2>
+            <h2>Rätsel</h2>
+            <p>Wo befindet sich das elsässische Dorf Hégenheim: A, B oder C?</p>
+            <app-img class="restricted-width" src={'../../assets/teil-3/karte.jpg'}>
+              Quelle: Siegfriedkarte von 1864
+            </app-img>
 
             <p>
               <ion-button color="primary" onClick={_ => this.successModal.open()}>

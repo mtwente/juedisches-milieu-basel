@@ -1,6 +1,6 @@
 export const titles = {
   1: 'Spielanleitung',
-  2: 'Juden in Basel',
+  2: 'Jüdische Gemeinden',
   3: 'Migration',
   4: 'Vereinswesen',
   5: 'Synagoge',

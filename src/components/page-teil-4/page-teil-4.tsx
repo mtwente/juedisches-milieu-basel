@@ -18,7 +18,7 @@ export class PageTeil4 {
         <app-header headerTitle={titles[nr]}></app-header>
         <ion-content class="ion-padding" id="main-menu">
           <app-content>
-            {/* <h1>{titles[nr]}</h1> */}
+            <h1 class="ion-hide-md-down">{titles[nr]}</h1>
             <p class="lead">
               Zentren des jüdischen Lebens <br />
               Das Vereinswesen im jüdischen Milieu
@@ -50,9 +50,8 @@ export class PageTeil4 {
               1903 fand am Zionistenkongress ein internationales jüdisches Schauturnen statt, das auch die Basler Juden inspirierte. Aufbauend auf ersten zaghaften Versuchen
               gründete sich 1914 der ‹Jüdische Turnverein Basel›. Trainiert wurde in der Turnhalle des Leonhardschulhauses.
             </p>
-
-            <h2>Wie hiess der gesuchte Mann?</h2>
-            <p>Im Haus zum Schwarzen Ritter direkt hinter dem Gemsbrunnen betrieb ein Gründungsmitglied des Männervereins Dowor Tow ein Lithografie-Geschäft.</p>
+            <h2>Rätsel</h2>
+            <p>Im Haus zum Schwarzen Ritter direkt hinter dem Gemsbrunnen betrieb ein Gründungsmitglied des Männervereins Dowor Tow ein Lithografie-Geschäft. Wie hiess der gesuchte Mann?</p>
             <p>
               <ion-button color="primary" onClick={_ => this.failModal.open()}>
                 Arthur Wolf

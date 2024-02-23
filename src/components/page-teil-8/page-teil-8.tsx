@@ -16,7 +16,7 @@ export class PageTeil8 {
         <app-header headerTitle={titles[nr]}></app-header>
         <ion-content class="ion-padding" id="main-menu">
           <app-content>
-            {/* <h1>{titles[nr]}</h1> */}
+            <h1 class="ion-hide-md-down">{titles[nr]}</h1>
             <p class="lead">
               «In Basel habe ich den Judenstaat gegründet» <br />
               Basel als Gastgeber der Zionistenkongresse
@@ -41,7 +41,8 @@ export class PageTeil8 {
               Bis 1911 fanden sieben von zehn Zionistenkongressen in Basel statt. Danach verlor Basel als Austragungsort an Bedeutung. Ein zehntes und letztes Mal begrüsste Basel
               1946 Gäste des Kongresses.
             </p>
-
+            <h2>Rätsel</h2>
+            <p>In welchem Hotel übernachtete Theodor Herzl während des ersten Zionistenkongresses in Basel?</p>
             <app-video>
               <iframe
                 width="100%"
@@ -58,8 +59,6 @@ export class PageTeil8 {
                 Israels. Anlässlich des Jubiläums die Universität Basel mit Prof. Dr. Erik Petry die Spuren, die Herzl in Basel hinterlassen hat.
               </span>
             </app-video>
-
-            <h2>In welchem Hotel übernachtete Theodor Herzl während des ersten Zionistenkongresses in Basel?</h2>
             <p>
               <ion-button color="primary" onClick={_ => this.failModal.open()}>
                 Hotel Jura

@@ -14,7 +14,7 @@ export class PageTeil9 {
         <app-header headerTitle={titles[nr]}></app-header>
         <ion-content class="ion-padding" id="main-menu">
           <app-content>
-             {/* <h1>{titles[nr]}</h1> */}
+            <h1 class="ion-hide-md-down">{titles[nr]}</h1>
             <p class="lead">
               Der Trödler aus dem Elsass <br />
               Isaac Ségal (1831-1916) wandert von Hégenheim nach Basel ein
@@ -40,6 +40,15 @@ export class PageTeil9 {
               Das Antiquariat begann in den letzten Jahren des 19. Jahrhunderts enge Geschäftsbeziehungen zu Museen aufzunehmen. Das Historische Museum Basel etwa erwarb bei Ségal
               mehrfach Objekte für die eigene Sammlung. Ein erster Kauf – ein englisches Rahm- und Milchkännchen sowie ein Teller – ging 1896 über die Bühne.
             </p>
+            <h2>Rätsel</h2>
+            <p>
+              In der Sendung «Sternstunde Religion» des Schweizer Fernsehen vom 27. Februar 2005 sprach der Soziologe Ralph Weill – anlässlich des 200-Jahr-Jubiläums der
+              Israelitischen Gemeinde Basel (IGB) – über die 800-jährige jüdischen Geschichte von Basel. Ab Minute 28:00 erzählt Weill, dass die Region zwischen Jura, Vogesen und
+              Schwarzwald früher eine einheitliche Kulturregion mit einer einheitlichen jüdischen Gemeinschaft gewesen sei. Diese teile sich nun in drei sehr verschiedene Gruppen
+              auf: Eine elsässische, ausschliesslich französisch sprechende Gruppe mit vielen aus Nordafrika eingewanderten Juden, eine gemischte Gruppe in Basel mit einem
+              elässisch-badischen und osteuropäischen Hintergrund. Auch in Südbaden gebe es wieder eine jüdische Bevölkerung.
+            </p>
+            <p>Welche Herkunft haben diese südbadischen Juden?</p>
             <app-video>
               <iframe
                 width="100%"
@@ -51,14 +60,6 @@ export class PageTeil9 {
               ></iframe>
               <span slot="caption">«Sternstunde Religion» des Schweizer Fernsehen mit Ralph Weill vom 27. Februar 2005</span>
             </app-video>
-            <p>
-              In der Sendung «Sternstunde Religion» des Schweizer Fernsehen vom 27. Februar 2005 sprach der Soziologe Ralph Weill – anlässlich des 200-Jahr-Jubiläums der
-              Israelitischen Gemeinde Basel (IGB) – über die 800-jährige jüdischen Geschichte von Basel. Ab Minute 28:00 erzählt Weill, dass die Region zwischen Jura, Vogesen und
-              Schwarzwald früher eine einheitliche Kulturregion mit einer einheitlichen jüdischen Gemeinschaft gewesen sei. Diese teile sich nun in drei sehr verschiedene Gruppen
-              auf: Eine elsässische, ausschliesslich französisch sprechende Gruppe mit vielen aus Nordafrika eingewanderten Juden, eine gemischte Gruppe in Basel mit einem
-              elässisch-badischen und osteuropäischen Hintergrund. Auch in Südbaden gebe es wieder eine jüdische Bevölkerung.
-            </p>
-            <h2>Welche Herkunft haben diese südbadischen Juden?</h2>
             <p>
               <ion-button color="primary" onClick={_ => this.failModal.open()}>
                 Ungarisch

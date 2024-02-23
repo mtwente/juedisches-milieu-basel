@@ -16,7 +16,7 @@ export class PageTeil10 {
         <app-header headerTitle={titles[nr]}></app-header>
         <ion-content id="main-menu">
           <div class={'ion-padding'}>
-            {/* <h1>{titles[nr]}</h1> */}
+            <h1 class="ion-hide-md-down">{titles[nr]}</h1>
             <p class={'lead'}>Ostjüdische Einwanderung und die Zentren der Wohnorte um 1910</p>
 
             <p>
@@ -73,8 +73,8 @@ export class PageTeil10 {
               Wohnorte von jüdischen Handwerkerinnen und Handwerke um 1910 anhand einer Liste, die der jüdische Frauenverein erstellt hatte. Im Vergleich zeigt sich, dass sich um
               1910 Wohnorte zusätzlich zur Altstadt auch im Hegenheimerquartier ballen. Nur vereinzelt lebten Personen hingegen im Kleinbasel.
             </p>
-            <h3>Welchen Beruf übte Maurice Goldstein aus?</h3>
-            <p>Tipp: Er wohnte um 1910 am Bläsiringweg 15 in Kleinbasel.</p>
+            <h2>Rätsel</h2>
+            <p>Maurice Goldstein wohnte um 1910 am Bläsiringweg 15 in Kleinbasel. Welchen Beruf übte er aus?</p>
             <p>
               <ion-button color="primary" onClick={_ => this.successModal.open()}>
                 Gummischuhhändler

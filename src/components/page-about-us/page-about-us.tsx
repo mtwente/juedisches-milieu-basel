@@ -12,6 +12,7 @@ export class PageAboutUs {
         <app-header headerTitle="Impressum"></app-header>
         <ion-content class="ion-padding" id="main-menu">
           <app-content>
+            <h1 class="ion-hide-md-down">Impressum</h1>
             <h2>Inhalte</h2>
             <p>
               <strong>Beni Pfister, lic. phil.</strong>

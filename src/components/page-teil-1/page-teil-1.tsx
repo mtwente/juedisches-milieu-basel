@@ -27,7 +27,7 @@ export class PageTeil1 {
         <app-header headerTitle={titles[nr]}></app-header>
         <ion-content class="ion-padding" id="main-menu">
           <app-content>
-            {/* <h1>Spielanleitung</h1> */}
+            <h1 class="ion-hide-md-down">{titles[nr]}</h1>
             <p class={'lead'}>Dieses digitale Puzzle gibt in zwölf Teilen einen Einblick in die Geschichte des jüdischen Basels von 1850 bis 1914.</p>
             <p>So funktioniert es:</p>
             <p>

@@ -14,7 +14,7 @@ export class PageTeil5 {
         <app-header headerTitle={titles[nr]}></app-header>
         <ion-content class="ion-padding" id="main-menu">
           <app-content>
-            {/* <h1>{titles[nr]}</h1> */}
+            <h1 class="ion-hide-md-down">{titles[nr]}</h1>
             <p class={'lead'}>Die Synagoge an der Leimenstrasse</p>
             <p>Das Zentrum des religiösen Judentums in Basel</p>
             <p>
@@ -53,8 +53,9 @@ export class PageTeil5 {
               <br />
               Quelle: StaBS NEG A 608
             </app-img>
+            <h2>Rätsel</h2>
 
-            <h2>Die Konsuln welcher Staaten nahmen 1868 an der Einweihung der Synagoge teil?</h2>
+            <p>Die Konsuln welcher Staaten nahmen 1868 an der Einweihung der Synagoge teil?</p>
             <p>
               <ion-button color="primary" onClick={_ => this.failModal.open()}>
                 Deutschland und England

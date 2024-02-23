@@ -14,7 +14,7 @@ export class PageTeil2 {
         <app-header headerTitle={titles[nr]}></app-header>
         <ion-content class="ion-padding" id="main-menu">
           <app-content>
-            {/* <h1>{titles[nr]}</h1> */}
+            <h1 class="ion-hide-md-down">Jüdisches Leben in Basel</h1>
             <p class={'lead'}>Drei jüdische Gemeinden in 800 Jahren</p>
             <p>
               In den letzten 800 Jahren gab es in Basel drei jüdische Gemeinden. Nach der Auslöschung der ersten Gemeinde durch ein Pogrom und dem schnellen Verschwinden einer
@@ -48,7 +48,8 @@ export class PageTeil2 {
               Das Schweizer Fernsehen berichtete in der Sendung «Schweiz Aktuell» von 28. August 1997 über das Leben der Juden in Basel. Darin wird auch beschrieben, wo sich heute
               einzelne Grabsteine des Friedhofs der ersten jüdischen Gemeinde befinden.{' '}
             </p>
-            <h2>In welchem Museum können die Grabsteine besichtigt werden?</h2>
+            <h2>Rätsel</h2>
+            <p>In welchem Museum können die Grabsteine besichtigt werden?</p>
             <p>
               <ion-button color="primary" onClick={_ => this.failModal.open()}>
                 Historisches Museum Basel
