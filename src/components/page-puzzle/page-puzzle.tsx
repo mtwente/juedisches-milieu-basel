@@ -157,8 +157,8 @@ export class PagePuzzle {
           <div class="container">
             <div class={`game-finished ${state.showBravo ? 'visible' : 'hidden'}`}>
               <p>
-                Bravo, <br />
-                Sie haben es geschafft!
+                Bravo <br />
+                Du hast es geschafft!
               </p>
               <div>
                 <ion-button color="primary" onClick={() => this.openGratification()}>

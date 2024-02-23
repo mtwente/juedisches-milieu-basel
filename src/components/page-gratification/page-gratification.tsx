@@ -50,7 +50,7 @@ export class PageGratification {
               Der Feiertag endet mit dem Tönen eines Schofars, eines Widderhorns. Die Israelitische Gemeinde Basel feierte 2023 Jom Kippur mit einem gemeinsamen «Anbeissen» nach
               dem Fastentag.
             </p>
-            <p>Vielen Dank für Deine Teilnahme am Spiel und herzlichen Glückwunsch noch einmal zu Ihrem Erfolg!</p>
+            <p>Vielen Dank für Deine Teilnahme am Spiel und herzlichen Glückwunsch noch einmal zu Deinem Erfolg!</p>
           </app-content>
         </ion-content>
       </Fragment>

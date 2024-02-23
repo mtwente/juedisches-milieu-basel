@@ -44,12 +44,11 @@ export class PageTeil4 {
               (1866) und die Union israélite Chevroh Ez Chajim für junge unverheiratete Männer (1880) stellten sich diesen Aufgaben. Dem Frauenverein, dem ältesten jüdischen Verein
               in Basel, kam dabei eine spezielle Bedeutung zu, weil Frauen in den meisten Fällen den Haushalt führten und damit für die Einhaltung der religiösen Gesetze
               verantwortlich waren. Der Frauenverein engagierte sich auch in der Bildungsförderung und finanzierte um die
-              Jahrhundertwende Ferienaufenthalte für arme jüdische Schulkinder.{' '}
+              Jahrhundertwende Ferienaufenthalte für arme jüdische Schulkinder.
             </p>
             <p>
               1903 fand am Zionistenkongress ein internationales jüdisches Schauturnen statt, das auch die Basler Juden inspirierte. Aufbauend auf ersten zaghaften Versuchen
-              gründete sich 1914 der ‹Jüdische Turnverein Basel›. Trainiert wurde in der Turnhalle des Leonhardschulhauses
-              .{' '}
+              gründete sich 1914 der ‹Jüdische Turnverein Basel›. Trainiert wurde in der Turnhalle des Leonhardschulhauses.
             </p>
 
             <h2>Wie hiess der gesuchte Mann?</h2>
@@ -73,7 +72,7 @@ export class PageTeil4 {
             ></app-literatur>
 
             <app-dialog-fail ref={e => (this.failModal = e)} titleTxt={'Leider falsch'}>
-              <p>Die richtige Antwort ist Georg Wolf.</p>
+              <p>Die richtige Antwort ist «Georg Wolf».</p>
             </app-dialog-fail>
             <app-dialog-success nr={nr} ref={e => (this.successModal = e)}>
               <ion-img src={getAssetPath('../../assets/hurray.gif')}></ion-img>

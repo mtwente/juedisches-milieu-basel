@@ -46,13 +46,13 @@ export class PageAboutUs {
             <h2>Auftraggeber</h2>
             <p>
               <a href="https://stadtgeschichtebasel.ch/" target="_blank" rel="noreferrer">
-                Stadt Geschichte Basel
+                Stadt.Geschichte.Basel
               </a>
             </p>
             <p>
               <strong>Moritz Mähr, Dr. sc.</strong>
               <br />
-              Leitung digital bei Stadt Geschichte Basel
+              Leitung digital bei Stadt.Geschichte.Basel
               <br />
               Studierte Geschichte und Philosophie des Wissens, Informatik und Ökonomie in Zürich und Berlin.
             </p>

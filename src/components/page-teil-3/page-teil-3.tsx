@@ -27,14 +27,14 @@ export class PageTeil3 {
               Weil Jüdinnen und Juden sich erst seit 1866 frei in der Schweiz niederlassen durften, dauerte es relativ lange, bis sich in Basel eine dritte jüdische Gemeinde
               etablieren konnte. Zwischen 1847 und 1849 erhielten alle in Basel geborenen Söhne aus jüdischen Familien das Niederlassungsrecht. Die neuen Basler Juden kamen bis
               1866 ausschliesslich aus dem Elsass. Viele waren vor antisemitischen Angriffen geflohen. Andere sahen in Basel bessere berufliche Chancen. Auch Salomon
-              Schwob-Dreyfus, der erste offizielle jüdische Basler Bürger, stammte ursprünglich aus Hégenheim . Mit ihm wurden insgesamt acht jüdische Familien 1872 ins Basler
+              Schwob-Dreyfus, der erste offizielle jüdische Basler Bürger, stammte ursprünglich aus Hégenheim. Mit ihm wurden insgesamt acht jüdische Familien 1872 ins Basler
               Bürgerrecht aufgenommen.{' '}
             </p>
             <app-img class="restricted-width" src={'../../assets/teil-3/karte.jpg'}>
               Quelle: Siegfriedkarte von 1864
             </app-img>
             <p>
-              Es fällt auf, dass in Basel in den drei Jahren nach dem Deutsch-Französischen Krieg ab 1871 viele Menschen aus dem Elsass das Bürgerrecht erhielten . Viele zugezogene
+              Es fällt auf, dass in Basel in den drei Jahren nach dem Deutsch-Französischen Krieg ab 1871 viele Menschen aus dem Elsass das Bürgerrecht erhielten. Viele zugezogene
               Juden hatten immer noch Familienangehörige in den Elsässer Dörfern. Mit Sorge blickten sie nach Norden, als Deutschland und Frankreich sich 1870 bekriegten. Tausende
               Flüchtende suchten in Basel Schutz. Viele darunter waren jüdische Französinnen und Franzosen. Die jüdischen Vereine kümmerten sich um deren Verpflegung und Unterkunft
               und kamen finanziell an den Anschalg. Die meisten der Geflohenen blieben nicht dauerhaft in Basel und kehrten in ihre Gemeinde zurück. Dennoch: In den nächsten rund

@@ -26,7 +26,7 @@ export class PageTeil8 {
               skeptisch zeigte, musste ein anderer Ort gesucht werden. Vom 29. bis 31. August 1897 trafen sich 200 Personen aus ganz Europa zum ersten Zionistenkongress in Basel.
               Die Basler Regierung hatte bei der Organisation mitgeholfen, in dem sie die Burgvogtei in Kleinbasel und den Musiksaal im Stadtcasino für Veranstaltungen zur
               Verfügung gestellt hatte. Auch die Bevölkerung reagierte überwiegend mit Sympathie. Der Zionismus, die Schaffung «einer gesicherten Heimstätte für das jüdische Volk
-              in Palästina», die Theodor Herzl am ersten Kongress proklamiert hatte, stiess insbesondere in den pietistischen Kreisen der ‹Freunde Israels› auf Unterstützung . Am
+              in Palästina», die Theodor Herzl am ersten Kongress proklamiert hatte, stiess insbesondere in den pietistischen Kreisen der ‹Freunde Israels› auf Unterstützung. Am
               Schluss des ersten Kongresses 1897 dankte Theodor Herzl der «gastlichen Stadt» Basel, «die uns mit solchem Wohlwollen empfangen hat». Einige Tage nach dem Kongress
               schrieb er in sein Tagebuch: «In Basel habe ich den Judenstaat gegründet. Wenn ich das heute laut sagte, würde mir ein universelles Gelächter antworten. In fünf
               Jahren, jedenfalls in fünfzig, wird es Jeder einsehen».

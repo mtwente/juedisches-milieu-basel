@@ -76,7 +76,7 @@ export class PageTeil5 {
           </app-content>
         </ion-content>
         <app-dialog-fail ref={e => (this.failModal = e)} titleTxt={'Leider falsch'}>
-          <p>Die richtige Antwort ist Nordamerika und Frankreich</p>
+          <p>Die richtige Antwort ist «Nordamerika und Frankreich»</p>
         </app-dialog-fail>
         <app-dialog-success nr={nr} ref={e => (this.successModal = e)}>
           <ion-img src={getAssetPath('../../assets/hurray.gif')}></ion-img>
