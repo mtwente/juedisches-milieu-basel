@@ -65,6 +65,13 @@ export class PageAboutUs {
               <br />
             </p>
             <p>Besten Dank dem Jüdischen Museum Schweiz für das Bildmaterial und die Belohnung bei erfolgreich abgeschlossenem Spiel in Form eines Gratiseintritts.</p>
+            <p>
+              <a href="https://www.geovistory.org/" target="_blank" rel="noreferrer">
+                Geovistory
+              </a>
+              <br />
+            </p>
+            <p>Besten Dank dem Geovistory-Team fürs Bereitstellen der Infrastruktur zur Erstellung der Karte in «Zentren um 1910».</p>
 
             <p style={{ 'margin-top': '8rem' }}>
               <ion-note>App Version {version}</ion-note>
