@@ -29,7 +29,7 @@ export class PageTeil4 {
             </p>
             <p>
               In der Altstadt entstand am Unteren Heuberg ein erstes Zentrum jüdischen Lebens. Ein Warenlager wurde 1850 in eine kleine Synagoge umfunktioniert. Gründungsmitglieder
-              des Männervereins Dowor Tow wohnten in unmittelbarer Umgebung, an der Hutgasse, am Spalenberg oder an der Schützenmattstrasse. Mit dem Bau der Synagoge 1868 an der
+              des <a href="https://www.geovistory.org/project/1719422/page/i1929590?p=1719422" target="_blank" rel="noopener noreferrer">Männervereins Dowor Tow</a> wohnten in unmittelbarer Umgebung, an der Hutgasse, am Spalenberg oder an der Schützenmattstrasse. Mit dem Bau der Synagoge 1868 an der
               Leimenstrasse verlagerte sich das Zentrum zunehmend in dieses Quartier und ins Hegenheimerquartier.
             </p>
             <app-img src={getAssetPath('../../assets/teil-4/bild1.png')}>
