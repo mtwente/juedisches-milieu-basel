@@ -67,7 +67,7 @@ export class PageTeil10 {
               </a>, umgesetzt mit Geovistory.
             </div>
           </app-video>
-          <div class="ion-padding-left ion-padding-right ion-padding-bottom">
+          <div class="ion-padding-start ion-padding-end ion-padding-bottom">
             <p>
               Die dunkelblauen Punkte auf der Karte zeigen die Wohnorte der Gründungsmitglieder des israelitischen Männervereins Dowor Tow (1857). Die hellblauen Punkte zeigen die
               Wohnorte von jüdischen Handwerkerinnen und Handwerke um 1910 anhand einer Liste, die der jüdische Frauenverein erstellt hatte. Im Vergleich zeigt sich, dass sich um
