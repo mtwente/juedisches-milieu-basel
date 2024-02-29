@@ -1,13 +1,40 @@
 @import '~@ionic/core/css/typography.css';
 
 @font-face {
-  font-family: "Open Sans";
-  src: url("/assets/fonts/EuclidCircularB-Regular-WebS.woff2") format("woff2");
+	font-display: swap;
+	font-family: 'Euclid Circular B';
+	src: url('/assets/fonts/EuclidCircularB-Regular-WebS.woff2') format('woff2');
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Euclid Circular B';
+	src: url('/assets/fonts/EuclidCircularB-Medium-WebS.woff2') format('woff2');
+	font-style: normal;
+	font-weight: 500;
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Euclid Circular B';
+	src: url('/assets/fonts/EuclidCircularB-Semibold-WebS.woff2') format('woff2');
+	font-style: normal;
+	font-weight: 600;
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Euclid Circular B';
+	src: url('/assets/fonts/EuclidCircularB-Bold-WebS.woff2') format('woff2');
+	font-style: normal;
+	font-weight: 700;
 }
 
 html {
   --ion-dynamic-font: var(--ion-default-dynamic-font);
-  --ion-font-family: 'Open Sans';
+  --ion-font-family: 'Euclid Circular B', sans-serif;;
   font-size: 20px;
 }
 

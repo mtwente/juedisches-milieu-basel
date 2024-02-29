@@ -15,7 +15,7 @@ export class PageTeil11 {
         <app-header headerTitle={titles[nr]}></app-header>
         <ion-content class="ion-padding" id="main-menu">
           <app-content>
-            <h1>{titles[nr]}</h1>
+             <h1 class="ion-hide-md-down">{titles[nr]}</h1>
             <p class="lead">
               Bâleph – Ein Streifzug durch Basels jüdische Geschichte.
               <br /> 13 Stationen in der Basler Innenstadt.
@@ -48,8 +48,8 @@ export class PageTeil11 {
               Die Historikerin Isabel Schlerkmann und die Archäologin Sabina Lutz haben den Rundgang «Bâleph – Ein Streifzug durch Basels jüdische Geschichte» 2014 konzipiert und
               umgesetzt.
             </p>
-            <h2> Wie heisst die 1961 gegründete jüdische Primarschule?</h2>
-            <p>Die Antwort findest Du in der 8. Station des Rundgangs.</p>
+            <h2>Rätsel</h2>
+            <p> Wie heisst die 1961 gegründete jüdische Primarschule? <br /> Die Antwort findest Du in der 8. Station des Rundgangs.</p>
             <p>
               <ion-button color="primary" onClick={_ => this.failModal.open()}>
                 Arthur Cohn

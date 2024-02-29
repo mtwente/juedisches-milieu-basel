@@ -10,12 +10,12 @@ export class AppHeader {
     return (
       <Fragment>
         <app-menu></app-menu>
-        <ion-header translucent={true}>
+        <ion-header translucent={false}>
           <ion-toolbar>
             <ion-buttons slot="start">
               <ion-back-button text="Zurück" defaultHref={window.location.pathname === '/puzzle' ? undefined : '/puzzle'}></ion-back-button>
             </ion-buttons>
-            <ion-title>{this.headerTitle}</ion-title>
+            <ion-title class={'ion-hide-md-up'}>{this.headerTitle}</ion-title>
             <ion-buttons slot="end">
               <ion-menu-button></ion-menu-button>
             </ion-buttons>

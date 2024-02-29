@@ -34,7 +34,11 @@ export class AppDialogSuccess {
               </ion-buttons>
             </ion-toolbar>
           </ion-header>
-          <slot />
+          <ion-content class="ion-padding-top">
+            <div style={{ 'max-width': '600px', 'margin': '0 auto auto auto' }}>
+              <slot />
+            </div>
+          </ion-content>
         </ion-modal>
       </Host>
     );

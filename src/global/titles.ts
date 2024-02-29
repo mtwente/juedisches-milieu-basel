@@ -1,9 +1,9 @@
 export const titles = {
   1: 'Spielanleitung',
-  2: 'Juden in Basel',
+  2: 'Jüdische Gemeinden',
   3: 'Migration',
   4: 'Vereinswesen',
-  5: 'Institutionen',
+  5: 'Synagoge',
   6: 'Der Rabbiner',
   7: 'Jüdischer Friedhof',
   8: 'Zionistenkongresse',

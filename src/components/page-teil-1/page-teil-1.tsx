@@ -3,6 +3,8 @@ import { Component, Fragment, h } from '@stencil/core';
 import routerProvider from '../../global/router-provider';
 import { state } from '../../global/store';
 import { titles } from '../../global/titles';
+import { Build } from '@stencil/core';
+
 const nr = 1;
 @Component({
   tag: 'page-teil-1',
@@ -14,29 +16,33 @@ export class PageTeil1 {
   successModal: HTMLIonModalElement;
   successAnimation: Animation;
   render() {
+    let theme = 'purple';
+    if (Build.isBrowser && typeof window['__theme'] === 'string') {
+      theme = window['__theme'];
+    }
+
+    const colorUnlocked = theme === 'light' ? 'violettes' : 'weisses';
     return (
       <Fragment>
         <app-header headerTitle={titles[nr]}></app-header>
         <ion-content class="ion-padding" id="main-menu">
           <app-content>
-            <h1>Spielanleitung</h1>
-            <p class={'lead'}>Dieses digitale Puzzle gibt in zwölf Teilen einen Einblick in die Geschichte des jüdischen Milieus in Basel von 1850 bis 1914.</p>
+            <h1 class="ion-hide-md-down">{titles[nr]}</h1>
+            <p class={'lead'}>Dieses digitale Puzzle gibt in zwölf Teilen einen Einblick in die Geschichte des jüdischen Basels von 1850 bis 1914.</p>
             <p>So funktioniert es:</p>
             <p>
               <ul>
-                <li>Bei jedem Puzzleteil finden Sie Wissenwertes zur Geschichte des jüdischen Milieus in Basel.</li>
+                <li>Klicke auf ein {colorUnlocked} (=freigeschaltetes) Puzzleteil.</li>
+                <li>Schau dir die Inhalte an und löse das Rätsel.</li>
+                <li>Bei richtiger Antwort dreht sich das Puzzleteil um und ein nächstes schaltet sich frei.</li>
                 <li>
-                  Hinter jedem Puzzleteil befindet sich eine Frage oder ein Rätsel. Haben Sie die Aufgabe richtig gelöst, dreht sich das Puzzleteil um und ergänzt ein Gesamtbild.
+                  Am Ende winkt als Belohnung ein <br /> <strong>Gratiseintritt in ein Museum</strong>! <br /> Lass dich überraschen…
                 </li>
-                <li>Klicken Sie darauf das nächste Puzzleteil an: Lesen Sie die Texte, schauen Sie die Filmbeiträge und sehen Sie sich die Bilder an.</li>
-                <li>Sie müssen die Rätsel nicht der Reihe nach lösen, sondern können frei auswählen.</li>
-                <li>Wenn Sie alle Aufgaben gelöst haben, werden die Puzzleteile zu einem grossen Bild freigeschaltet. Das Puzzle ist vollständig.</li>
-                <li>Holen Sie sich ihre Belohnung ab!</li>
               </ul>
             </p>
             <p>
-              Puzzlen stärkt unser Wohlbefinden. Es regt beide Gehirnhälften und wirkt sich positiv auf die Konzentration und das Kurzzeitgedächtnis aus. Deshalb: Legen Sie los.
-              Tauchen Sie in das Puzzle ein und eignen Sie sich Wissen zum jüdischen Milieu in Basel an.
+              Puzzeln stärkt unser Wohlbefinden. Es regt beide Gehirnhälften an und wirkt sich positiv auf Konzentration und Kurzzeitgedächtnis aus. Also: Leg los. Tauche in das
+              Puzzle ein und eigne dir Wissen zur Geschichte des jüdischen Basels.
             </p>
             <p>
               <ion-button color="primary" onClick={_ => this.dismiss()}>

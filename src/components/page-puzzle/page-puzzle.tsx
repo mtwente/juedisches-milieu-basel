@@ -157,8 +157,8 @@ export class PagePuzzle {
           <div class="container">
             <div class={`game-finished ${state.showBravo ? 'visible' : 'hidden'}`}>
               <p>
-                Bravo, <br />
-                Sie haben es geschafft!
+                Bravo <br />
+                Du hast es geschafft!
               </p>
               <div>
                 <ion-button color="primary" onClick={() => this.openGratification()}>
@@ -190,7 +190,7 @@ export class PagePuzzle {
                   <g>
                     {this.elements.map(e => (
                       <g class={`puzzle-piece ${state?.['t' + e.nr]}`}>
-                        <path d={e.path.d} />
+                        <path class="cover" d={e.path.d} />
                         <path class="overlay" d={e.path.d} onClick={() => this.navigate(e)} />
                         {/* <text class="nr" x={e.txt1.x + e.txt1.width / 2} y={e.txt1.y + e.txt1.height / 1.5} dominant-baseline="middle" text-anchor="middle">
                           {e.nr}
@@ -201,13 +201,13 @@ export class PagePuzzle {
                       </g>
                     ))}
                     <g ref={e => (this.g = e)}></g>
-                    <text class="title" x="495px" y="1480px" dominant-baseline="middle" text-anchor="middle">
-                      Jüdisches
+                    <text class="title" x="498px" y="1460px" dominant-baseline="middle" text-anchor="middle">
+                      Das
                     </text>
-                    <text class="title" x="495px" y="1580px" dominant-baseline="middle" text-anchor="middle">
-                      Milieu Basel
+                    <text class="title" x="498px" y="1560px" dominant-baseline="middle" text-anchor="middle">
+                      jüdische Basel
                     </text>
-                    <text class="title" x="495px" y="1680px" dominant-baseline="middle" text-anchor="middle">
+                    <text class="title" x="498px" y="1660px" dominant-baseline="middle" text-anchor="middle">
                       1850 bis 1914
                     </text>
                   </g>

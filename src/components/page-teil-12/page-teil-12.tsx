@@ -14,7 +14,7 @@ export class PageTeil12 {
         <app-header headerTitle={titles[nr]}></app-header>
         <ion-content class="ion-padding" id="main-menu">
           <app-content>
-            <h1>{titles[nr]}</h1>
+             <h1 class="ion-hide-md-down">{titles[nr]}</h1>
             <p class="lead">
               Öffentlich-rechtlich anerkannt <br />
               Die Entwicklung der jüdischen Bevölkerung bis heute
