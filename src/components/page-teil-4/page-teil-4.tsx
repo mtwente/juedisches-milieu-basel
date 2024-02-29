@@ -20,8 +20,7 @@ export class PageTeil4 {
           <app-content>
             <h1 class="ion-hide-md-down">{titles[nr]}</h1>
             <p class="lead">
-              Zentren des jüdischen Lebens <br />
-              Das Vereinswesen im jüdischen Milieu
+              Zentren des jüdischen Lebens
             </p>
             <p>
               Die Jüdinnen und Juden organisierten sich als religiöse Minderheit in einem eigenen Milieu mit Vereinen und Institutionen. Das soziale und kulturelle Leben fand in
@@ -34,7 +33,7 @@ export class PageTeil4 {
             </p>
             <app-img src={getAssetPath('../../assets/teil-4/bild1.png')}>
               Quelle: StaBS BILD Schn. 142 <br />
-              Das Bild von Johann Jakob Schneider entstand 1879. Der Blick führt in den unteren Heuberg zur alten Synagoge vom Gemsberg her.
+              Das Bild von Johann Jakob Schneider entstand 1879. Der Blick führt in den Unteren Heuberg zur alten Synagoge vom Gemsberg her.
             </app-img>
             <app-img src={getAssetPath('../../assets/teil-4/bild2.png')}>Quelle: StaBS NEG 1224 (Aufnahme von 1895).</app-img>
             <p>

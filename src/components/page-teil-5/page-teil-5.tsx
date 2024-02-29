@@ -16,16 +16,15 @@ export class PageTeil5 {
           <app-content>
             <h1 class="ion-hide-md-down">{titles[nr]}</h1>
             <p class={'lead'}>Die Synagoge an der Leimenstrasse</p>
-            <p>Das Zentrum des religiösen Judentums in Basel</p>
             <p>
               Die Mitglieder der dritten jüdischen Gemeinde, die sich ab etwa 1805 gebildet hatte, trafen sich für mehrere Jahrzehnte in Privatwohnungen zum Gebet. 1850 nahm die
-              erste Synagoge am Unteren Heuberg den Betrieb auf. Die kleine Synagoge befand sich in einer umgebauten Liegenschaft. 16 Jahre später nahm Heinrich Gauss die Planung
+              erste Synagoge am Unteren Heuberg den Betrieb auf. Die kleine Synagoge befand sich in einer umgebauten Liegenschaft. 16 Jahre später nahm Hermann Gauss die Planung
               einer «richtigen» Synagoge in Angriff. Der deutsche Architekt war 1858 als Angestellter des technischen Büros der Schweizerischen Centralbahn nach Basel gekommen und
               hatte sich zwei Jahre später selbständig gemacht. Gauss liess sich bei der Planung des Kuppelbaus vom orientalischen Stil der Synagogen von Dresden und Stuttgart
               inspirieren.{' '}
             </p>
             <app-img src="../../assets/teil-5/synagoge-1.png">
-              Die von Architekt Heinrich Gauss gebaute Synagoge an der Leimenstrasse war mit seinem Kuppelbau ein architektonischer Farbtupfer in der Stadt. Die Aufnahme entstand
+              Die von Architekt Hermann Gauss gebaute Synagoge an der Leimenstrasse war mit seinem Kuppelbau ein architektonischer Farbtupfer in der Stadt. Die Aufnahme entstand
               zwischen 1868 und 1880.
               <br />
               Quelle: Staatsarchiv Basel-Stadt, SMM Inv.2016.1.17.3
@@ -37,7 +36,7 @@ export class PageTeil5 {
               Synagoge um eine zweite Kuppel und einen Langbau ergänzt.{' '}
             </p>
 
-            <app-img src="../../assets/teil-5/der-israelit.png">Kurze Nachricht in der Zeitschrift «Der Israelit» vom 30. September 1868</app-img>
+            <app-img src="../../assets/teil-5/der-israelit.png">Kurze Nachricht in der Zeitschrift «Der Israelit» vom 30. September 1868.</app-img>
 
             <p>
               Paul Reber (1835-1908) war nicht nur Architekt, sondern auch Politiker. Er sass mehrere Jahrzehnte im Grossen Rat und im Bürgerrat. Politisch liess er sich nicht klar

@@ -18,7 +18,7 @@ export class PageTeil8 {
           <app-content>
             <h1 class="ion-hide-md-down">{titles[nr]}</h1>
             <p class="lead">
-              «In Basel habe ich den Judenstaat gegründet» <br />
+              «In Basel habe ich den Judenstaat gegründet»: <br />
               Basel als Gastgeber der Zionistenkongresse
             </p>
             <p>
@@ -33,7 +33,7 @@ export class PageTeil8 {
             </p>
             <p>
               Die Basler Juden beeindruckte die Idee der Auswanderung nach Palästina hingegen wenig. Sie fühlten sich hier zuhause und spürten wenig Drang, die Heimat zu verlassen.
-              1901 sandte die Basler Regierung erstmals ein offizielles Begrüssungsschreiben und empfing eine Delegation mit Herzl an der Spitze. Der freisinnige
+              Für den Zionistenkongress 1901 sandte die Basler Regierung erstmals ein offizielles Begrüssungsschreiben und empfing eine Delegation mit Herzl an der Spitze. Der freisinnige
               Regierungspräsident Heinrich David äusserte, der Zionismus sei «etwas Erhabenes», und er freute sich, «dass diese grosse, schöne Idee in Basel ein Heim gefunden hat».
               Die Kongresse dürften dazu beigetragen haben, dass sich die jüdische und die nicht-jüdische Bevölkerung von Basel näherkamen.
             </p>
@@ -56,7 +56,7 @@ export class PageTeil8 {
               ></iframe>
               <span slot="caption">
                 Vom 29. bis 31. August 2022 jährte sich der Erste Zionistenkongress in Basel zum 125. Mal. Dort legte der Initiator Theodor Herzl den Grundstein für die Gründung
-                Israels. Anlässlich des Jubiläums die Universität Basel mit Prof. Dr. Erik Petry die Spuren, die Herzl in Basel hinterlassen hat.
+                Israels. Anlässlich des Jubiläums beleuchtete die Universität Basel mit Prof. Dr. Erik Petry die Spuren, die Herzl in Basel hinterlassen hat.
               </span>
             </app-video>
             <p>
@@ -79,7 +79,7 @@ export class PageTeil8 {
                 </Fragment>,
                 <Fragment>Haumann, Heiko (Hg.): Der Erste Zionistenkongress von 1897 – Ursachen, Bedeutung, Aktualität, Basel 1997.</Fragment>,
                 <Fragment>
-                  Heiko Haumann: Juden in Basel und Umgebung – Zur Geschichte einer Minderheit. Darstellung und Quellen für den Gebrauch an Schulen. Herausgegeben von den
+                  Haumann, Heiko: Juden in Basel und Umgebung – Zur Geschichte einer Minderheit. Darstellung und Quellen für den Gebrauch an Schulen. Herausgegeben von den
                   Regierungsräten der Kantone Basel-Stadt und Basel-Landschaft. Basel 1999.
                 </Fragment>,
               ]}

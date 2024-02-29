@@ -16,7 +16,7 @@ export class PageTeil6 {
           <app-content>
             <h1 class="ion-hide-md-down">{titles[nr]}</h1>
             <p class={'lead'}>
-              Konservativ, aber kein Elsässer <br />
+              Konservativ, aber kein Elsässer: <br />
               Arthur Cohn wird erster Rabbiner in Basel
             </p>
 
@@ -33,10 +33,10 @@ export class PageTeil6 {
               Quelle: UBH Portr BS Cohn A 1862, 1
             </app-img>
             <p>
-              Arthur Cohn war kein Elsässer, sorgte mit seiner konservativen Haltung aber dafür, dass liberale Reformbewegungen in der jüdischen Gemeinde in Basel nicht
-              nachhaltigen erfolgreich blieben. Der Charakter der Basler Gemeinde war deshalb im Gegensatz zu vielen liberalen jüdischen Gemeinden in Deutschland orthodox geprägt.
-              In Basel gründete Cohn Vereine und Institutionen, die sich dem Studium der jüdischen Religion widmeten. Während seiner Amtszeit weihte Cohn 1892 die vergrösserte
-              Synagoge ein und eröffnete 1903 den neuen jüdischen Friedhof.
+              Arthur Cohn war kein Elsässer, sorgte mit seiner konservativen Haltung aber dafür, dass liberale Reformbewegungen in der jüdischen Gemeinde in Basel nicht nachhaltig
+              erfolgreich blieben. Der Charakter der Basler Gemeinde war deshalb im Gegensatz zu vielen liberalen jüdischen Gemeinden in Deutschland orthodox geprägt. Während
+              seiner Amtszeit gründete Cohn Vereine und Institutionen, die sich dem Studium der jüdischen Religion widmeten, weihte 1892 die vergrösserte Synagoge ein und eröffnete
+              1903 den neuen jüdischen Friedhof.
             </p>
             <p>
               Nach über vierzigjährigem Wirken verstarb Arthur Cohn 1926 im Amt. Auf ihn folgte Arthur Weil, der aus Frankreich stammte, sein Diplom aber am gleichen

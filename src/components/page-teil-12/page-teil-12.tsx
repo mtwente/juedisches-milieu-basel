@@ -16,7 +16,7 @@ export class PageTeil12 {
           <app-content>
              <h1 class="ion-hide-md-down">{titles[nr]}</h1>
             <p class="lead">
-              Öffentlich-rechtlich anerkannt <br />
+              Öffentlich-rechtlich anerkannt: <br />
               Die Entwicklung der jüdischen Bevölkerung bis heute
             </p>
             <p>

@@ -16,7 +16,7 @@ export class PageTeil9 {
           <app-content>
             <h1 class="ion-hide-md-down">{titles[nr]}</h1>
             <p class="lead">
-              Der Trödler aus dem Elsass <br />
+              Der Trödler aus dem Elsass: <br />
               Isaac Ségal (1831-1916) wandert von Hégenheim nach Basel ein
             </p>
             <p>
@@ -30,7 +30,7 @@ export class PageTeil9 {
               Berthold Ségal kam 1873 auf die Welt und erhielt 1904 das Basler Bürgerrecht. Bild: Privatarchiv Antiquités Ségal&Selig.
             </app-img>
             <p>
-              Sein 1873 geborener Sohn Berthold Ségal erhielt 1904 das Basler Bürgerrecht. Ségal Junior war Mitglied des israelitischen Männervereines Dowor Tow und vertrat diesen
+              Sein 1873 geborener Sohn Berthold Ségal erhielt 1904 das Basler Bürgerrecht. Ségal Junior war Mitglied des israelitischen Männervereins Dowor Tow und vertrat diesen
               als Delegierter in der Armenkommission der Israelitischen Gemeinde Basel. Spätestens nach dem Tod von Isaac Ségal am 6. Oktober 1916 hatte Berthold Ségal das Geschäft
               übernommen. Er spezialisierte das Antiquariat, das sich inzwischen am Fischmarkt befand, auf wertvolle Antiquitäten. Unterstützung erhielt er von seiner Frau Betty,
               geborene Kaufmann. In den Jahren nach dem Ersten Weltkrieg betreute Ségal als Experte Auktionen von teilweise grossen Sammlungen, die aus wirtschaftlichen Gründen
@@ -43,7 +43,7 @@ export class PageTeil9 {
             <h2>Rätsel</h2>
             <p>
               In der Sendung «Sternstunde Religion» des Schweizer Fernsehen vom 27. Februar 2005 sprach der Soziologe Ralph Weill – anlässlich des 200-Jahr-Jubiläums der
-              Israelitischen Gemeinde Basel (IGB) – über die 800-jährige jüdischen Geschichte von Basel. Ab Minute 28:00 erzählt Weill, dass die Region zwischen Jura, Vogesen und
+              Israelitischen Gemeinde Basel (IGB) – über die 800-jährige jüdische Geschichte von Basel. Ab Minute 28:00 erzählt Weill, dass die Region zwischen Jura, Vogesen und
               Schwarzwald früher eine einheitliche Kulturregion mit einer einheitlichen jüdischen Gemeinschaft gewesen sei. Diese teile sich nun in drei sehr verschiedene Gruppen
               auf: Eine elsässische, ausschliesslich französisch sprechende Gruppe mit vielen aus Nordafrika eingewanderten Juden, eine gemischte Gruppe in Basel mit einem
               elässisch-badischen und osteuropäischen Hintergrund. Auch in Südbaden gebe es wieder eine jüdische Bevölkerung.

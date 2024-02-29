@@ -21,9 +21,9 @@ export class PageTeil7 {
               Die Basler Juden erhalten einen eigenen Friedhof
             </p>
             <p>
-              Rud hundert Jahre lang bestattete die jüdische Gemeinde von Basel ihre Toten im benachbarten Hégenheim im Elsass. Dort ist seit 1673 ein jüdischer Friedhof in
+              Rund hundert Jahre lang bestattete die jüdische Gemeinde von Basel ihre Toten im benachbarten Hégenheim im Elsass. Dort ist seit 1673 ein jüdischer Friedhof in
               Betrieb. Der Wunsch nach einem eigenen Friedhof auf Basler Boden verstärkte sich, als sich die Zusammensetzung der jüdischen Gemeinde durch Zuwanderung veränderte und
-              nicht mehr ausschliesslich elsässisch-geprägt war. Ausserdem vergrösserte sich der bürokratische und finanzielle Aufwand für eine Bestattung im Ausland.{' '}
+              nicht mehr ausschliesslich elsässisch geprägt war. Ausserdem vergrösserte sich der bürokratische und finanzielle Aufwand für eine Bestattung im Ausland.{' '}
             </p>
             <app-img src="../../assets/teil-7/friedhof-1.jpg">
               Auf dem jüdischen Friedhof in Hégenheim wurden bis 1903 auch Basler Jüdinnen und Juden begraben.
@@ -46,25 +46,23 @@ export class PageTeil7 {
               wurden umfangreiche rechtliche Abklärungen getroffen, mögliche Standorte des Friedhofs evaluiert und zahlreiche Gespräche mit dem zuständigen Sanitätsdepartement und
               weiteren Personen geführt. Das sorgfältige Vorgehen zahlte sich aus. Die Regierung arbeitete einen Ratschlag aus, in dem sie die Genehmigung einer Ausnahmebewilligung
               für einen eigenen Friedhof befürwortete. Als sich im Grossen Rat eine kritische Haltung insbesondere bei den Freisinnigen abzeichnete, verschickte das
-              Initiativkomitee ein Schreiben an alle Grossräte und organisierte eine Informationsveranstaltung für die freisinnige Grossräte. Referent Emil Göttisheim, selber
+              Initiativkomitee ein Schreiben an alle Grossräte und organisierte eine Informationsveranstaltung für die freisinnigen Grossräte. Referent Emil Göttisheim, selber
               freisinniger Grossrat, konnte die Anwesenden überzeugen.
             </p>
             <p>
               In der Grossratssitzung vom 10. April 1902 war das Geschäft deshalb schnell behandelt und wurde ohne grosse Diskussion angenommen. Die Grossräte gewichteten die
               Religionsfreiheit höher als die strikte Einhaltung des Gesetzes, das dem Staat die alleinige Hoheit über das Bestattungswesen vorschrieb.
             </p>
+            <h2>Rätsel</h2>
             <p>
-              Die Basler Chronik vermerkt den Tod von Nathan Höchstetter:{' '}
+              Die Basler Chronik vermerkt den Tod von Nathan Höchstetter {' '}
               <a
                 href="https://www.baslerstadtbuch.ch/chronik/1909/06/07/es-stirbt-nathan-hoechstetter-levy-der-eine-reihe-von-jahren-die-sozialdemokratische-partei-im.html"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 hier.
-              </a>
-            </p>
-            <h2>Rätsel</h2>
-            <p>Für welche Partei sass Nathan Höchstetter mehrere Jahre im Grossen Rat?</p>
+              </a>{' '}Für welche Partei sass Nathan Höchstetter mehrere Jahre im Grossen Rat?</p>
             <p>
               <ion-button color="primary" onClick={_ => this.failModal.open()}>
                 Freisinnig-Demokratische Partei
