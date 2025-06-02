@@ -33,10 +33,11 @@ export class PageTeil3 {
             <p>
               Es fällt auf, dass in Basel in den drei Jahren nach dem Deutsch-Französischen Krieg ab 1871 viele Menschen aus dem Elsass das Bürgerrecht erhielten. Viele zugezogene
               Juden hatten immer noch Familienangehörige in den Elsässer Dörfern. Mit Sorge blickten sie nach Norden, als Deutschland und Frankreich sich 1870 bekriegten. Tausende
-              Flüchtende suchten in Basel Schutz. Viele darunter waren jüdische Französinnen und Franzosen. Die jüdischen Vereine kümmerten sich um deren Verpflegung und Unterkunft. Die meisten der Geflohenen blieben nicht dauerhaft in Basel und kehrten in ihre Gemeinde zurück. Dennoch: In den nächsten rund
-              40 Jahren verfünffachte sich die jüdische Bevölkerung in Basel von rund 500 Personen 1870 auf über 2400 Personen 1910. Zwar kamen mit der rechtlichen Gleichstellung
-              vermehrt auch Juden aus dem süddeutschen Raum, dem Baselbiet und aus Endingen und Lengnau in die Stadt. Die Beziehungen zum Elsass, insbesondere zur Gemeinde
-              Hégenheim blieben aber identitätsstiftend für die jüdische Gemeinde.
+              Flüchtende suchten in Basel Schutz. Viele darunter waren jüdische Französinnen und Franzosen. Die jüdischen Vereine kümmerten sich um deren Verpflegung und
+              Unterkunft. Die meisten der Geflohenen blieben nicht dauerhaft in Basel und kehrten in ihre Gemeinde zurück. Dennoch: In den nächsten rund 40 Jahren verfünffachte
+              sich die jüdische Bevölkerung in Basel von rund 500 Personen 1870 auf über 2400 Personen 1910. Zwar kamen mit der rechtlichen Gleichstellung vermehrt auch Juden aus
+              dem süddeutschen Raum, dem Baselbiet und aus Endingen und Lengnau in die Stadt. Die Beziehungen zum Elsass, insbesondere zur Gemeinde Hégenheim blieben aber
+              identitätsstiftend für die jüdische Gemeinde.
             </p>
             <h2>Rätsel</h2>
             <p>Wo befindet sich das elsässische Dorf Hégenheim: A, B oder C?</p>

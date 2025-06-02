@@ -36,6 +36,11 @@ To run the unit tests and watch for file changes during development, run:
 npm run test.watch
 ```
 
+To deploy the app to GitHub Pages, run:
+
+```bash
+npm run deploy
+```
 
 ## Docker
 
@@ -48,7 +53,7 @@ docker build -t juedisches-basel-app .
 Start docker container
 
 ```bash
-docker run -d -p 8080:8080 --name jb-app juedisches-basel-app 
+docker run -d -p 8080:8080 --name jb-app juedisches-basel-app
 ```
 
 Stop and remove docker container

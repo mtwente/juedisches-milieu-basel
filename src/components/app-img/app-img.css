@@ -1,6 +1,5 @@
 :host {
   display: block;
-
 }
 
 figure {
@@ -9,6 +8,6 @@ figure {
 }
 
 figcaption {
-  margin-top: .5rem;
-  font-size: .8rem;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
 }

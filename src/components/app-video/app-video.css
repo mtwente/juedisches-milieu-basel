@@ -7,7 +7,7 @@ figure {
   margin: 1rem 0 3rem 0;
 }
 
-::slotted([slot="caption"]) {
-  margin-top: .5rem;
-  font-size: .8rem;
+::slotted([slot='caption']) {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
 }

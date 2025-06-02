@@ -9,9 +9,10 @@ export const config: Config = {
   outputTargets: [
     {
       type: 'www',
+      dir: 'www',
       // comment the following line to disable service workers in production
       serviceWorker: null,
-      baseUrl: 'https://stadtgeschichtebasel-jb.geovistory.org/',
+      baseUrl: 'https://das-juedische-basel.stadtgeschichtebasel.ch/',
     },
   ],
 };

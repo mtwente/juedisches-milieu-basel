@@ -7,12 +7,11 @@
   fill: none;
 }
 
-.circle.segment-1 ,
-.circle.segment-2 ,
+.circle.segment-1,
+.circle.segment-2,
 .circle.segment-3 {
   stroke: #7b3f27;
 }
-
 
 .outline {
   stroke: var(--ion-color-step-500);
@@ -26,5 +25,5 @@
 .label-2,
 .label-3 {
   fill: var(--ion-color-step-500);
-  font-size: .8rem;
+  font-size: 0.8rem;
 }

@@ -11,7 +11,8 @@
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
-    "serve": "cd www && npx wds --node-resolve --open"
+    "serve": "cd www && npx wds --node-resolve --open",
+    "deploy": "npx gh-pages -d www/ --cname das-juedische-basel.stadtgeschichtebasel.ch --nojekyll"
   },
   "devDependencies": {
     "@ionic/core": "^7.0.9",

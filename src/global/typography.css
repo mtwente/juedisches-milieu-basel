@@ -1,43 +1,42 @@
 @import '~@ionic/core/css/typography.css';
 
 @font-face {
-	font-display: swap;
-	font-family: 'Euclid Circular B';
-	src: url('/assets/fonts/EuclidCircularB-Regular-WebS.woff2') format('woff2');
-	font-style: normal;
-	font-weight: 400;
+  font-display: swap;
+  font-family: 'Euclid Circular B';
+  src: url('/assets/fonts/EuclidCircularB-Regular-WebS.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
 }
 
 @font-face {
-	font-display: swap;
-	font-family: 'Euclid Circular B';
-	src: url('/assets/fonts/EuclidCircularB-Medium-WebS.woff2') format('woff2');
-	font-style: normal;
-	font-weight: 500;
+  font-display: swap;
+  font-family: 'Euclid Circular B';
+  src: url('/assets/fonts/EuclidCircularB-Medium-WebS.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 500;
 }
 
 @font-face {
-	font-display: swap;
-	font-family: 'Euclid Circular B';
-	src: url('/assets/fonts/EuclidCircularB-Semibold-WebS.woff2') format('woff2');
-	font-style: normal;
-	font-weight: 600;
+  font-display: swap;
+  font-family: 'Euclid Circular B';
+  src: url('/assets/fonts/EuclidCircularB-Semibold-WebS.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 600;
 }
 
 @font-face {
-	font-display: swap;
-	font-family: 'Euclid Circular B';
-	src: url('/assets/fonts/EuclidCircularB-Bold-WebS.woff2') format('woff2');
-	font-style: normal;
-	font-weight: 700;
+  font-display: swap;
+  font-family: 'Euclid Circular B';
+  src: url('/assets/fonts/EuclidCircularB-Bold-WebS.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 700;
 }
 
 html {
   --ion-dynamic-font: var(--ion-default-dynamic-font);
-  --ion-font-family: 'Euclid Circular B', sans-serif;;
+  --ion-font-family: 'Euclid Circular B', sans-serif;
   font-size: 20px;
 }
-
 
 /*
 * Elements with restricted width of body text
@@ -73,7 +72,6 @@ pre:not(.CodeMirror-line),
   margin-right: auto;
 }
 
-
 /*
 * Reading (medium).
 * Text set for immersive reading. This usually
@@ -82,8 +80,8 @@ pre:not(.CodeMirror-line),
 */
 p {
   font-size: 1rem;
-  margin-block-start: .9em;
-  margin-block-end: .9em;
+  margin-block-start: 0.9em;
+  margin-block-end: 0.9em;
   line-height: 1.8;
 }
 
@@ -108,8 +106,6 @@ sup {
   vertical-align: baseline;
 }
 
-
-
 /*
 * Reference (small).
 * Reference text includes small print, notes and specialist purposes
@@ -132,7 +128,7 @@ h6 {
   font-weight: 500;
   line-height: 1.2;
   margin-block-start: 2em;
-  margin-block-end: .5em;
+  margin-block-end: 0.5em;
 }
 
 h1:first-child,
@@ -176,16 +172,15 @@ h6 {
   /* font-size: 16px; */
 }
 
-h2+h3,
-h3+h4,
-h4+h5,
-h5+h6 {
+h2 + h3,
+h3 + h4,
+h4 + h5,
+h5 + h6 {
   margin-block-start: 1rem;
 }
 
 /* sm and up */
 @media screen and (min-width: 576px) {
-
   h1 {
     /* 16px x 4.875 = 78px */
     /* font-size: 4.875rem; */
@@ -234,8 +229,6 @@ h5+h6 {
     /* font-size: 16px; */
   }
 }
-
-
 
 /* unvisited link */
 a:link {

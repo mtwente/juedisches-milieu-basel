@@ -1,4 +1,4 @@
-import { Component, Fragment, h, State } from '@stencil/core'
+import { Component, Fragment, h, State } from '@stencil/core';
 
 @Component({
   tag: 'page-home',
@@ -6,27 +6,27 @@ import { Component, Fragment, h, State } from '@stencil/core'
   // shadow: true,
 })
 export class PageHome {
-  @State() mode: string
+  @State() mode: string;
 
   constructor() {
-    this.mode = localStorage.getItem('mode') || 'auto'
+    this.mode = localStorage.getItem('mode') || 'auto';
   }
 
   setMode(mode: string) {
     if (mode == this.mode) {
-      return
+      return;
     }
-    this.mode = mode
+    this.mode = mode;
     switch (mode) {
       case 'md':
       case 'ios':
-        localStorage.setItem('mode', mode)
-        break
+        localStorage.setItem('mode', mode);
+        break;
       default:
-        localStorage.removeItem('mode')
-        break
+        localStorage.removeItem('mode');
+        break;
     }
-    location.reload()
+    location.reload();
   }
 
   render() {
@@ -40,16 +40,11 @@ export class PageHome {
         <ion-content class="ion-padding">
           <p>Welcome to Stencil App Starter.</p>
           <ion-list>
-            <ion-radio-group
-              value={this.mode}
-              onIonChange={e => this.setMode(e.detail.value)}
-            >
+            <ion-radio-group value={this.mode} onIonChange={e => this.setMode(e.detail.value)}>
               <ion-list-header>
                 <ion-label>Theme Mode</ion-label>
               </ion-list-header>
-              <ion-note class="ion-padding-start">
-                (Changing theme will reload the whole app.)
-              </ion-note>
+              <ion-note class="ion-padding-start">(Changing theme will reload the whole app.)</ion-note>
               <ion-item>
                 <ion-radio value="auto">Auto Detect</ion-radio>
               </ion-item>
@@ -72,6 +67,6 @@ export class PageHome {
           </ion-list>
         </ion-content>
       </Fragment>
-    )
+    );
   }
 }

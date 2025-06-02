@@ -10,7 +10,7 @@ export class AppImg {
   render() {
     return (
       <Host>
-        <figure >
+        <figure>
           <ion-img src={getAssetPath(this.src)}></ion-img>
           <figcaption>
             <slot></slot>

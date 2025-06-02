@@ -22,39 +22,37 @@
   border-right: 10px dotted var(--ion-background-color);
 }
 
-.coupon>div:first-of-type {
-  font-size: 23.5px
+.coupon > div:first-of-type {
+  font-size: 23.5px;
 }
 
-.coupon>div:nth-of-type(2) {
+.coupon > div:nth-of-type(2) {
   position: relative;
   font-size: 32px;
   margin-bottom: 16px;
   border-bottom: 2px solid rgb(52, 52, 52);
 }
 
-.coupon>div:nth-of-type(2)>span {
+.coupon > div:nth-of-type(2) > span {
   position: absolute;
   font-size: 16px;
   line-height: 22px;
   right: 0;
   bottom: 0;
   color: rgb(116, 116, 116);
-
 }
 
-
-.coupon>div:nth-of-type(3) {
+.coupon > div:nth-of-type(3) {
   text-align: center;
   line-height: 24px;
   font-family: monospace;
 }
 
-.coupon>div:nth-of-type(3)>pre {
+.coupon > div:nth-of-type(3) > pre {
   font-weight: 700;
 }
 
-.coupon>div:nth-of-type(4) {
+.coupon > div:nth-of-type(4) {
   color: rgb(116, 116, 116);
   text-align: left;
   margin-top: 12px;

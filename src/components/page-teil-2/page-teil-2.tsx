@@ -23,15 +23,15 @@ export class PageTeil2 {
             <p>
               Die Mitglieder der ersten jüdischen Gemeinde wohnten zwischen Barfüsserplatz und Marktplatz. Viele arbeiteten im Geldwechsel- und Kreditgeschäft, dessen Ausübung den
               Christen verboten war. Ein Geschäftspartner war etwa Bischof Heinrich von Thun, der 1223 den Münsterschatz als Sicherheit für ein Darlehen gab, mit dem er wohl den
-              Bau der Mittleren Brücke finanzieren konnte. Die Synagoge der ersten Gemeinde befand sich an der Gerbergasse, der Friedhof lag beim Kollegiengebäude
-              der Universität Basel am Petersplatz. Als eine Pestwelle Europa erfasste, wurde die jüdische Bevölkerung zum Sündenbock gemacht. Auch Basel ging gewalttätig gegen die
-              jüdischen Mitmenschen vor. Während der Fasnachtszeit, im Januar 1349, wurden alle Jüdinnen und Juden, die nicht geflohen waren, auf einer Insel im Rhein verbrannt.{' '}
+              Bau der Mittleren Brücke finanzieren konnte. Die Synagoge der ersten Gemeinde befand sich an der Gerbergasse, der Friedhof lag beim Kollegiengebäude der Universität
+              Basel am Petersplatz. Als eine Pestwelle Europa erfasste, wurde die jüdische Bevölkerung zum Sündenbock gemacht. Auch Basel ging gewalttätig gegen die jüdischen
+              Mitmenschen vor. Während der Fasnachtszeit, im Januar 1349, wurden alle Jüdinnen und Juden, die nicht geflohen waren, auf einer Insel im Rhein verbrannt.{' '}
             </p>
             <p>
-              Ein halbes Jahrhundert später erhielt Basel eine zweite jüdische Gemeinde mit einer Synagoge an der Grünpfahlgasse. Bereits nach wenigen Jahren verschwand
-              diese aber wieder. Eine offizielle Verfolgung oder Ausweisung war nicht der Grund. Vielmehr floh die jüdische Bevölkerung wohl aus der Stadt, weil sie sich nicht
-              sicher fühlten und eine Verfolgung fürchteten. Denn Bruno von Rappoltstein, Herrscher von Ribeauvillé, hatte 1397 Jüdinnen und Juden unter Folter gezwungen, das
-              Vergiften von Brunnen zu gestehen. Dabei war auch der Name eines Basler Juden genannt worden.{' '}
+              Ein halbes Jahrhundert später erhielt Basel eine zweite jüdische Gemeinde mit einer Synagoge an der Grünpfahlgasse. Bereits nach wenigen Jahren verschwand diese aber
+              wieder. Eine offizielle Verfolgung oder Ausweisung war nicht der Grund. Vielmehr floh die jüdische Bevölkerung wohl aus der Stadt, weil sie sich nicht sicher fühlten
+              und eine Verfolgung fürchteten. Denn Bruno von Rappoltstein, Herrscher von Ribeauvillé, hatte 1397 Jüdinnen und Juden unter Folter gezwungen, das Vergiften von
+              Brunnen zu gestehen. Dabei war auch der Name eines Basler Juden genannt worden.{' '}
             </p>
             <app-video>
               <iframe

@@ -1,53 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html dir="ltr" lang="en" class="ios">
+  <head>
+    <meta charset="utf-8" />
+    <title>Das jüdische Basel 1850–1914</title>
+    <meta name="description" content="Entdecken Sie die Geschichte des jüdischen Basel von 1850 bis 1914 auf spielerische Art und Weise." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <meta name="theme-color" content="#16161d" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="x-ua-compatible" content="IE=Edge" />
 
-<head>
-  <meta charset="utf-8">
-  <title>Das jüdische Basel 1850 – 1914</title>
-  <meta name="Description"
-    content="Entdecken Sie die Geschichte des jüdischen Basel von 1850 bis 1914 auf spielerische Art und Weise.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
-  <meta name="theme-color" content="#16161d">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta http-equiv="x-ua-compatible" content="IE=Edge">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Das jüdische Basel 1850–1914" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:description" content="Entdecken Sie die Geschichte des jüdischen Basel von 1850 bis 1914 auf spielerische Art und Weise." />
+    <meta property="og:image" content="/assets/socialimage.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="600" />
 
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Das jüdische Basel, 1850 – 1914" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta property="og:description"
-    content="Entdecken Sie die Geschichte des jüdischen Basel von 1850 bis 1914 auf spielerische Art und Weise." />
-  <meta property="og:image" content="/assets/socialimage.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="600" />
+    <script type="module" src="/build/app.esm.js"></script>
+    <script nomodule src="/build/app.js"></script>
+    <link href="/build/app.css" rel="stylesheet" />
 
-  <script type="module" src="/build/app.esm.js"></script>
-  <script nomodule src="/build/app.js"></script>
-  <link href="/build/app.css" rel="stylesheet">
+    <link rel="apple-touch-icon" href="/assets/icon/icon.png" />
+    <link rel="icon" type="image/x-icon" href="/assets/icon/favicon.ico" />
+    <link rel="manifest" href="/manifest.json" />
 
-  <link rel="apple-touch-icon" href="/assets/icon/icon.png">
-  <link rel="icon" type="image/x-icon" href="/assets/icon/favicon.ico">
-  <link rel="manifest" href="/manifest.json">
-
-  <script>
-    function init() {
-
-      // Use matchMedia to check the user preference
-      let theme = 'purple'
-      const urlParams = new URLSearchParams(window.location.search);
-      theme = urlParams.get('theme');
-      if (theme) {
-        document.body.classList.remove('purple');
-        document.body.classList.add(theme);
+    <script>
+      function init() {
+        // Use matchMedia to check the user preference
+        let theme = 'purple';
+        const urlParams = new URLSearchParams(window.location.search);
+        theme = urlParams.get('theme');
+        if (theme) {
+          document.body.classList.remove('purple');
+          document.body.classList.add(theme);
+        }
+        window.__theme = theme;
       }
-      window.__theme=theme;
-    }
-  </script>
-</head>
+    </script>
+  </head>
 
-<body class="purple" onload="init()">
-
-  <app-root></app-root>
-
-</body>
-
+  <body class="purple" onload="init()">
+    <app-root></app-root>
+  </body>
 </html>

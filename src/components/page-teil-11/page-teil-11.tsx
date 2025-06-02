@@ -15,7 +15,7 @@ export class PageTeil11 {
         <app-header headerTitle={titles[nr]}></app-header>
         <ion-content class="ion-padding" id="main-menu">
           <app-content>
-             <h1 class="ion-hide-md-down">{titles[nr]}</h1>
+            <h1 class="ion-hide-md-down">{titles[nr]}</h1>
             <p class="lead">
               Bâleph – Ein Streifzug durch Basels jüdische Geschichte.
               <br /> 13 Stationen in der Basler Innenstadt.
@@ -49,7 +49,10 @@ export class PageTeil11 {
               umgesetzt.
             </p>
             <h2>Rätsel</h2>
-            <p> Wie heisst die 1961 gegründete jüdische Primarschule? <br /> Die Antwort findest Du in der 8. Station des Rundgangs.</p>
+            <p>
+              {' '}
+              Wie heisst die 1961 gegründete jüdische Primarschule? <br /> Die Antwort findest Du in der 8. Station des Rundgangs.
+            </p>
             <p>
               <ion-button color="primary" onClick={_ => this.failModal.open()}>
                 Arthur Cohn

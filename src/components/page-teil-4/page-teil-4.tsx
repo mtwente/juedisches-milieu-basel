@@ -19,17 +19,19 @@ export class PageTeil4 {
         <ion-content class="ion-padding" id="main-menu">
           <app-content>
             <h1 class="ion-hide-md-down">{titles[nr]}</h1>
-            <p class="lead">
-              Zentren des jüdischen Lebens
-            </p>
+            <p class="lead">Zentren des jüdischen Lebens</p>
             <p>
               Die Jüdinnen und Juden organisierten sich als religiöse Minderheit in einem eigenen Milieu mit Vereinen und Institutionen. Das soziale und kulturelle Leben fand in
               religiösen, fürsorgerischen, politischen und Sportvereinen statt. Dabei war die religiöse Identität wichtiger als die Zugehörigkeit zu einer bestimmten Schicht.
             </p>
             <p>
               In der Altstadt entstand am Unteren Heuberg ein erstes Zentrum jüdischen Lebens. Ein Warenlager wurde 1850 in eine kleine Synagoge umfunktioniert. Gründungsmitglieder
-              des <a href="https://www.geovistory.org/project/1719422/page/i1929590?p=1719422" target="_blank" rel="noopener noreferrer">Männervereins Dowor Tow</a> wohnten in unmittelbarer Umgebung, an der Hutgasse, am Spalenberg oder an der Schützenmattstrasse. Mit dem Bau der Synagoge 1868 an der
-              Leimenstrasse verlagerte sich das Zentrum zunehmend in dieses Quartier und ins Hegenheimerquartier.
+              des{' '}
+              <a href="https://www.geovistory.org/project/1719422/page/i1929590?p=1719422" target="_blank" rel="noopener noreferrer">
+                Männervereins Dowor Tow
+              </a>{' '}
+              wohnten in unmittelbarer Umgebung, an der Hutgasse, am Spalenberg oder an der Schützenmattstrasse. Mit dem Bau der Synagoge 1868 an der Leimenstrasse verlagerte sich
+              das Zentrum zunehmend in dieses Quartier und ins Hegenheimerquartier.
             </p>
             <app-img src={getAssetPath('../../assets/teil-4/bild1.png')}>
               Quelle: StaBS BILD Schn. 142 <br />
@@ -42,15 +44,18 @@ export class PageTeil4 {
               Angehörigen unter die Arme zu greifen. Der Jüdische Frauenverein (1834), der Männerverein Dowor Tow (1857), der Verein Espérance für junge unverheiratete Männer
               (1866) und die Union israélite Chevroh Ez Chajim für junge unverheiratete Männer (1880) stellten sich diesen Aufgaben. Dem Frauenverein, dem ältesten jüdischen Verein
               in Basel, kam dabei eine spezielle Bedeutung zu, weil Frauen in den meisten Fällen den Haushalt führten und damit für die Einhaltung der religiösen Gesetze
-              verantwortlich waren. Der Frauenverein engagierte sich auch in der Bildungsförderung und finanzierte um die
-              Jahrhundertwende Ferienaufenthalte für arme jüdische Schulkinder.
+              verantwortlich waren. Der Frauenverein engagierte sich auch in der Bildungsförderung und finanzierte um die Jahrhundertwende Ferienaufenthalte für arme jüdische
+              Schulkinder.
             </p>
             <p>
               1903 fand am Zionistenkongress ein internationales jüdisches Schauturnen statt, das auch die Basler Juden inspirierte. Aufbauend auf ersten zaghaften Versuchen
               gründete sich 1914 der ‹Jüdische Turnverein Basel›. Trainiert wurde in der Turnhalle des Leonhardschulhauses.
             </p>
             <h2>Rätsel</h2>
-            <p>Im Haus zum Schwarzen Ritter direkt hinter dem Gemsbrunnen betrieb ein Gründungsmitglied des Männervereins Dowor Tow ein Lithografie-Geschäft. Wie hiess der gesuchte Mann?</p>
+            <p>
+              Im Haus zum Schwarzen Ritter direkt hinter dem Gemsbrunnen betrieb ein Gründungsmitglied des Männervereins Dowor Tow ein Lithografie-Geschäft. Wie hiess der gesuchte
+              Mann?
+            </p>
             <p>
               <ion-button color="primary" onClick={_ => this.failModal.open()}>
                 Arthur Wolf

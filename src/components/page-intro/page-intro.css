@@ -3,7 +3,7 @@
 }
 
 .overflow-y-hidden {
-  --overflow: hidden
+  --overflow: hidden;
 }
 
 .container {

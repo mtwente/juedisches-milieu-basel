@@ -33,9 +33,9 @@ export class PageTeil8 {
             </p>
             <p>
               Die Basler Juden beeindruckte die Idee der Auswanderung nach Palästina hingegen wenig. Sie fühlten sich hier zuhause und spürten wenig Drang, die Heimat zu verlassen.
-              Für den Zionistenkongress 1901 sandte die Basler Regierung erstmals ein offizielles Begrüssungsschreiben und empfing eine Delegation mit Herzl an der Spitze. Der freisinnige
-              Regierungspräsident Heinrich David äusserte, der Zionismus sei «etwas Erhabenes», und er freute sich, «dass diese grosse, schöne Idee in Basel ein Heim gefunden hat».
-              Die Kongresse dürften dazu beigetragen haben, dass sich die jüdische und die nicht-jüdische Bevölkerung von Basel näherkamen.
+              Für den Zionistenkongress 1901 sandte die Basler Regierung erstmals ein offizielles Begrüssungsschreiben und empfing eine Delegation mit Herzl an der Spitze. Der
+              freisinnige Regierungspräsident Heinrich David äusserte, der Zionismus sei «etwas Erhabenes», und er freute sich, «dass diese grosse, schöne Idee in Basel ein Heim
+              gefunden hat». Die Kongresse dürften dazu beigetragen haben, dass sich die jüdische und die nicht-jüdische Bevölkerung von Basel näherkamen.
             </p>
             <p>
               Bis 1911 fanden sieben von zehn Zionistenkongressen in Basel statt. Danach verlor Basel als Austragungsort an Bedeutung. Ein zehntes und letztes Mal begrüsste Basel

@@ -6,14 +6,13 @@ import { Component, Host, h } from '@stencil/core';
   shadow: true,
 })
 export class AppVideo {
-
   render() {
     return (
       <Host>
         <figure>
           <slot></slot>
           <figcaption>
-            <slot name='caption'></slot>
+            <slot name="caption"></slot>
           </figcaption>
         </figure>
       </Host>

@@ -36,7 +36,7 @@ export class PageTeil7 {
               Grab zu öffnen und damit die Ruhe der Toten zu stören, ist ein zentraler Aspekt der jüdischen Glaubenslehre. Gräber auf öffentlichen Friedhöfen hingegen konnten nach
               einigen Jahren aufgehoben werden.
             </p>
-            <app-img style={{maxWidth:'450px'}} src="../../assets/teil-7/friedhof-2.jpg">
+            <app-img style={{ maxWidth: '450px' }} src="../../assets/teil-7/friedhof-2.jpg">
               Grossrat Nathan Höchstetter-Levi starb 1909 und erhielt als einer der ersten einen Grabstein auf dem neuen jüdischen Friedhof in Basel.
               <br /> Bild zvg
             </app-img>
@@ -55,14 +55,16 @@ export class PageTeil7 {
             </p>
             <h2>Rätsel</h2>
             <p>
-              Die Basler Chronik vermerkt den Tod von Nathan Höchstetter {' '}
+              Die Basler Chronik vermerkt den Tod von Nathan Höchstetter{' '}
               <a
                 href="https://www.baslerstadtbuch.ch/chronik/1909/06/07/es-stirbt-nathan-hoechstetter-levy-der-eine-reihe-von-jahren-die-sozialdemokratische-partei-im.html"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 hier.
-              </a>{' '}Für welche Partei sass Nathan Höchstetter mehrere Jahre im Grossen Rat?</p>
+              </a>{' '}
+              Für welche Partei sass Nathan Höchstetter mehrere Jahre im Grossen Rat?
+            </p>
             <p>
               <ion-button color="primary" onClick={_ => this.failModal.open()}>
                 Freisinnig-Demokratische Partei

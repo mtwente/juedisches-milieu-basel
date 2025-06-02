@@ -51,5 +51,5 @@ export const queryTabs = [
       GROUP BY ?building ?long ?lat ?type ?link
 
       `,
-  }
-]
+  },
+];

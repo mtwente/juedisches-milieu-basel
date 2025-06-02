@@ -26,8 +26,8 @@ export class PageTeil10 {
             <p>
               Um die Jahrhundertwende kamen viele osteuropäische Juden, die vor Pogromen geflüchtet waren, nach Basel. Für sie war die Stadt häufig eine Zwischenstation auf dem Weg
               nach Westen. Mehrere Tausend Ostjuden passierten ab 1906 Basel, wo sie sich oft einen oder mehrere Tage aufhielten. Einige osteuropäische Jüdinnen und Juden liessen
-              sich in Basel nieder. 1910 lebten rund 450 Juden russischer und polnisch-russischer Herkunft im Kanton, was rund einem Fünftel der jüdischen Bevölkerung entsprach. Viele
-              wohnten aufgrund der günstigen Mieten in Kleinbasel und eröffneten an der Florastrasse einen Gebetraum. Die osteuropäischen Juden unterschieden sich nicht nur
+              sich in Basel nieder. 1910 lebten rund 450 Juden russischer und polnisch-russischer Herkunft im Kanton, was rund einem Fünftel der jüdischen Bevölkerung entsprach.
+              Viele wohnten aufgrund der günstigen Mieten in Kleinbasel und eröffneten an der Florastrasse einen Gebetraum. Die osteuropäischen Juden unterschieden sich nicht nur
               kulturell, sondern auch mit ihren Berufen – überdurchschnittlich viele waren Handwerker – von den bereits ansässigen Juden. Deshalb stiessen sie bei vielen auf
               Skepsis.
             </p>
@@ -61,10 +61,11 @@ export class PageTeil10 {
               }}
             ></geov-yasgui>
             <div class={'restricted-width'} slot="caption">
-              Karte basierend auf {' '}
+              Karte basierend auf{' '}
               <a href="https://www.geovistory.org/project/1719422" target="_blank" rel="noopener noreferrer">
                 «Jüdische & katholische Zentren Basels»
-              </a>, umgesetzt mit Geovistory.
+              </a>
+              , umgesetzt mit Geovistory.
             </div>
           </app-video>
           <div class="ion-padding-start ion-padding-end ion-padding-bottom">
