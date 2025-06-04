@@ -1,2 +1,1 @@
-function n(n,e,r){if(e&&r){const t=new RegExp(e);n=n.replace(t,r)}return n}export{n as r};
-//# sourceMappingURL=p-cc441cb7.js.map
+function c(e,t,n){if(t&&n){const r=new RegExp(t);e=e.replace(r,n)}return e}export{c as r};

@@ -1,2 +1,1 @@
-import{c as o}from"./p-53386044.js";const t=(t,c)=>{const s=o().addElement(c.enteringEl).fromTo("opacity",0,1).duration(250);const a=o().addElement(c.leavingEl).fromTo("opacity",1,0).duration(250);const n=o().addAnimation(s).addAnimation(a);return n};export{t as a};
-//# sourceMappingURL=p-90ff8298.js.map
+import{c as n}from"./p-53386044.js";const i=(d,o)=>{const t=n().addElement(o.enteringEl).fromTo("opacity",0,1).duration(250),a=n().addElement(o.leavingEl).fromTo("opacity",1,0).duration(250);return n().addAnimation(t).addAnimation(a)};export{i as a};

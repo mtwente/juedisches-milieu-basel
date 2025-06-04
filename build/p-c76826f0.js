@@ -1,5 +1,3 @@
 /*!
  * (C) Ionic http://ionicframework.com - MIT License
- */
-const n=typeof window!=="undefined"?window:undefined;const d=typeof document!=="undefined"?document:undefined;export{d,n as w};
-//# sourceMappingURL=p-c76826f0.js.map
+ */const n=typeof window<"u"?window:void 0,d=typeof document<"u"?document:void 0;export{d,n as w};

@@ -1,5 +1,3 @@
 /*!
  * (C) Ionic http://ionicframework.com - MIT License
- */
-const n=(n,t)=>t.closest(n)!==null;const t=(n,t)=>typeof n==="string"&&n.length>0?Object.assign({"ion-color":true,[`ion-color-${n}`]:true},t):t;const o=n=>{if(n!==undefined){const t=Array.isArray(n)?n:n.split(" ");return t.filter((n=>n!=null)).map((n=>n.trim())).filter((n=>n!==""))}return[]};const r=n=>{const t={};o(n).forEach((n=>t[n]=true));return t};const e=/^[a-z][a-z0-9+\-.]*:/;const s=async(n,t,o,r)=>{if(n!=null&&n[0]!=="#"&&!e.test(n)){const e=document.querySelector("ion-router");if(e){if(t!=null){t.preventDefault()}return e.push(n,o,r)}}return false};export{t as c,r as g,n as h,s as o};
-//# sourceMappingURL=p-b2d007f6.js.map
+ */const n=(t,r)=>r.closest(t)!==null,c=(t,r)=>typeof t=="string"&&t.length>0?Object.assign({"ion-color":!0,[`ion-color-${t}`]:!0},r):r,l=t=>t!==void 0?(Array.isArray(t)?t:t.split(" ")).filter(e=>e!=null).map(e=>e.trim()).filter(e=>e!==""):[],u=t=>{const r={};return l(t).forEach(e=>r[e]=!0),r},i=/^[a-z][a-z0-9+\-.]*:/,a=async(t,r,e,s)=>{if(t!=null&&t[0]!=="#"&&!i.test(t)){const o=document.querySelector("ion-router");if(o)return r?.preventDefault(),o.push(t,e,s)}return!1};export{c,u as g,n as h,a as o};
