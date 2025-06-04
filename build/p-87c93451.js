@@ -1,3 +1,5 @@
 /*!
  * (C) Ionic http://ionicframework.com - MIT License
- */const u=(e,t,n)=>{if(typeof MutationObserver>"u")return;const r=new MutationObserver(o=>{n(d(o,t))});return r.observe(e,{childList:!0,subtree:!0}),r},d=(e,t)=>{let n;return e.forEach(r=>{for(let o=0;o<r.addedNodes.length;o++)n=s(r.addedNodes[o],t)||n}),n},s=(e,t)=>e.nodeType!==1?void 0:(e.tagName===t.toUpperCase()?[e]:Array.from(e.querySelectorAll(t))).find(r=>r.value===e.value);export{u as w};
+ */
+const e=(e,r,n)=>{if(typeof MutationObserver==="undefined"){return}const u=new MutationObserver((e=>{n(t(e,r))}));u.observe(e,{childList:true,subtree:true});return u};const t=(e,t)=>{let n;e.forEach((e=>{for(let u=0;u<e.addedNodes.length;u++){n=r(e.addedNodes[u],t)||n}}));return n};const r=(e,t)=>{if(e.nodeType!==1){return undefined}const r=e.tagName===t.toUpperCase()?[e]:Array.from(e.querySelectorAll(t));return r.find((t=>t.value===e.value))};export{e as w};
+//# sourceMappingURL=p-87c93451.js.map

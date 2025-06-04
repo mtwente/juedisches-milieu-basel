@@ -1,1 +1,2 @@
-import{r as t,h as s,H as c}from"./p-1bafedb0.js";import{c as n}from"./p-b2d007f6.js";import{g as i}from"./p-501d07b5.js";const l=":host(.ion-color){color:var(--ion-color-base)}",r=class{constructor(o){t(this,o),this.color=void 0}render(){const o=i(this);return s(c,{class:n(this.color,{[o]:!0})},s("slot",null))}};r.style=l;export{r as ion_text};
+import{r as o,h as s,H as r}from"./p-1bafedb0.js";import{c as t}from"./p-b2d007f6.js";import{g as n}from"./p-501d07b5.js";const c=":host(.ion-color){color:var(--ion-color-base)}";const i=class{constructor(s){o(this,s);this.color=undefined}render(){const o=n(this);return s(r,{class:t(this.color,{[o]:true})},s("slot",null))}};i.style=c;export{i as ion_text};
+//# sourceMappingURL=p-e7e01cea.entry.js.map

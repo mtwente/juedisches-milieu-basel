@@ -1,3 +1,5 @@
 /*!
  * (C) Ionic http://ionicframework.com - MIT License
- */const r=(o,...n)=>console.warn(`[Ionic Warning]: ${o}`,...n),s=(o,...n)=>console.error(`[Ionic Error]: ${o}`,...n),e=(o,...n)=>console.error(`<${o.tagName.toLowerCase()}> must be used inside ${n.join(" or ")}.`);export{s as a,e as b,r as p};
+ */
+const o=(o,...s)=>console.warn(`[Ionic Warning]: ${o}`,...s);const s=(o,...s)=>console.error(`[Ionic Error]: ${o}`,...s);const n=(o,...s)=>console.error(`<${o.tagName.toLowerCase()}> must be used inside ${s.join(" or ")}.`);export{s as a,n as b,o as p};
+//# sourceMappingURL=p-b4215fed.js.map

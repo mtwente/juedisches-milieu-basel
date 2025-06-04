@@ -1,5 +1,8 @@
-import{w as a}from"./p-c76826f0.js";import{r as m}from"./p-a533da20.js";import{a as p}from"./p-b4215fed.js";/*!
+import{w as t}from"./p-c76826f0.js";import{r as e}from"./p-a533da20.js";import{a as r}from"./p-b4215fed.js";
+/*!
  * (C) Ionic http://ionicframework.com - MIT License
- */const v=(n,o,r)=>{let t,e;a!==void 0&&"MutationObserver"in a&&(t=new MutationObserver(d=>{for(const s of d)for(const i of s.addedNodes)if(i.nodeType===Node.ELEMENT_NODE&&i.slot===o){r(),m(()=>c(i));return}}),t.observe(n,{childList:!0}));const c=d=>{var s;e&&(e.disconnect(),e=void 0),e=new MutationObserver(i=>{r();for(const E of i)for(const u of E.removedNodes)u.nodeType===Node.ELEMENT_NODE&&u.slot===o&&f()}),e.observe((s=d.parentElement)!==null&&s!==void 0?s:d,{subtree:!0,childList:!0})},l=()=>{t&&(t.disconnect(),t=void 0),f()},f=()=>{e&&(e.disconnect(),e=void 0)};return{destroy:l}};/*!
+ */const n=(r,n,o)=>{let i;let s;if(t!==undefined&&"MutationObserver"in t){i=new MutationObserver((t=>{for(const r of t){for(const t of r.addedNodes){if(t.nodeType===Node.ELEMENT_NODE&&t.slot===n){o();e((()=>f(t)));return}}}}));i.observe(r,{childList:true})}const f=t=>{var e;if(s){s.disconnect();s=undefined}s=new MutationObserver((t=>{o();for(const e of t){for(const t of e.removedNodes){if(t.nodeType===Node.ELEMENT_NODE&&t.slot===n){d()}}}}));s.observe((e=t.parentElement)!==null&&e!==void 0?e:t,{subtree:true,childList:true})};const c=()=>{if(i){i.disconnect();i=undefined}d()};const d=()=>{if(s){s.disconnect();s=undefined}};return{destroy:c}};
+/*!
  * (C) Ionic http://ionicframework.com - MIT License
- */const N=(n,o,r)=>{const t=n==null?0:n.toString().length,e=b(t,o);if(r===void 0)return e;try{return r(t,o)}catch(c){return p("Exception in provided `counterFormatter`.",c),e}},b=(n,o)=>`${n} / ${o}`;export{v as c,N as g};
+ */const o=(t,e,n)=>{const o=t==null?0:t.toString().length;const s=i(o,e);if(n===undefined){return s}try{return n(o,e)}catch(t){r("Exception in provided `counterFormatter`.",t);return s}};const i=(t,e)=>`${t} / ${e}`;export{n as c,o as g};
+//# sourceMappingURL=p-34eafc06.js.map

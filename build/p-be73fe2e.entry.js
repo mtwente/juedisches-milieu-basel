@@ -1,1 +1,2 @@
-import{r as l,h as o,H as r}from"./p-1bafedb0.js";const n=":host{display:block}figure{display:block;margin:1rem 0 3rem 0}::slotted([slot='caption']){margin-top:0.5rem;font-size:0.8rem}",t=class{constructor(s){l(this,s)}render(){return o(r,null,o("figure",null,o("slot",null),o("figcaption",null,o("slot",{name:"caption"}))))}};t.style=n;export{t as app_video};
+import{r as o,h as t,H as r}from"./p-1bafedb0.js";const s=":host{display:block}figure{display:block;margin:1rem 0 3rem 0}::slotted([slot='caption']){margin-top:0.5rem;font-size:0.8rem}";const l=class{constructor(t){o(this,t)}render(){return t(r,null,t("figure",null,t("slot",null),t("figcaption",null,t("slot",{name:"caption"}))))}};l.style=s;export{l as app_video};
+//# sourceMappingURL=p-be73fe2e.entry.js.map
